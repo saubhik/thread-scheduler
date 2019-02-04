@@ -21,6 +21,11 @@ typedef struct uthread_struct
 	int uthread_priority; /* uthread running priority */
 	int cpu_id; /* cpu it is currently executing on */
 	int last_cpu_id; /* last cpu it was executing on */
+
+	/** for credit-based scheduler **/
+	int initial_credit; /** used to bump credits when all uthread are in OVER queue **/
+	int credit; /* the credit the uthread can consume */
+	int cap;  /* the upper bound of credit; not set if 0 */
 	
 	uthread_t uthread_tid; /* thread id */
 	uthread_group_t uthread_gid; /* thread group id  */
@@ -39,4 +44,5 @@ typedef struct uthread_struct
 
 struct __kthread_runqueue;
 extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(struct __kthread_runqueue *));
+extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid, int u_weight, int u_cap);
 #endif

@@ -62,10 +62,14 @@ extern void kthread_init_vtalrm_timeslice()
 {
 	struct itimerval timeslice;
 
+	// on initialization, set the next expiration time equal to a single time period
 	timeslice.it_interval.tv_sec = KTHREAD_VTALRM_SEC;
 	timeslice.it_interval.tv_usec = KTHREAD_VTALRM_USEC;
 	timeslice.it_value.tv_sec = KTHREAD_VTALRM_SEC;
 	timeslice.it_value.tv_usec = KTHREAD_VTALRM_USEC;
+
+	/************ here we can change the time slice size if needed **************/
+
 
 	setitimer(ITIMER_VIRTUAL,&timeslice,NULL);
 	return;

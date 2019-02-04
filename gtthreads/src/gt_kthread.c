@@ -35,7 +35,7 @@ static void kthread_exit();
 
 /**********************************************************************/
 /* kthread schedule */
-static inline void ksched_info_init(ksched_shared_info_t *ksched_info);
+static inline void ksched_info_init(ksched_shared_info_t *ksched_info, int sched_alg);
 static void ksched_announce_cosched_group();
 static void ksched_priority(int );
 static void ksched_cosched(int );
@@ -135,11 +135,14 @@ static inline void kthread_exit()
 /* kthread schedule */
 
 /* Initialize the ksched_shared_info */
-static inline void ksched_info_init(ksched_shared_info_t *ksched_info)
+static inline void ksched_info_init(ksched_shared_info_t *ksched_info, int sched_alg)
 {
 	gt_spinlock_init(&(ksched_info->ksched_lock));
 	gt_spinlock_init(&(ksched_info->uthread_init_lock));
 	gt_spinlock_init(&(ksched_info->__malloc_lock));
+
+	/** set the scheduling algorithm **/
+	ksched_info->uthread_sched_alg = sched_alg;
 	return;
 }
 
@@ -212,7 +215,7 @@ static void ksched_cosched(int signal)
 #ifdef CO_SCHED
 	uthread_schedule(&sched_find_best_uthread_group);
 #else
-	uthread_schedule(&sched_find_best_uthread);
+	uthread_schedule(ksched_shared_info.uthread_sched_alg == 0? &sched_find_best_uthread: &sched_get_head);
 #endif
 
 	// kthread_unblock_signal(SIGVTALRM);
@@ -260,12 +263,14 @@ static void ksched_priority(int signo)
 		}
 	}
 
-	uthread_schedule(&sched_find_best_uthread);
+	if (ksched_shared_info.uthread_sched_alg == 0) uthread_schedule(&sched_find_best_uthread);
+	else uthread_schedule(&sched_get_head);
 
 	// kthread_unblock_signal(SIGVTALRM);
 	// kthread_unblock_signal(SIGUSR1);
 	return;
 }
+
 
 /**********************************************************************/
 
@@ -293,7 +298,9 @@ static void gtthread_app_start(void *arg)
 			/* XXX: gtthread app cleanup has to be done. */
 			continue;
 		}
-		uthread_schedule(&sched_find_best_uthread);
+		if (ksched_shared_info.uthread_sched_alg == 0) uthread_schedule(&sched_find_best_uthread);
+		else if (ksched_shared_info.uthread_sched_alg == 1) uthread_schedule(&sched_get_head);
+		else printf("uthread isn't invoked in gtthread_app_start()!\n");
 	}
 	kthread_exit();
 
@@ -301,7 +308,7 @@ static void gtthread_app_start(void *arg)
 }
 
 
-extern void gtthread_app_init()
+extern void gtthread_app_init(int sched_arg)
 {
 	kthread_context_t *k_ctx, *k_ctx_main;
 	kthread_t k_tid;
@@ -309,7 +316,7 @@ extern void gtthread_app_init()
 	
 
 	/* Initialize shared schedule information */
-	ksched_info_init(&ksched_shared_info);
+	ksched_info_init(&ksched_shared_info, sched_arg);
 
 	/* kthread (virtual processor) on the first logical processor */
 	k_ctx_main = (kthread_context_t *)MALLOCZ_SAFE(sizeof(kthread_context_t));
@@ -386,7 +393,7 @@ extern void gtthread_app_exit()
 			/* XXX: gtthread app cleanup has to be done. */
 			continue;
 		}
-		uthread_schedule(&sched_find_best_uthread);
+		uthread_schedule(ksched_shared_info.uthread_sched_alg == 0? &sched_find_best_uthread: &sched_get_head);
 	}
 
 	kthread_block_signal(SIGVTALRM);

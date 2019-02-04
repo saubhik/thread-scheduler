@@ -31,7 +31,7 @@ static int uthread_init(uthread_struct_t *u_new);
 /* uthread creation */
 #define UTHREAD_DEFAULT_SSIZE (16 * 1024)
 
-extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid);
+extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid, int weight, int cap);
 
 /**********************************************************************/
 /** DEFNITIONS **/
@@ -151,7 +151,14 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 		{
 			/* XXX: Apply uthread_group_penalty before insertion */
 			u_obj->uthread_state = UTHREAD_RUNNABLE;
-			add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+			if (ksched_shared_info.uthread_sched_alg == 0) add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+			/** in credit scheduler, choose the right queue to put the current uthread into **/
+			else {
+				/** calculate the remaining credit of current uthread and insert it to the right queue **/
+				u_obj->credit -= KTHREAD_CREDIT_USEC/1000; /** decrease 1 credit per usecond **/
+				if (u_obj->credit < 0) add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+				else add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock), u_obj);
+			}
 			/* XXX: Save the context (signal mask not saved) */
 			if(sigsetjmp(u_obj->uthread_env, 0))
 				return;
@@ -197,10 +204,12 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
  * into a regular stack for uthread (by using SS_DISABLE). */
 static void uthread_context_func(int signo)
 {
+	kthread_context_t *k_ctx;
 	uthread_struct_t *cur_uthread;
 	kthread_runqueue_t *kthread_runq;
 
-	kthread_runq = &(kthread_cpu_map[kthread_apic_id()]->krunqueue);
+	k_ctx = kthread_cpu_map[kthread_apic_id()];
+	kthread_runq = &(k_ctx->krunqueue);
 
 	printf("..... uthread_context_func .....\n");
 	/* kthread->cur_uthread points to newly created uthread */
@@ -221,7 +230,8 @@ static void uthread_context_func(int signo)
 	cur_uthread->uthread_func(cur_uthread->uthread_arg);
 	cur_uthread->uthread_state = UTHREAD_DONE;
 
-	uthread_schedule(&sched_find_best_uthread);
+	if (ksched_shared_info.uthread_sched_alg == 0) uthread_schedule(&sched_find_best_uthread);
+	else uthread_schedule(&sched_get_head);
 	return;
 }
 
@@ -230,7 +240,7 @@ static void uthread_context_func(int signo)
 
 extern kthread_runqueue_t *ksched_find_target(uthread_struct_t *);
 
-extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid)
+extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid, int u_weight, int u_cap)
 {
 	kthread_runqueue_t *kthread_runq;
 	uthread_struct_t *u_new;
@@ -251,6 +261,9 @@ extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, 
 	u_new->uthread_gid = u_gid;
 	u_new->uthread_func = u_func;
 	u_new->uthread_arg = u_arg;
+	u_new->initial_credit = u_weight;
+	u_new->credit = u_weight;
+	u_new->cap = u_cap;
 
 	/* Allocate new stack for uthread */
 	u_new->uthread_stack.ss_flags = 0; /* Stack enabled for signal handling */

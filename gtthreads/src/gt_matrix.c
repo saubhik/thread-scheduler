@@ -9,11 +9,12 @@
 #include <setjmp.h>
 #include <errno.h>
 #include <assert.h>
+#include <stdlib.h> /** to use atoi() **/
 
 #include "gt_include.h"
 
 
-#define ROWS 512
+#define ROWS 32
 #define COLS ROWS
 #define SIZE COLS
 
@@ -82,7 +83,7 @@ static void print_matrix(matrix_t *mat)
 	return;
 }
 
-static void * uthread_mulmat(void *p)
+static int uthread_mulmat(void *p)
 {
 	int i, j, k;
 	int start_row, end_row;
@@ -145,13 +146,17 @@ static void init_matrices()
 uthread_arg_t uargs[NUM_THREADS];
 uthread_t utids[NUM_THREADS];
 
-int main()
+int main(int argc, char** argv)
 {
 	uthread_arg_t *uarg;
 	int inx;
+	int kthread_sched_arg = atoi(argv[0]);
+	printf("kthread_sched_arg: %d\n", kthread_sched_arg);
+	int weight = atoi(argv[1]);
+	int cap = atoi(argv[2]);
 
 
-	gtthread_app_init();
+	gtthread_app_init(kthread_sched_arg);
 
 	init_matrices();
 
@@ -174,12 +179,12 @@ int main()
 		uarg->start_col = (uarg->gid * PER_GROUP_COLS);
 #endif
 
-		uthread_create(&utids[inx], uthread_mulmat, uarg, uarg->gid);
+		uthread_create(&utids[inx], uthread_mulmat, uarg, uarg->gid, weight, cap);
 	}
 
 	gtthread_app_exit();
 
-	// print_matrix(&C);
-	// fprintf(stderr, "********************************");
+	print_matrix(&C);
+	fprintf(stderr, "********************************");
 	return(0);
 }

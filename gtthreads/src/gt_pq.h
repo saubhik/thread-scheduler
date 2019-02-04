@@ -83,5 +83,7 @@ extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_run
  * Also globally sets the penalty, if choosing a lower priority uthread. */
 extern uthread_struct_t *sched_find_best_uthread_group(kthread_runqueue_t *kthread_runq);
 
+/** for credit scheduler, simply return the head of the queue **/
+extern uthread_struct_t *sched_get_head(kthread_runqueue_t *kthread_runq);
 
 #endif

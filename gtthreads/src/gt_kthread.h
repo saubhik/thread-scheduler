@@ -56,6 +56,9 @@ typedef struct __ksched_shared_info
 
 	unsigned short last_ugroup_kthread[MAX_UTHREAD_GROUPS]; /* (M) : Target cpu for next uthread from group */
 
+	/** to specify the scheduling algorithm **/
+	unsigned int uthread_sched_alg;
+
 	gt_spinlock_t ksched_lock; /* global lock for updating above counters */
 	gt_spinlock_t uthread_init_lock; /* global lock for uthread_init (to serialize signal handling stuff in there) */
 
@@ -116,7 +119,7 @@ static inline void *MALLOCZ_SAFE(unsigned int size)
 
 /**********************************************************************/
 /* gt-thread api(s) */
-extern void gtthread_app_init();
+extern void gtthread_app_init(int sched_arg);
 extern void gtthread_app_exit();
 
 #endif

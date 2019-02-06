@@ -58,6 +58,8 @@ typedef struct __ksched_shared_info
 
 	/** to specify the scheduling algorithm **/
 	unsigned int uthread_sched_alg;
+	/** cpu time period of each uthread **/
+	unsigned long cpu_time[16][8]; 
 
 	gt_spinlock_t ksched_lock; /* global lock for updating above counters */
 	gt_spinlock_t uthread_init_lock; /* global lock for uthread_init (to serialize signal handling stuff in there) */
@@ -120,6 +122,6 @@ static inline void *MALLOCZ_SAFE(unsigned int size)
 /**********************************************************************/
 /* gt-thread api(s) */
 extern void gtthread_app_init(int sched_arg);
-extern void gtthread_app_exit();
+extern unsigned long** gtthread_app_exit();
 
 #endif

@@ -1,0 +1,493 @@
+kthread_sched_arg: 1
+kthread(1) created !!
+kthread(2) created !!
+kthread(3) created !!
+..... uthread_context_func .....
+
+Thread(id:0, group:0) started..... uthread_context_func .....
+
+Thread(id:2, group:0) started..... uthread_context_func .....
+
+Thread(id:4, group:0) started..... uthread_context_func .....
+
+Thread(id:6, group:0) started
+Thread(id:0, group:0) finished (TIME : 0 s and 487 us)..... uthread_context_func .....
+
+Thread(id:2, group:0) finished (TIME : 0 s and 515 us)
+Thread(id:8, group:0) started..... uthread_context_func .....
+
+Thread(id:10, group:0) started
+Thread(id:6, group:0) finished (TIME : 0 s and 741 us)..... uthread_context_func .....
+
+Thread(id:14, group:0) started
+Thread(id:4, group:0) finished (TIME : 0 s and 819 us)..... uthread_context_func .....
+
+Thread(id:12, group:0) started
+Thread(id:10, group:0) finished (TIME : 0 s and 977 us)
+Thread(id:8, group:0) finished (TIME : 0 s and 978 us)..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:18, group:0) started
+Thread(id:16, group:0) started
+Thread(id:14, group:0) finished (TIME : 0 s and 1219 us)..... uthread_context_func .....
+
+Thread(id:22, group:0) started
+Thread(id:18, group:0) finished (TIME : 0 s and 1460 us)
+Thread(id:16, group:0) finished (TIME : 0 s and 1468 us)..... uthread_context_func .....
+
+Thread(id:24, group:0) started..... uthread_context_func .....
+
+Thread(id:26, group:0) started
+Thread(id:12, group:0) finished (TIME : 0 s and 1553 us)..... uthread_context_func .....
+
+Thread(id:20, group:0) started
+Thread(id:22, group:0) finished (TIME : 0 s and 1696 us)..... uthread_context_func .....
+
+Thread(id:30, group:0) started
+Thread(id:26, group:0) finished (TIME : 0 s and 1950 us)
+Thread(id:24, group:0) finished (TIME : 0 s and 1952 us)..... uthread_context_func .....
+
+Thread(id:34, group:0) started..... uthread_context_func .....
+
+Thread(id:32, group:0) started
+Thread(id:30, group:0) finished (TIME : 0 s and 2164 us)..... uthread_context_func .....
+
+Thread(id:38, group:0) started
+Thread(id:20, group:0) finished (TIME : 0 s and 2256 us)..... uthread_context_func .....
+
+Thread(id:28, group:0) started
+Thread(id:28, group:0) finished (TIME : 0 s and 2827 us)..... uthread_context_func .....
+
+Thread(id:36, group:0) started
+Thread(id:34, group:0) finished (TIME : 0 s and 5403 us)..... uthread_context_func .....
+
+Thread(id:42, group:0) started
+Thread(id:32, group:0) finished (TIME : 0 s and 5587 us)..... uthread_context_func .....
+
+Thread(id:40, group:0) started
+Thread(id:38, group:0) finished (TIME : 0 s and 5733 us)..... uthread_context_func .....
+
+Thread(id:46, group:0) started
+Thread(id:36, group:0) finished (TIME : 0 s and 8403 us)..... uthread_context_func .....
+
+Thread(id:44, group:0) started
+Thread(id:46, group:0) finished (TIME : 0 s and 8991 us)..... uthread_context_func .....
+
+Thread(id:54, group:0) started
+Thread(id:42, group:0) finished (TIME : 0 s and 9533 us)..... uthread_context_func .....
+
+Thread(id:50, group:0) started
+Thread(id:40, group:0) finished (TIME : 0 s and 11649 us)..... uthread_context_func .....
+
+Thread(id:48, group:0) started
+Thread(id:44, group:0) finished (TIME : 0 s and 12386 us)..... uthread_context_func .....
+
+Thread(id:54, group:0) finished (TIME : 0 s and 12470 us)..... uthread_context_func .....
+
+Thread(id:62, group:0) started
+Thread(id:52, group:0) started
+Thread(id:48, group:0) finished (TIME : 0 s and 15784 us)..... uthread_context_func .....
+
+Thread(id:52, group:0) finished (TIME : 0 s and 15790 us)..... uthread_context_func .....
+
+Thread(id:56, group:0) started
+Thread(id:60, group:0) started
+Thread(id:62, group:0) finished (TIME : 0 s and 16050 us)..... uthread_context_func .....
+
+Thread(id:70, group:0) started
+Thread(id:50, group:0) finished (TIME : 0 s and 16408 us)..... uthread_context_func .....
+
+Thread(id:58, group:0) started
+Thread(id:60, group:0) finished (TIME : 0 s and 19472 us)..... uthread_context_func .....
+
+Thread(id:68, group:0) started
+Thread(id:56, group:0) finished (TIME : 0 s and 19652 us)..... uthread_context_func .....
+
+Thread(id:64, group:0) started
+Thread(id:58, group:0) finished (TIME : 0 s and 19993 us)..... uthread_context_func .....
+
+Thread(id:66, group:0) started
+Thread(id:70, group:0) finished (TIME : 0 s and 44252 us)..... uthread_context_func .....
+
+Thread(id:78, group:0) started
+Thread(id:68, group:0) finished (TIME : 0 s and 48108 us)..... uthread_context_func .....
+
+Thread(id:76, group:0) started
+Thread(id:66, group:0) finished (TIME : 0 s and 50970 us)..... uthread_context_func .....
+
+Thread(id:74, group:0) started
+Thread(id:64, group:0) finished (TIME : 0 s and 53322 us)..... uthread_context_func .....
+
+Thread(id:72, group:0) started..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:82, group:0) started..... uthread_context_func .....
+
+Thread(id:80, group:0) started
+Thread(id:84, group:0) started
+Thread(id:86, group:0) started
+Thread(id:86, group:0) finished (TIME : 0 s and 95582 us)..... uthread_context_func .....
+
+Thread(id:94, group:0) started
+Thread(id:84, group:0) finished (TIME : 0 s and 95701 us)..... uthread_context_func .....
+
+Thread(id:92, group:0) started
+Thread(id:82, group:0) finished (TIME : 0 s and 97245 us)..... uthread_context_func .....
+
+Thread(id:90, group:0) started
+Thread(id:80, group:0) finished (TIME : 0 s and 98451 us)..... uthread_context_func .....
+
+Thread(id:88, group:0) started
+Thread(id:94, group:0) finished (TIME : 0 s and 124207 us)..... uthread_context_func .....
+
+Thread(id:102, group:0) started
+Thread(id:92, group:0) finished (TIME : 0 s and 124569 us)..... uthread_context_func .....
+
+Thread(id:100, group:0) started
+Thread(id:90, group:0) finished (TIME : 0 s and 127461 us)..... uthread_context_func .....
+
+Thread(id:98, group:0) started
+Thread(id:88, group:0) finished (TIME : 0 s and 129943 us)..... uthread_context_func .....
+
+Thread(id:96, group:0) started..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:108, group:0) started
+Thread(id:106, group:0) started..... uthread_context_func .....
+
+Thread(id:110, group:0) started
+Thread(id:104, group:0) started..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:118, group:0) started
+Thread(id:112, group:0) started..... uthread_context_func .....
+
+Thread(id:114, group:0) started..... uthread_context_func .....
+
+Thread(id:116, group:0) started..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:120, group:0) started
+Thread(id:122, group:0) started
+Thread(id:124, group:0) started..... uthread_context_func .....
+
+Thread(id:126, group:0) started
+Thread(id:78, group:0) finished (TIME : 0 s and 473252 us)
+Thread(id:76, group:0) finished (TIME : 0 s and 476934 us)
+Thread(id:74, group:0) finished (TIME : 0 s and 480218 us)
+Thread(id:72, group:0) finished (TIME : 0 s and 482670 us)
+Thread(id:110, group:0) finished (TIME : 1 s and 18446744073709456959 us)
+Thread(id:108, group:0) finished (TIME : 1 s and 18446744073709458748 us)
+Thread(id:104, group:0) finished (TIME : 1 s and 18446744073709460960 us)
+Thread(id:106, group:0) finished (TIME : 1 s and 18446744073709465441 us)
+Thread(id:118, group:0) finished (TIME : 1 s and 18446744073709496249 us)
+Thread(id:116, group:0) finished (TIME : 1 s and 18446744073709507494 us)
+Thread(id:112, group:0) finished (TIME : 1 s and 18446744073709507702 us)
+Thread(id:114, group:0) finished (TIME : 1 s and 18446744073709511099 us)
+Thread(id:126, group:0) finished (TIME : 1 s and 18446744073709537484 us)..... uthread_context_func .....
+
+Thread(id:7, group:1) started
+Thread(id:7, group:1) finished (TIME : 1 s and 18446744073709538001 us)..... uthread_context_func .....
+
+Thread(id:15, group:1) started
+Thread(id:15, group:1) finished (TIME : 1 s and 18446744073709538489 us)..... uthread_context_func .....
+
+Thread(id:23, group:1) started
+Thread(id:23, group:1) finished (TIME : 1 s and 18446744073709538981 us)..... uthread_context_func .....
+
+Thread(id:31, group:1) started
+Thread(id:31, group:1) finished (TIME : 1 s and 18446744073709539475 us)..... uthread_context_func .....
+
+Thread(id:39, group:1) started
+Thread(id:39, group:1) finished (TIME : 1 s and 18446744073709543057 us)..... uthread_context_func .....
+
+Thread(id:47, group:1) started
+Thread(id:47, group:1) finished (TIME : 1 s and 18446744073709546581 us)..... uthread_context_func .....
+
+Thread(id:55, group:1) started
+Thread(id:55, group:1) finished (TIME : 1 s and 18446744073709549966 us)..... uthread_context_func .....
+
+Thread(id:63, group:1) started
+Thread(id:124, group:0) finished (TIME : 1 s and 18446744073709550506 us)..... uthread_context_func .....
+
+Thread(id:5, group:1) started
+Thread(id:5, group:1) finished (TIME : 1 s and 18446744073709551018 us)..... uthread_context_func .....
+
+Thread(id:13, group:1) started
+Thread(id:13, group:1) finished (TIME : 1 s and 18446744073709551511 us)..... uthread_context_func .....
+
+Thread(id:21, group:1) started
+Thread(id:21, group:1) finished (TIME : 1 s and 386 us)..... uthread_context_func .....
+
+Thread(id:29, group:1) started
+Thread(id:120, group:0) finished (TIME : 1 s and 576 us)..... uthread_context_func .....
+
+Thread(id:1, group:1) started
+Thread(id:29, group:1) finished (TIME : 1 s and 863 us)..... uthread_context_func .....
+
+Thread(id:37, group:1) started
+Thread(id:1, group:1) finished (TIME : 1 s and 1092 us)..... uthread_context_func .....
+
+Thread(id:9, group:1) started
+Thread(id:9, group:1) finished (TIME : 1 s and 1582 us)..... uthread_context_func .....
+
+Thread(id:17, group:1) started
+Thread(id:63, group:1) finished (TIME : 1 s and 1928 us)..... uthread_context_func .....
+
+Thread(id:71, group:1) started
+Thread(id:17, group:1) finished (TIME : 1 s and 2075 us)..... uthread_context_func .....
+
+Thread(id:25, group:1) started
+Thread(id:25, group:1) finished (TIME : 1 s and 2564 us)..... uthread_context_func .....
+
+Thread(id:33, group:1) started
+Thread(id:122, group:0) finished (TIME : 1 s and 4126 us)..... uthread_context_func .....
+
+Thread(id:3, group:1) started
+Thread(id:37, group:1) finished (TIME : 1 s and 4381 us)..... uthread_context_func .....
+
+Thread(id:45, group:1) started
+Thread(id:3, group:1) finished (TIME : 1 s and 4683 us)..... uthread_context_func .....
+
+Thread(id:11, group:1) started
+Thread(id:11, group:1) finished (TIME : 1 s and 5202 us)..... uthread_context_func .....
+
+Thread(id:19, group:1) started
+Thread(id:19, group:1) finished (TIME : 1 s and 5717 us)..... uthread_context_func .....
+
+Thread(id:27, group:1) started
+Thread(id:27, group:1) finished (TIME : 1 s and 6234 us)..... uthread_context_func .....
+
+Thread(id:35, group:1) started
+Thread(id:33, group:1) finished (TIME : 1 s and 6362 us)..... uthread_context_func .....
+
+Thread(id:41, group:1) started
+Thread(id:45, group:1) finished (TIME : 1 s and 7897 us)..... uthread_context_func .....
+
+Thread(id:53, group:1) started
+Thread(id:35, group:1) finished (TIME : 1 s and 9925 us)..... uthread_context_func .....
+
+Thread(id:43, group:1) started
+Thread(id:41, group:1) finished (TIME : 1 s and 10049 us)..... uthread_context_func .....
+
+Thread(id:49, group:1) started
+Thread(id:53, group:1) finished (TIME : 1 s and 11458 us)..... uthread_context_func .....
+
+Thread(id:61, group:1) started
+Thread(id:43, group:1) finished (TIME : 1 s and 13351 us)..... uthread_context_func .....
+
+Thread(id:51, group:1) started
+Thread(id:49, group:1) finished (TIME : 1 s and 13803 us)..... uthread_context_func .....
+
+Thread(id:57, group:1) started
+Thread(id:51, group:1) finished (TIME : 1 s and 16778 us)..... uthread_context_func .....
+
+Thread(id:59, group:1) started
+Thread(id:57, group:1) finished (TIME : 1 s and 17811 us)..... uthread_context_func .....
+
+Thread(id:65, group:1) started
+Thread(id:61, group:1) finished (TIME : 1 s and 18486 us)..... uthread_context_func .....
+
+Thread(id:69, group:1) started
+Thread(id:59, group:1) finished (TIME : 1 s and 20521 us)..... uthread_context_func .....
+
+Thread(id:67, group:1) started
+Thread(id:71, group:1) finished (TIME : 1 s and 30514 us)..... uthread_context_func .....
+
+Thread(id:79, group:1) started
+Thread(id:65, group:1) finished (TIME : 1 s and 47915 us)..... uthread_context_func .....
+
+Thread(id:73, group:1) started
+Thread(id:69, group:1) finished (TIME : 1 s and 49705 us)..... uthread_context_func .....
+
+Thread(id:77, group:1) started
+Thread(id:67, group:1) finished (TIME : 1 s and 50658 us)..... uthread_context_func .....
+
+Thread(id:75, group:1) started
+Thread(id:79, group:1) finished (TIME : 1 s and 59255 us)..... uthread_context_func .....
+
+Thread(id:87, group:1) started..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:81, group:1) started..... uthread_context_func .....
+
+Thread(id:95, group:1) started
+Thread(id:85, group:1) started..... uthread_context_func .....
+
+Thread(id:83, group:1) started
+Thread(id:95, group:1) finished (TIME : 1 s and 95747 us)..... uthread_context_func .....
+
+Thread(id:103, group:1) started
+Thread(id:81, group:1) finished (TIME : 1 s and 96639 us)..... uthread_context_func .....
+
+Thread(id:89, group:1) started
+Thread(id:83, group:1) finished (TIME : 1 s and 96861 us)
+Thread(id:85, group:1) finished (TIME : 1 s and 96900 us)..... uthread_context_func .....
+
+Thread(id:93, group:1) started..... uthread_context_func .....
+
+Thread(id:91, group:1) started
+Thread(id:93, group:1) finished (TIME : 1 s and 126411 us)..... uthread_context_func .....
+
+Thread(id:101, group:1) started
+Thread(id:89, group:1) finished (TIME : 1 s and 126884 us)..... uthread_context_func .....
+
+Thread(id:97, group:1) started
+Thread(id:91, group:1) finished (TIME : 1 s and 127416 us)..... uthread_context_func .....
+
+Thread(id:99, group:1) started..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:111, group:1) started
+Thread(id:105, group:1) started..... uthread_context_func .....
+
+Thread(id:109, group:1) started..... uthread_context_func .....
+
+Thread(id:107, group:1) started..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:119, group:1) started
+Thread(id:113, group:1) started..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:115, group:1) started
+Thread(id:117, group:1) started..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:121, group:1) started
+Thread(id:127, group:1) started..... uthread_context_func .....
+
+Thread(id:125, group:1) started..... uthread_context_func .....
+
+Thread(id:123, group:1) started
+Thread(id:73, group:1) finished (TIME : 1 s and 478055 us)
+Thread(id:77, group:1) finished (TIME : 1 s and 479628 us)
+Thread(id:75, group:1) finished (TIME : 1 s and 480411 us)
+Thread(id:87, group:1) finished (TIME : 1 s and 488069 us)
+Thread(id:111, group:1) finished (TIME : 2 s and 18446744073709459383 us)
+Thread(id:107, group:1) finished (TIME : 2 s and 18446744073709459612 us)
+Thread(id:105, group:1) finished (TIME : 2 s and 18446744073709464125 us)
+Thread(id:109, group:1) finished (TIME : 2 s and 18446744073709464391 us)
+Thread(id:115, group:1) finished (TIME : 2 s and 18446744073709502078 us)
+Thread(id:119, group:1) finished (TIME : 2 s and 18446744073709502448 us)
+Thread(id:113, group:1) finished (TIME : 2 s and 18446744073709507168 us)
+Thread(id:127, group:1) finished (TIME : 2 s and 18446744073709542775 us)stealing uthread from another kthread
+
+Thread(id:123, group:1) finished (TIME : 2 s and 18446744073709543794 us)stealing uthread from another kthread
+
+Thread(id:121, group:1) finished (TIME : 2 s and 18446744073709550994 us)
+Thread(id:125, group:1) finished (TIME : 2 s and 22882 us)
+Thread(id:117, group:1) finished (TIME : 2 s and 33051 us)stealing uthread from another kthread
+
+Thread(id:102, group:0) finished (TIME : 2 s and 100187 us)
+Thread(id:96, group:0) finished (TIME : 2 s and 221323 us)
+Thread(id:97, group:1) finished (TIME : 2 s and 227677 us)
+Thread(id:100, group:0) finished (TIME : 2 s and 258217 us)
+Thread(id:99, group:1) finished (TIME : 2 s and 283077 us)
+Thread(id:101, group:1) finished (TIME : 2 s and 305210 us)
+Thread(id:98, group:0) finished (TIME : 2 s and 308830 us)
+Thread(id:103, group:1) finished (TIME : 2 s and 323358 us)Quitting kthread (2)
+Quitting kthread (0)
+Quitting kthread (1)
+mean uthread raw time for uthread set 0 is 499252
+Quitting kthread (3)
+standard deviation of uthread raw time for uthread set 0 is 498647.356842
+
+mean uthread raw time for uthread set 1 is 499755
+standard deviation of uthread raw time for uthread set 1 is 498626.308362
+
+mean uthread raw time for uthread set 2 is 500258
+standard deviation of uthread raw time for uthread set 2 is 498605.746318
+
+mean uthread raw time for uthread set 3 is 500741
+standard deviation of uthread raw time for uthread set 3 is 498601.534787
+
+mean uthread raw time for uthread set 4 is 504576
+standard deviation of uthread raw time for uthread set 4 is 498397.082690
+
+mean uthread raw time for uthread set 5 is 508509
+standard deviation of uthread raw time for uthread set 5 is 497987.071694
+
+mean uthread raw time for uthread set 6 is 512497
+standard deviation of uthread raw time for uthread set 6 is 497517.259790
+
+mean uthread raw time for uthread set 7 is 516615
+standard deviation of uthread raw time for uthread set 7 is 497975.673015
+
+mean uthread raw time for uthread set 8 is 546791
+standard deviation of uthread raw time for uthread set 8 is 497806.457309
+
+mean uthread raw time for uthread set 9 is 926149
+standard deviation of uthread raw time for uthread set 9 is 466141.229146
+
+mean uthread raw time for uthread set 10 is 645511
+standard deviation of uthread raw time for uthread set 10 is 561852.562630
+
+mean uthread raw time for uthread set 11 is 622626
+standard deviation of uthread raw time for uthread set 11 is 496378.296053
+
+mean uthread raw time for uthread set 12 is 2253266
+standard deviation of uthread raw time for uthread set 12 is 67749.047121
+
+mean uthread raw time for uthread set 13 is 1409353
+standard deviation of uthread raw time for uthread set 13 is 500682.119289
+
+mean uthread raw time for uthread set 14 is 1462998
+standard deviation of uthread raw time for uthread set 14 is 509843.801475
+
+mean uthread raw time for uthread set 15 is 1499117
+standard deviation of uthread raw time for uthread set 15 is 502121.458968
+
+**************************************************************
+
+mean uthread cpu time for uthread set 0 is 495
+standard deviation of uthread cpu time for uthread set 0 is 74.949149
+
+mean uthread cpu time for uthread set 1 is 495
+standard deviation of uthread cpu time for uthread set 1 is 74.771318
+
+mean uthread cpu time for uthread set 2 is 494
+standard deviation of uthread cpu time for uthread set 2 is 63.506889
+
+mean uthread cpu time for uthread set 3 is 470
+standard deviation of uthread cpu time for uthread set 3 is 24.634833
+
+mean uthread cpu time for uthread set 4 is 3853
+standard deviation of uthread cpu time for uthread set 4 is 706.040721
+
+mean uthread cpu time for uthread set 5 is 3899
+standard deviation of uthread cpu time for uthread set 5 is 852.780965
+
+mean uthread cpu time for uthread set 6 is 3975
+standard deviation of uthread cpu time for uthread set 6 is 1114.950391
+
+mean uthread cpu time for uthread set 7 is 4101
+standard deviation of uthread cpu time for uthread set 7 is 1112.935982
+
+mean uthread cpu time for uthread set 8 is 30176
+standard deviation of uthread cpu time for uthread set 8 is 1674.066494
+
+mean uthread cpu time for uthread set 9 is 29348
+standard deviation of uthread cpu time for uthread set 9 is 497.178288
+
+mean uthread cpu time for uthread set 10 is 29882
+standard deviation of uthread cpu time for uthread set 10 is 894.738020
+
+mean uthread cpu time for uthread set 11 is 29721
+standard deviation of uthread cpu time for uthread set 11 is 917.539713
+
+mean uthread cpu time for uthread set 12 is 248378
+standard deviation of uthread cpu time for uthread set 12 is 12059.945693
+
+mean uthread cpu time for uthread set 13 is 242623
+standard deviation of uthread cpu time for uthread set 13 is 2883.384383
+
+mean uthread cpu time for uthread set 14 is 246535
+standard deviation of uthread cpu time for uthread set 14 is 7215.055890
+
+mean uthread cpu time for uthread set 15 is 244320
+standard deviation of uthread cpu time for uthread set 15 is 4609.933649
+

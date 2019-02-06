@@ -149,15 +149,29 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 		}
 		else
 		{
+			/** update the last_start_time and tot_cpu_time fields of cur_uthread **/
+			struct timeval cur_time;
+			gettimeofday(&cur_time, NULL);
+			u_obj->tot_cpu_time += (cur_time.tv_sec*1000000 + cur_time.tv_usec) - (u_obj->last_start_time.tv_sec*1000000 + u_obj->last_start_time.tv_usec);
+
 			/* XXX: Apply uthread_group_penalty before insertion */
 			u_obj->uthread_state = UTHREAD_RUNNABLE;
-			if (ksched_shared_info.uthread_sched_alg == 0) add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+			if (ksched_shared_info.uthread_sched_alg == 0) {
+				add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+				//printf("uthread %d inserted into active_runq\n", u_obj->uthread_tid);
+			}
 			/** in credit scheduler, choose the right queue to put the current uthread into **/
 			else {
 				/** calculate the remaining credit of current uthread and insert it to the right queue **/
-				u_obj->credit -= KTHREAD_CREDIT_USEC/1000; /** decrease 1 credit per usecond **/
-				if (u_obj->credit < 0) add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
-				else add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock), u_obj);
+				u_obj->credit -= 25; /** decrease 25 credit per 10 usecond **/
+				if (u_obj->credit < 0) {
+					add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+					//printf("uthread %d inserted into OVER queue\n", u_obj->uthread_tid);
+				}
+				else {
+					add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock), u_obj);
+					//printf("uthread %d inserted into UNDER queue\n", u_obj->uthread_tid);
+				}
 			}
 			/* XXX: Save the context (signal mask not saved) */
 			if(sigsetjmp(u_obj->uthread_env, 0))
@@ -168,6 +182,31 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 	/* kthread_best_sched_uthread acquires kthread_runqlock. Dont lock it up when calling the function. */
 	if(!(u_obj = kthread_best_sched_uthread(kthread_runq)))
 	{
+		if (ksched_shared_info.uthread_sched_alg == 1) {
+			/** in credit scheduler, steal uthread from other kthread's runn queue if own run queue is empty **/
+			kthread_context_t *kthread_target = NULL;
+			for (int i = 0; i < GT_MAX_KTHREADS; ++i) {
+				if (!kthread_cpu_map[i] || (kthread_cpu_map[i] && (kthread_cpu_map[i]->kthread_flags & KTHREAD_DONE))) continue;
+				kthread_target = kthread_cpu_map[i];
+				break;
+			}
+			if (kthread_target) {
+				kthread_runqueue_t *target_kthread_runq = &(kthread_target->krunqueue);
+				/** get a uthread from target kthread (set the run queue lock before balancing) **/
+				//gt_spin_lock(&(target_kthread_runq->kthread_runqlock));
+				runqueue_t *target_runq = target_kthread_runq->active_runq;
+				if (target_runq->uthread_mask) {
+					int prio_idx = LOWEST_BIT_SET(target_runq->uthread_mask);
+					prio_struct_t prio = target_runq->prio_array[prio_idx];
+					int group_idx = LOWEST_BIT_SET(prio.group_mask);
+					u_obj = TAILQ_LAST(&prio.group[group_idx], uthread_head);
+					rem_from_runqueue(target_runq, &(target_kthread_runq->kthread_runqlock), u_obj);
+					printf("stealing uthread from another kthread\n");
+				}
+				//gt_spin_unlock(&(target_kthread_runq->kthread_runqlock));
+			}
+		}
+
 		/* Done executing all uthreads. Return to main */
 		/* XXX: We can actually get rid of KTHREAD_DONE flag */
 		if(ksched_shared_info.kthread_tot_uthreads && !ksched_shared_info.kthread_cur_uthreads)
@@ -176,11 +215,14 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 			k_ctx->kthread_flags |= KTHREAD_DONE;
 		}
 
-		siglongjmp(k_ctx->kthread_env, 1);
-		return;
+		if (!u_obj) {
+			siglongjmp(k_ctx->kthread_env, 1);
+			return;
+		}
 	}
 
 	kthread_runq->cur_uthread = u_obj;
+	gettimeofday(&(kthread_runq->cur_uthread->last_start_time), NULL);
 	if((u_obj->uthread_state == UTHREAD_INIT) && (uthread_init(u_obj)))
 	{
 		fprintf(stderr, "uthread_init failed on kthread(%d)\n", k_ctx->cpuid);
@@ -196,6 +238,12 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 	siglongjmp(u_obj->uthread_env, 1);
 
 	return;
+}
+
+
+/** voluntary preemption **/
+extern void gt_yield() {
+	uthread_schedule(ksched_shared_info.uthread_sched_alg? sched_get_head: sched_find_best_uthread);
 }
 
 
@@ -230,6 +278,9 @@ static void uthread_context_func(int signo)
 	cur_uthread->uthread_func(cur_uthread->uthread_arg);
 	cur_uthread->uthread_state = UTHREAD_DONE;
 
+	/** update its entry in cpu_time array **/
+	ksched_shared_info.cpu_time[cur_uthread->uthread_tid/8][cur_uthread->uthread_tid%8] = cur_uthread->tot_cpu_time;
+
 	if (ksched_shared_info.uthread_sched_alg == 0) uthread_schedule(&sched_find_best_uthread);
 	else uthread_schedule(&sched_get_head);
 	return;
@@ -261,9 +312,11 @@ extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, 
 	u_new->uthread_gid = u_gid;
 	u_new->uthread_func = u_func;
 	u_new->uthread_arg = u_arg;
+	/** for credit scheduler and calculation of cpu time **/
 	u_new->initial_credit = u_weight;
 	u_new->credit = u_weight;
 	u_new->cap = u_cap;
+	u_new->tot_cpu_time = 0;
 
 	/* Allocate new stack for uthread */
 	u_new->uthread_stack.ss_flags = 0; /* Stack enabled for signal handling */
@@ -288,6 +341,7 @@ extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, 
 	kthread_runq = ksched_find_target(u_new);
 
 	*u_tid = u_new->uthread_tid;
+	// printf("uthread %d initial states set\n", *u_tid);
 	/* Queue the uthread for target-cpu. Let target-cpu take care of initialization. */
 	add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock), u_new);
 

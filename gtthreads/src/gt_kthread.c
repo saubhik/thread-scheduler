@@ -298,9 +298,14 @@ static void gtthread_app_start(void *arg)
 			/* XXX: gtthread app cleanup has to be done. */
 			continue;
 		}
-		if (ksched_shared_info.uthread_sched_alg == 0) uthread_schedule(&sched_find_best_uthread);
-		else if (ksched_shared_info.uthread_sched_alg == 1) uthread_schedule(&sched_get_head);
-		else printf("uthread isn't invoked in gtthread_app_start()!\n");
+		if (ksched_shared_info.uthread_sched_alg == 0) {
+			//printf("kthread %d, O(1) scheduler\n", k_ctx->cpuid);
+			uthread_schedule(&sched_find_best_uthread);
+		}
+		else if (ksched_shared_info.uthread_sched_alg == 1) {
+			//printf("kthread %d, credit scheduler\n", k_ctx->cpuid);
+			uthread_schedule(&sched_get_head);
+		}
 	}
 	kthread_exit();
 
@@ -374,7 +379,7 @@ yield_again:
 	return;
 }
 
-extern void gtthread_app_exit()
+extern unsigned long** gtthread_app_exit()
 {
 	/* gtthread_app_exit called by only main thread. */
 	/* For main thread, trigger start again. */
@@ -404,7 +409,14 @@ extern void gtthread_app_exit()
 		/* Main thread has to wait for other kthreads */
 		__asm__ __volatile__ ("pause\n");
 	}
-	return;	
+	unsigned long** uthread_cpu_time = (unsigned long **) malloc(16 * sizeof(*(uthread_cpu_time)));
+	for (int i = 0; i < 16; ++i) uthread_cpu_time[i] = (unsigned long *) malloc(8 * sizeof(*(uthread_cpu_time[0])));
+	for (int i = 0; i < 16; ++i) {
+		for (int j = 0; j < 8; ++j) {
+			uthread_cpu_time[i][j] = ksched_shared_info.cpu_time[i][j];
+		}
+	}
+	return uthread_cpu_time;
 }
 
 /**********************************************************************/

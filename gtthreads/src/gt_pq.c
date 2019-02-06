@@ -33,6 +33,7 @@ static inline void __add_to_runqueue(runqueue_t *runq, uthread_struct_t *u_elem)
 
 	/* Insert at the tail */
 	uhead = &runq->prio_array[uprio].group[ugroup];
+	//printf("uthread_tid: %d, tot_cpu_time: %lu\n", u_elem->uthread_tid, u_elem->tot_cpu_time);
 	TAILQ_INSERT_TAIL(uhead, u_elem, uthread_runq);
 
 	/* Update information */
@@ -221,6 +222,45 @@ extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_run
 }
 
 
+/** for credit scheduler, simply return the head of the queue **/
+extern uthread_struct_t *sched_get_head(kthread_runqueue_t *kthread_runq) {
+	// printf("in sched_get_head\n");
+	runqueue_t *runq = kthread_runq->active_runq;
+	uthread_struct_t *u_obj = NULL;
+	uthread_head_t *headq;
+	gt_spin_lock(&kthread_runq->kthread_runqlock);
+	/** if there is no uthread in UNDER queue, switch run queue and re-assign credits **/
+	if (!runq->uthread_mask) {
+		kthread_runq->active_runq = kthread_runq->expires_runq;
+		kthread_runq->expires_runq = runq;
+		runq = kthread_runq->expires_runq;
+		/** if both UNDER queue and OVER queue are empty, return null or steal an uthread to return **/
+		if (!runq->uthread_mask) {
+
+			gt_spin_unlock(&(kthread_runq->kthread_runqlock));
+			return u_obj;
+		}
+
+		for (int i = 0; i < MAX_UTHREAD_PRIORITY; ++i) {
+			if (!kthread_runq->active_runq->prio_array[i].group_mask) continue;
+			for (int j = 0; j < MAX_UTHREAD_GROUPS; ++j) {
+				uthread_head_t *u_head = &kthread_runq->active_runq->prio_array[i].group[j];
+				uthread_struct_t *uthread_ele;
+				TAILQ_FOREACH(uthread_ele, u_head, uthread_runq) uthread_ele->credit = uthread_ele->initial_credit;
+			}
+		}
+	}
+
+	/** return the first uthread in the run queue **/
+	int prio_idx = LOWEST_BIT_SET(runq->uthread_mask);
+	prio_struct_t prio = runq->prio_array[prio_idx];
+	int group_idx = LOWEST_BIT_SET(prio.group_mask);
+	u_obj = TAILQ_FIRST(&prio.group[group_idx]);
+	__rem_from_runqueue(runq, u_obj);
+	gt_spin_unlock(&(kthread_runq->kthread_runqlock));
+	return u_obj;
+}
+
 
 /* XXX: More work to be done !!! */
 extern gt_spinlock_t uthread_group_penalty_lock;
@@ -282,37 +322,6 @@ extern uthread_struct_t *sched_find_best_uthread_group(kthread_runqueue_t *kthre
 	rem_from_runqueue(runq, &(kthread_runq->kthread_runqlock), u_obj);
 	
 	return(u_obj);
-}
-
-/** for credit scheduler, simply return the head of the queue **/
-extern uthread_struct_t *sched_get_head(kthread_runqueue_t *kthread_runq) {
-	runqueue_t *runq = kthread_runq->active_runq;
-	uthread_struct_t *u_obj;
-	uthread_head_t *headq;
-	gt_spin_lock(&kthread_runq->kthread_runqlock);
-	/** if there is no uthread in UNDER queue, switch run queue and re-assign credits **/
-	if (!runq->uthread_tot) {
-		kthread_runq->active_runq = kthread_runq->expires_runq;
-		kthread_runq->expires_runq = runq;
-		for (int i = 0; i < MAX_UTHREAD_PRIORITY; ++i) {
-			if (!kthread_runq->active_runq->prio_array[i].group_mask) continue;
-			for (int j = 0; j < MAX_UTHREAD_GROUPS; ++j) {
-				uthread_head_t *u_head = &kthread_runq->active_runq->prio_array[i].group[j];
-				uthread_struct_t *uthread_ele;
-				TAILQ_FOREACH(uthread_ele, u_head, uthread_runq) uthread_ele->credit = uthread_ele->initial_credit;
-			}
-		}
-		gt_spin_unlock(&(kthread_runq->kthread_runqlock));
-		return NULL;
-	}
-
-	/** return the first uthread in the run queue **/
-	int prio_idx = LOWEST_BIT_SET(runq->uthread_mask);
-	prio_struct_t prio = runq->prio_array[prio_idx];
-	int group_idx = LOWEST_BIT_SET(prio.group_mask);
-	u_obj = TAILQ_FIRST(&prio.group[group_idx]);
-	rem_from_runqueue(runq, &(kthread_runq->kthread_runqlock), u_obj);
-	return u_obj;
 }
 
 #if 0

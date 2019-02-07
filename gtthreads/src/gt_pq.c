@@ -246,7 +246,7 @@ extern uthread_struct_t *sched_get_head(kthread_runqueue_t *kthread_runq) {
 			for (int j = 0; j < MAX_UTHREAD_GROUPS; ++j) {
 				uthread_head_t *u_head = &kthread_runq->active_runq->prio_array[i].group[j];
 				uthread_struct_t *uthread_ele;
-				TAILQ_FOREACH(uthread_ele, u_head, uthread_runq) uthread_ele->credit = uthread_ele->initial_credit;
+				TAILQ_FOREACH(uthread_ele, u_head, uthread_runq) uthread_ele->credit = (uthread_ele->credit + uthread_ele->initial_credit > 0? uthread_ele->credit + uthread_ele->initial_credit: 1);
 			}
 		}
 	}

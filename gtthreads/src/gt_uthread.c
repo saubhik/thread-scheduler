@@ -124,14 +124,28 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 
 	k_ctx = kthread_cpu_map[kthread_apic_id()];
 	kthread_runq = &(k_ctx->krunqueue);
+    
 
 	if((u_obj = kthread_runq->cur_uthread))
 	{
+		/** update the last_start_time and tot_cpu_time fields of cur_uthread **/
+		struct timeval cur_time;
+		gettimeofday(&cur_time, NULL);
+		unsigned long cpu_time_interval = (cur_time.tv_sec*1000000 + cur_time.tv_usec) - (u_obj->last_start_time.tv_sec*1000000 + u_obj->last_start_time.tv_usec);
+		u_obj->tot_cpu_time += cpu_time_interval;
+		/** calculate the remaining credit of current uthread **/
+		printf("In uthread %d cpu time consumed: %lu\n", u_obj->uthread_tid, cpu_time_interval);
+		u_obj->credit -= cpu_time_interval/500; /** decrease 1 credit per milisecond **/
+
+
 		/*Go through the runq and schedule the next thread to run */
 		kthread_runq->cur_uthread = NULL;
 		
 		if(u_obj->uthread_state & (UTHREAD_DONE | UTHREAD_CANCELLED))
 		{
+			/** update its entry in cpu_time array **/
+			ksched_shared_info.cpu_time[u_obj->uthread_tid/8][u_obj->uthread_tid%8] = u_obj->tot_cpu_time;
+
 			/* XXX: Inserting uthread into zombie queue is causing improper
 			 * cleanup/exit of uthread (core dump) */
 			uthread_head_t * kthread_zhead = &(kthread_runq->zombie_uthreads);
@@ -149,11 +163,6 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 		}
 		else
 		{
-			/** update the last_start_time and tot_cpu_time fields of cur_uthread **/
-			struct timeval cur_time;
-			gettimeofday(&cur_time, NULL);
-			u_obj->tot_cpu_time += (cur_time.tv_sec*1000000 + cur_time.tv_usec) - (u_obj->last_start_time.tv_sec*1000000 + u_obj->last_start_time.tv_usec);
-
 			/* XXX: Apply uthread_group_penalty before insertion */
 			u_obj->uthread_state = UTHREAD_RUNNABLE;
 			if (ksched_shared_info.uthread_sched_alg == 0) {
@@ -162,15 +171,13 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 			}
 			/** in credit scheduler, choose the right queue to put the current uthread into **/
 			else {
-				/** calculate the remaining credit of current uthread and insert it to the right queue **/
-				u_obj->credit -= 25; /** decrease 25 credit per 10 usecond **/
 				if (u_obj->credit < 0) {
 					add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
-					//printf("uthread %d inserted into OVER queue\n", u_obj->uthread_tid);
+					printf("credits left: %d, uthread %d inserted into OVER queue\n", u_obj->credit, u_obj->uthread_tid);
 				}
 				else {
 					add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock), u_obj);
-					//printf("uthread %d inserted into UNDER queue\n", u_obj->uthread_tid);
+					printf("credits left: %d, uthread %d inserted into UNDER queue\n", u_obj->credit, u_obj->uthread_tid);
 				}
 			}
 			/* XXX: Save the context (signal mask not saved) */
@@ -222,7 +229,9 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 	}
 
 	kthread_runq->cur_uthread = u_obj;
+	/** update the last_start_time of the new cur_uthread **/
 	gettimeofday(&(kthread_runq->cur_uthread->last_start_time), NULL);
+	printf("\nin uthread_schedule, last_start_time of uthread %d is set to %lu s %lu us\n", u_obj->uthread_tid, u_obj->last_start_time.tv_sec, u_obj->last_start_time.tv_usec);
 	if((u_obj->uthread_state == UTHREAD_INIT) && (uthread_init(u_obj)))
 	{
 		fprintf(stderr, "uthread_init failed on kthread(%d)\n", k_ctx->cpuid);
@@ -278,9 +287,6 @@ static void uthread_context_func(int signo)
 	cur_uthread->uthread_func(cur_uthread->uthread_arg);
 	cur_uthread->uthread_state = UTHREAD_DONE;
 
-	/** update its entry in cpu_time array **/
-	ksched_shared_info.cpu_time[cur_uthread->uthread_tid/8][cur_uthread->uthread_tid%8] = cur_uthread->tot_cpu_time;
-
 	if (ksched_shared_info.uthread_sched_alg == 0) uthread_schedule(&sched_find_best_uthread);
 	else uthread_schedule(&sched_get_head);
 	return;
@@ -317,6 +323,9 @@ extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, 
 	u_new->credit = u_weight;
 	u_new->cap = u_cap;
 	u_new->tot_cpu_time = 0;
+	u_new->tot_cpu_time = 0;
+	u_new->last_start_time.tv_sec = 0;
+	u_new->last_start_time.tv_usec = 0;
 
 	/* Allocate new stack for uthread */
 	u_new->uthread_stack.ss_flags = 0; /* Stack enabled for signal handling */

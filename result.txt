@@ -2,492 +2,1123 @@ kthread_sched_arg: 1
 kthread(1) created !!
 kthread(2) created !!
 kthread(3) created !!
+
+in uthread_schedule, last_start_time of uthread 6 is set to 1549510382 s 997492 us
 ..... uthread_context_func .....
 
-Thread(id:0, group:0) started..... uthread_context_func .....
-
-Thread(id:2, group:0) started..... uthread_context_func .....
-
-Thread(id:4, group:0) started..... uthread_context_func .....
-
 Thread(id:6, group:0) started
-Thread(id:0, group:0) finished (TIME : 0 s and 487 us)..... uthread_context_func .....
+Thread(id:6, group:0) finished (TIME : 0 s and 1301 us)In uthread 6 cpu time consumed: 887
 
-Thread(id:2, group:0) finished (TIME : 0 s and 515 us)
-Thread(id:8, group:0) started..... uthread_context_func .....
-
-Thread(id:10, group:0) started
-Thread(id:6, group:0) finished (TIME : 0 s and 741 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 14 is set to 1549510382 s 998465 us
+..... uthread_context_func .....
 
 Thread(id:14, group:0) started
-Thread(id:4, group:0) finished (TIME : 0 s and 819 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 4 is set to 1549510382 s 998860 us
+..... uthread_context_func .....
+
+Thread(id:4, group:0) started
+Thread(id:14, group:0) finished (TIME : 0 s and 2189 us)In uthread 14 cpu time consumed: 776
+
+in uthread_schedule, last_start_time of uthread 22 is set to 1549510382 s 999321 us
+..... uthread_context_func .....
+
+Thread(id:22, group:0) started
+Thread(id:22, group:0) finished (TIME : 0 s and 2931 us)In uthread 22 cpu time consumed: 662
+
+in uthread_schedule, last_start_time of uthread 30 is set to 1549510383 s 53 us
+..... uthread_context_func .....
+
+Thread(id:30, group:0) started
+Thread(id:30, group:0) finished (TIME : 1 s and 18446744073708555270 us)In uthread 30 cpu time consumed: 652
+
+in uthread_schedule, last_start_time of uthread 38 is set to 1549510383 s 784 us
+..... uthread_context_func .....
+
+Thread(id:38, group:0) started
+Thread(id:4, group:0) finished (TIME : 0 s and 2265 us)In uthread 4 cpu time consumed: 4010
+
+in uthread_schedule, last_start_time of uthread 12 is set to 1549510383 s 2879 us
+..... uthread_context_func .....
 
 Thread(id:12, group:0) started
-Thread(id:10, group:0) finished (TIME : 0 s and 977 us)
-Thread(id:8, group:0) finished (TIME : 0 s and 978 us)..... uthread_context_func .....
+Thread(id:12, group:0) finished (TIME : 1 s and 18446744073708557877 us)In uthread 12 cpu time consumed: 369
+
+in uthread_schedule, last_start_time of uthread 20 is set to 1549510383 s 3257 us
+..... uthread_context_func .....
+
+Thread(id:20, group:0) started
+Thread(id:20, group:0) finished (TIME : 1 s and 18446744073708558248 us)In uthread 20 cpu time consumed: 363
+
+in uthread_schedule, last_start_time of uthread 28 is set to 1549510383 s 3631 us
+..... uthread_context_func .....
+
+Thread(id:28, group:0) started
+Thread(id:38, group:0) finished (TIME : 1 s and 18446744073708558470 us)In uthread 38 cpu time consumed: 3122
+
+
+Thread(id:28, group:0) finished (TIME : 1 s and 18446744073708558631 us)
+In uthread 28 cpu time consumed: 373
+
+in uthread_schedule, last_start_time of uthread 36 is set to 1549510383 s 4012 us
+..... uthread_context_func .....
+
+Thread(id:36, group:0) startedin uthread_schedule, last_start_time of uthread 46 is set to 1549510383 s 3976 us
+..... uthread_context_func .....
+
+Thread(id:46, group:0) started
+Thread(id:36, group:0) finished (TIME : 1 s and 18446744073708561139 us)In uthread 36 cpu time consumed: 2500
+
+in uthread_schedule, last_start_time of uthread 44 is set to 1549510383 s 6521 us
+..... uthread_context_func .....
+
+Thread(id:44, group:0) started
+in uthread_schedule, last_start_time of uthread 0 is set to 1549510383 s 6861 us
+..... uthread_context_func .....
+
+Thread(id:0, group:0) started
+Thread(id:46, group:0) finished (TIME : 1 s and 18446744073708561632 us)In uthread 46 cpu time consumed: 3091
+
+in uthread_schedule, last_start_time of uthread 54 is set to 1549510383 s 7137 us
+
+Thread(id:0, group:0) finished (TIME : 1 s and 18446744073708561880 us)In uthread 0 cpu time consumed: 391
+
+in uthread_schedule, last_start_time of uthread 8 is set to 1549510383 s 7261 us
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+Thread(id:54, group:0) started
+Thread(id:44, group:0) finished (TIME : 1 s and 18446744073708563667 us)In uthread 44 cpu time consumed: 2520
+
+in uthread_schedule, last_start_time of uthread 52 is set to 1549510383 s 9050 us
+..... uthread_context_func .....
+
+Thread(id:52, group:0) started
+Thread(id:54, group:0) finished (TIME : 1 s and 18446744073708564706 us)In uthread 54 cpu time consumed: 3008
+
+in uthread_schedule, last_start_time of uthread 62 is set to 1549510383 s 10220 us
+..... uthread_context_func .....
+
+Thread(id:62, group:0) started
+in uthread_schedule, last_start_time of uthread 2 is set to 1549510383 s 10862 us
+..... uthread_context_func .....
+
+Thread(id:2, group:0) started
+Thread(id:2, group:0) finished (TIME : 1 s and 18446744073708565874 us)In uthread 2 cpu time consumed: 383
+
+in uthread_schedule, last_start_time of uthread 10 is set to 1549510383 s 11253 us
+..... uthread_context_func .....
+
+Thread(id:10, group:0) started
+Thread(id:10, group:0) finished (TIME : 1 s and 18446744073708566242 us)In uthread 10 cpu time consumed: 359
+
+in uthread_schedule, last_start_time of uthread 18 is set to 1549510383 s 11620 us
 ..... uthread_context_func .....
 
 Thread(id:18, group:0) started
-Thread(id:16, group:0) started
-Thread(id:14, group:0) finished (TIME : 0 s and 1219 us)..... uthread_context_func .....
+Thread(id:18, group:0) finished (TIME : 1 s and 18446744073708566616 us)In uthread 18 cpu time consumed: 368
 
-Thread(id:22, group:0) started
-Thread(id:18, group:0) finished (TIME : 0 s and 1460 us)
-Thread(id:16, group:0) finished (TIME : 0 s and 1468 us)..... uthread_context_func .....
-
-Thread(id:24, group:0) started..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 26 is set to 1549510383 s 11995 us
+..... uthread_context_func .....
 
 Thread(id:26, group:0) started
-Thread(id:12, group:0) finished (TIME : 0 s and 1553 us)..... uthread_context_func .....
+Thread(id:26, group:0) finished (TIME : 1 s and 18446744073708566981 us)In uthread 26 cpu time consumed: 357
 
-Thread(id:20, group:0) started
-Thread(id:22, group:0) finished (TIME : 0 s and 1696 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 34 is set to 1549510383 s 12359 us
+..... uthread_context_func .....
 
-Thread(id:30, group:0) started
-Thread(id:26, group:0) finished (TIME : 0 s and 1950 us)
-Thread(id:24, group:0) finished (TIME : 0 s and 1952 us)..... uthread_context_func .....
+Thread(id:34, group:0) started
+Thread(id:62, group:0) finished (TIME : 1 s and 18446744073708568094 us)In uthread 62 cpu time consumed: 3313
 
-Thread(id:34, group:0) started..... uthread_context_func .....
-
-Thread(id:32, group:0) started
-Thread(id:30, group:0) finished (TIME : 0 s and 2164 us)..... uthread_context_func .....
-
-Thread(id:38, group:0) started
-Thread(id:20, group:0) finished (TIME : 0 s and 2256 us)..... uthread_context_func .....
-
-Thread(id:28, group:0) started
-Thread(id:28, group:0) finished (TIME : 0 s and 2827 us)..... uthread_context_func .....
-
-Thread(id:36, group:0) started
-Thread(id:34, group:0) finished (TIME : 0 s and 5403 us)..... uthread_context_func .....
-
-Thread(id:42, group:0) started
-Thread(id:32, group:0) finished (TIME : 0 s and 5587 us)..... uthread_context_func .....
-
-Thread(id:40, group:0) started
-Thread(id:38, group:0) finished (TIME : 0 s and 5733 us)..... uthread_context_func .....
-
-Thread(id:46, group:0) started
-Thread(id:36, group:0) finished (TIME : 0 s and 8403 us)..... uthread_context_func .....
-
-Thread(id:44, group:0) started
-Thread(id:46, group:0) finished (TIME : 0 s and 8991 us)..... uthread_context_func .....
-
-Thread(id:54, group:0) started
-Thread(id:42, group:0) finished (TIME : 0 s and 9533 us)..... uthread_context_func .....
-
-Thread(id:50, group:0) started
-Thread(id:40, group:0) finished (TIME : 0 s and 11649 us)..... uthread_context_func .....
-
-Thread(id:48, group:0) started
-Thread(id:44, group:0) finished (TIME : 0 s and 12386 us)..... uthread_context_func .....
-
-Thread(id:54, group:0) finished (TIME : 0 s and 12470 us)..... uthread_context_func .....
-
-Thread(id:62, group:0) started
-Thread(id:52, group:0) started
-Thread(id:48, group:0) finished (TIME : 0 s and 15784 us)..... uthread_context_func .....
-
-Thread(id:52, group:0) finished (TIME : 0 s and 15790 us)..... uthread_context_func .....
-
-Thread(id:56, group:0) started
-Thread(id:60, group:0) started
-Thread(id:62, group:0) finished (TIME : 0 s and 16050 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 70 is set to 1549510383 s 13602 us
+..... uthread_context_func .....
 
 Thread(id:70, group:0) started
-Thread(id:50, group:0) finished (TIME : 0 s and 16408 us)..... uthread_context_func .....
+Thread(id:34, group:0) finished (TIME : 1 s and 18446744073708569480 us)In uthread 34 cpu time consumed: 2502
 
-Thread(id:58, group:0) started
-Thread(id:60, group:0) finished (TIME : 0 s and 19472 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 42 is set to 1549510383 s 14866 us
+..... uthread_context_func .....
+
+Thread(id:42, group:0) started
+Thread(id:42, group:0) finished (TIME : 1 s and 18446744073708571997 us)In uthread 42 cpu time consumed: 2504
+
+in uthread_schedule, last_start_time of uthread 50 is set to 1549510383 s 17381 us
+..... uthread_context_func .....
+
+Thread(id:50, group:0) started
+Thread(id:8, group:0) started
+Thread(id:8, group:0) finished (TIME : 1 s and 18446744073708577815 us)In uthread 8 cpu time consumed: 15926
+
+in uthread_schedule, last_start_time of uthread 16 is set to 1549510383 s 23201 us
+..... uthread_context_func .....
+
+Thread(id:16, group:0) started
+Thread(id:16, group:0) finished (TIME : 1 s and 18446744073708578199 us)In uthread 16 cpu time consumed: 369
+
+in uthread_schedule, last_start_time of uthread 24 is set to 1549510383 s 23578 us
+..... uthread_context_func .....
+
+Thread(id:24, group:0) started
+Thread(id:24, group:0) finished (TIME : 1 s and 18446744073708578583 us)In uthread 24 cpu time consumed: 377
+
+in uthread_schedule, last_start_time of uthread 32 is set to 1549510383 s 23963 us
+..... uthread_context_func .....
+
+Thread(id:32, group:0) started
+Thread(id:32, group:0) finished (TIME : 1 s and 18446744073708581111 us)In uthread 32 cpu time consumed: 2520
+
+in uthread_schedule, last_start_time of uthread 40 is set to 1549510383 s 26492 us
+..... uthread_context_func .....
+
+Thread(id:40, group:0) started
+Thread(id:52, group:0) finished (TIME : 1 s and 18446744073708582191 us)In uthread 52 cpu time consumed: 18515
+
+in uthread_schedule, last_start_time of uthread 60 is set to 1549510383 s 27575 us
+..... uthread_context_func .....
+
+Thread(id:60, group:0) started
+Thread(id:60, group:0) finished (TIME : 1 s and 18446744073708584716 us)In uthread 60 cpu time consumed: 2514
+
+in uthread_schedule, last_start_time of uthread 68 is set to 1549510383 s 30098 us
+..... uthread_context_func .....
 
 Thread(id:68, group:0) started
-Thread(id:56, group:0) finished (TIME : 0 s and 19652 us)..... uthread_context_func .....
+Thread(id:70, group:0) finished (TIME : 1 s and 18446744073708591646 us)In uthread 70 cpu time consumed: 23504
 
-Thread(id:64, group:0) started
-Thread(id:58, group:0) finished (TIME : 0 s and 19993 us)..... uthread_context_func .....
-
-Thread(id:66, group:0) started
-Thread(id:70, group:0) finished (TIME : 0 s and 44252 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 78 is set to 1549510383 s 37175 us
+..... uthread_context_func .....
 
 Thread(id:78, group:0) started
-Thread(id:68, group:0) finished (TIME : 0 s and 48108 us)..... uthread_context_func .....
+Thread(id:40, group:0) finished (TIME : 1 s and 18446744073708599663 us)In uthread 40 cpu time consumed: 18555
+
+in uthread_schedule, last_start_time of uthread 48 is set to 1549510383 s 45056 us
+..... uthread_context_func .....
+
+Thread(id:48, group:0) started
+Thread(id:50, group:0) finished (TIME : 1 s and 18446744073708602528 us)In uthread 50 cpu time consumed: 30522
+
+in uthread_schedule, last_start_time of uthread 58 is set to 1549510383 s 47911 us
+..... uthread_context_func .....
+
+Thread(id:58, group:0) started
+Thread(id:58, group:0) finished (TIME : 1 s and 18446744073708605040 us)In uthread 58 cpu time consumed: 2501
+
+in uthread_schedule, last_start_time of uthread 66 is set to 1549510383 s 50420 us
+..... uthread_context_func .....
+
+Thread(id:66, group:0) started
+Thread(id:78, group:0) finished (TIME : 1 s and 18446744073708611873 us)In uthread 78 cpu time consumed: 20137
+
+in uthread_schedule, last_start_time of uthread 86 is set to 1549510383 s 57380 us
+..... uthread_context_func .....
+
+Thread(id:86, group:0) started
+Thread(id:48, group:0) finished (TIME : 1 s and 18446744073708618216 us)In uthread 48 cpu time consumed: 18534
+
+in uthread_schedule, last_start_time of uthread 56 is set to 1549510383 s 63598 us
+..... uthread_context_func .....
+
+Thread(id:56, group:0) started
+Thread(id:56, group:0) finished (TIME : 1 s and 18446744073708620747 us)In uthread 56 cpu time consumed: 2522
+
+in uthread_schedule, last_start_time of uthread 64 is set to 1549510383 s 66128 us
+..... uthread_context_func .....
+
+Thread(id:64, group:0) startedIn uthread 86 cpu time consumed: 17510
+credits left: 40, uthread 86 inserted into UNDER queue
+
+in uthread_schedule, last_start_time of uthread 94 is set to 1549510383 s 75095 us
+..... uthread_context_func .....
+
+Thread(id:94, group:0) startedIn uthread 66 cpu time consumed: 32445
+credits left: In uthread -64 cpu time 66 inserte16752
+ OVER queue
+credits left: In uthread -64 cpu time 66 inserte16752
+
+credits left: in uthread_schedule, last_start_time of uthrcredits left: in uthread_schedule, last_start_time of uthread 74 is set to 1549510383 s 82890 us
+
+in uthread_schedule, last_start_time of uthread 72 is set to 1549510383 s 82901 us
+..... uthread_context_func .....
+
+Thread(id:74, group:0) started..... uthread_context_func .....
+
+Thread(id:72, group:0) startedIn uthread 68 cpu time consumed: 56765
+credits left: -88, uthread 68 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 76 is set to 1549510383 s 86887 us
+..... uthread_context_func .....
 
 Thread(id:76, group:0) started
-Thread(id:66, group:0) finished (TIME : 0 s and 50970 us)..... uthread_context_func .....
+Thread(id:94, group:0) finished (TIME : 1 s and 18446744073708650263 us)In uthread 94 cpu time consumed: 20657
 
-Thread(id:74, group:0) started
-Thread(id:64, group:0) finished (TIME : 0 s and 53322 us)..... uthread_context_func .....
-
-Thread(id:72, group:0) started..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 102 is set to 1549510383 s 95849 us
 ..... uthread_context_func .....
-..... uthread_context_func .....
-
-Thread(id:82, group:0) started..... uthread_context_func .....
-
-Thread(id:80, group:0) started
-Thread(id:84, group:0) started
-Thread(id:86, group:0) started
-Thread(id:86, group:0) finished (TIME : 0 s and 95582 us)..... uthread_context_func .....
-
-Thread(id:94, group:0) started
-Thread(id:84, group:0) finished (TIME : 0 s and 95701 us)..... uthread_context_func .....
-
-Thread(id:92, group:0) started
-Thread(id:82, group:0) finished (TIME : 0 s and 97245 us)..... uthread_context_func .....
-
-Thread(id:90, group:0) started
-Thread(id:80, group:0) finished (TIME : 0 s and 98451 us)..... uthread_context_func .....
-
-Thread(id:88, group:0) started
-Thread(id:94, group:0) finished (TIME : 0 s and 124207 us)..... uthread_context_func .....
 
 Thread(id:102, group:0) started
-Thread(id:92, group:0) finished (TIME : 0 s and 124569 us)..... uthread_context_func .....
+Thread(id:76, group:0) finished (TIME : 1 s and 18446744073708706211 us)In uthread 76 cpu time consumed: 64700
+
+in uthread_schedule, last_start_time of uthread 84 is set to 1549510383 s 151601 us
+..... uthread_context_func .....
+
+Thread(id:84, group:0) started
+Thread(id:74, group:0) finished (TIME : 1 s and 18446744073708713262 us)In uthread 74 cpu time consumed: 75747
+
+in uthread_schedule, last_start_time of uthread 82 is set to 1549510383 s 158646 us
+..... uthread_context_func .....
+
+Thread(id:82, group:0) startedIn uthread 102 cpu time consumed: 87035
+credits left: -149, uthread 102 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 110 is set to 1549510383 s 183102 us
+..... uthread_context_func .....
+
+Thread(id:110, group:0) startedIn uthread 82 cpu time consumed: 32220
+credits left: 11, uthread 82 inserted into UNDER queue
+
+in uthread_schedule, last_start_time of uthread 90 is set to 1549510383 s 190885 us
+..... uthread_context_func .....
+
+Thread(id:90, group:0) startedIn uthread 84 cpu time consumed: 43263
+credits left: -11, uthread 84 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 92 is set to 1549510383 s 194885 us
+..... uthread_context_func .....
+
+Thread(id:92, group:0) startedIn uthread 72 cpu time consumed: 119965
+credits left: -189, uthread 72 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 80 is set to 1549510383 s 202886 us
+..... uthread_context_func .....
+
+Thread(id:80, group:0) started
+Thread(id:92, group:0) finished (TIME : 1 s and 18446744073708813143 us)In uthread 92 cpu time consumed: 63632
+
+in uthread_schedule, last_start_time of uthread 100 is set to 1549510383 s 258527 us
+..... uthread_context_func .....
 
 Thread(id:100, group:0) started
-Thread(id:90, group:0) finished (TIME : 0 s and 127461 us)..... uthread_context_func .....
+Thread(id:90, group:0) finished (TIME : 1 s and 18446744073708821114 us)In uthread 90 cpu time consumed: 75604
 
-Thread(id:98, group:0) started
-Thread(id:88, group:0) finished (TIME : 0 s and 129943 us)..... uthread_context_func .....
-
-Thread(id:96, group:0) started..... uthread_context_func .....
-..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 98 is set to 1549510383 s 266497 us
 ..... uthread_context_func .....
 
-Thread(id:108, group:0) started
+Thread(id:98, group:0) startedIn uthread 110 cpu time consumed: 103791
+credits left: -157, uthread 110 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 118 is set to 1549510383 s 287099 us
+..... uthread_context_func .....
+
+Thread(id:118, group:0) startedIn uthread 100 cpu time consumed: 36337
+credits left: -47, uthread 100 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 108 is set to 1549510383 s 294886 us
+..... uthread_context_func .....
+
+Thread(id:108, group:0) startedIn uthread In cpu time consumed: 32373
+In uthread In cpu time consumed: 32373
+80 cpu time consumed: 95981
+credits left: -39, uthread 98 inserted into OVER queue
+credits left: -116, uthread 80 inserted into OVER queue
+
+in uthread_schedule, lin uthread_schedule, last_start_time of uthread 106 is set to 1549510383 s 298894 us
+in uthread_schedule, last_start_time of uthread 88 is set to 1549510383 s 298900 us
+..... uthread_context_func .....
+
 Thread(id:106, group:0) started..... uthread_context_func .....
 
-Thread(id:110, group:0) started
-Thread(id:104, group:0) started..... uthread_context_func .....
+Thread(id:88, group:0) started
+Thread(id:88, group:0) finished (TIME : 1 s and 18446744073708953392 us)In uthread 88 cpu time consumed: 99867
+
+in uthread_schedule, last_start_time of uthread 96 is set to 1549510383 s 398776 us
 ..... uthread_context_func .....
 
-Thread(id:118, group:0) started
-Thread(id:112, group:0) started..... uthread_context_func .....
+Thread(id:96, group:0) startedIn uthread 118 cpu time consumed: 119798
+In uthread 118 cpu time consumed: 119798
+In uthread 106 cpu time consumed: 108005
+credits left: -166, uthread 106 inserted into OVER queue
 
-Thread(id:114, group:0) started..... uthread_context_func .....
-
-Thread(id:116, group:0) started..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 114 is set to 1549510383 s 406983 us
 ..... uthread_context_func .....
+
+Thread(id:114, group:0) startedcredits left: -164, uthread 118 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 126 is set to 1549510383 s 407184 us
 ..... uthread_context_func .....
 
-Thread(id:120, group:0) started
-Thread(id:122, group:0) started
-Thread(id:124, group:0) started..... uthread_context_func .....
+Thread(id:126, group:0) startedIn uthread 96 cpu time consumed: 20089
+credits left: -15, uthread 96 inserted into OVER queue
 
-Thread(id:126, group:0) started
-Thread(id:78, group:0) finished (TIME : 0 s and 473252 us)
-Thread(id:76, group:0) finished (TIME : 0 s and 476934 us)
-Thread(id:74, group:0) finished (TIME : 0 s and 480218 us)
-Thread(id:72, group:0) finished (TIME : 0 s and 482670 us)
-Thread(id:110, group:0) finished (TIME : 1 s and 18446744073709456959 us)
-Thread(id:108, group:0) finished (TIME : 1 s and 18446744073709458748 us)
-Thread(id:104, group:0) finished (TIME : 1 s and 18446744073709460960 us)
-Thread(id:106, group:0) finished (TIME : 1 s and 18446744073709465441 us)
-Thread(id:118, group:0) finished (TIME : 1 s and 18446744073709496249 us)
-Thread(id:116, group:0) finished (TIME : 1 s and 18446744073709507494 us)
-Thread(id:112, group:0) finished (TIME : 1 s and 18446744073709507702 us)
-Thread(id:114, group:0) finished (TIME : 1 s and 18446744073709511099 us)
-Thread(id:126, group:0) finished (TIME : 1 s and 18446744073709537484 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 104 is set to 1549510383 s 418885 us
+..... uthread_context_func .....
+
+Thread(id:104, group:0) startedIn uthread 108 cpu time consumed: 127983
+credits left: -205, uthread 108 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 116 is set to 1549510383 s 422890 us
+..... uthread_context_func .....
+
+Thread(id:116, group:0) startedIn uthread 126 cpu time consumed: 99702
+credits left: -99, uthread 126 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 86 is set to 1549510383 s 507097 us
+
+Thread(id:86, group:0) finished (TIME : 1 s and 18446744073709064383 us)In uthread 86 cpu time consumed: 2756
+
+in uthread_schedule, last_start_time of uthread 7 is set to 1549510383 s 509949 us
+..... uthread_context_func .....
 
 Thread(id:7, group:1) started
-Thread(id:7, group:1) finished (TIME : 1 s and 18446744073709538001 us)..... uthread_context_func .....
+Thread(id:7, group:1) finished (TIME : 1 s and 18446744073709065266 us)In uthread 7 cpu time consumed: 786
+
+
+In uthread 116 cpu time consumed: 87974
+credits left: -100, uthread 116 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 124 is set to 1549510383 s 510881 us
+..... uthread_context_func .....
+
+Thread(id:124, group:0) startedin uthread_schedule, last_start_time of uthread 15 is set to 1549510383 s 510830 us
+..... uthread_context_func .....
 
 Thread(id:15, group:1) started
-Thread(id:15, group:1) finished (TIME : 1 s and 18446744073709538489 us)..... uthread_context_func .....
+Thread(id:15, group:1) finished (TIME : 1 s and 18446744073709066269 us)In uthread 15 cpu time consumed: 910
+
+in uthread_schedule, last_start_time of uthread 23 is set to 1549510383 s 511835 us
+..... uthread_context_func .....
 
 Thread(id:23, group:1) started
-Thread(id:23, group:1) finished (TIME : 1 s and 18446744073709538981 us)..... uthread_context_func .....
+Thread(id:23, group:1) finished (TIME : 1 s and 18446744073709067132 us)In uthread 23 cpu time consumed: 732
+
+in uthread_schedule, last_start_time of uthread 31 is set to 1549510383 s 512636 us
+..... uthread_context_func .....
 
 Thread(id:31, group:1) started
-Thread(id:31, group:1) finished (TIME : 1 s and 18446744073709539475 us)..... uthread_context_func .....
+Thread(id:31, group:1) finished (TIME : 1 s and 18446744073709067860 us)In uthread 31 cpu time consumed: 659
+
+in uthread_schedule, last_start_time of uthread 39 is set to 1549510383 s 513368 us
+..... uthread_context_func .....
 
 Thread(id:39, group:1) started
-Thread(id:39, group:1) finished (TIME : 1 s and 18446744073709543057 us)..... uthread_context_func .....
+Thread(id:39, group:1) finished (TIME : 1 s and 18446744073709070725 us)In uthread 39 cpu time consumed: 2797
 
-Thread(id:47, group:1) started
-Thread(id:47, group:1) finished (TIME : 1 s and 18446744073709546581 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 47 is set to 1549510383 s 516235 us
+..... uthread_context_func .....
+
+Thread(id:47, group:1) startedIn uthread 104 cpu time consumed: 99981
+credits left: -149, uthread 104 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 112 is set to 1549510383 s 518886 us
+..... uthread_context_func .....
+
+Thread(id:112, group:0) started
+Thread(id:47, group:1) finished (TIME : 1 s and 18446744073709074015 us)In uthread 47 cpu time consumed: 3217
+
+in uthread_schedule, last_start_time of uthread 55 is set to 1549510383 s 519522 us
+..... uthread_context_func .....
 
 Thread(id:55, group:1) started
-Thread(id:55, group:1) finished (TIME : 1 s and 18446744073709549966 us)..... uthread_context_func .....
+Thread(id:55, group:1) finished (TIME : 1 s and 18446744073709076881 us)In uthread 55 cpu time consumed: 2797
+
+in uthread_schedule, last_start_time of uthread 63 is set to 1549510383 s 522389 us
+..... uthread_context_func .....
 
 Thread(id:63, group:1) started
-Thread(id:124, group:0) finished (TIME : 1 s and 18446744073709550506 us)..... uthread_context_func .....
+Thread(id:63, group:1) finished (TIME : 1 s and 18446744073709079735 us)In uthread 63 cpu time consumed: 2786
 
-Thread(id:5, group:1) started
-Thread(id:5, group:1) finished (TIME : 1 s and 18446744073709551018 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 71 is set to 1549510383 s 525245 us
+..... uthread_context_func .....
 
-Thread(id:13, group:1) started
-Thread(id:13, group:1) finished (TIME : 1 s and 18446744073709551511 us)..... uthread_context_func .....
+Thread(id:71, group:1) startedIn uthread 114 cpu time consumed: 131883
+credits left: -188, uthread 114 inserted into OVER queue
 
-Thread(id:21, group:1) started
-Thread(id:21, group:1) finished (TIME : 1 s and 386 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 122 is set to 1549510383 s 538890 us
+..... uthread_context_func .....
 
-Thread(id:29, group:1) started
-Thread(id:120, group:0) finished (TIME : 1 s and 576 us)..... uthread_context_func .....
+Thread(id:122, group:0) started
+Thread(id:71, group:1) finished (TIME : 1 s and 18446744073709099810 us)In uthread 71 cpu time consumed: 20039
 
-Thread(id:1, group:1) started
-Thread(id:29, group:1) finished (TIME : 1 s and 863 us)..... uthread_context_func .....
-
-Thread(id:37, group:1) started
-Thread(id:1, group:1) finished (TIME : 1 s and 1092 us)..... uthread_context_func .....
-
-Thread(id:9, group:1) started
-Thread(id:9, group:1) finished (TIME : 1 s and 1582 us)..... uthread_context_func .....
-
-Thread(id:17, group:1) started
-Thread(id:63, group:1) finished (TIME : 1 s and 1928 us)..... uthread_context_func .....
-
-Thread(id:71, group:1) started
-Thread(id:17, group:1) finished (TIME : 1 s and 2075 us)..... uthread_context_func .....
-
-Thread(id:25, group:1) started
-Thread(id:25, group:1) finished (TIME : 1 s and 2564 us)..... uthread_context_func .....
-
-Thread(id:33, group:1) started
-Thread(id:122, group:0) finished (TIME : 1 s and 4126 us)..... uthread_context_func .....
-
-Thread(id:3, group:1) started
-Thread(id:37, group:1) finished (TIME : 1 s and 4381 us)..... uthread_context_func .....
-
-Thread(id:45, group:1) started
-Thread(id:3, group:1) finished (TIME : 1 s and 4683 us)..... uthread_context_func .....
-
-Thread(id:11, group:1) started
-Thread(id:11, group:1) finished (TIME : 1 s and 5202 us)..... uthread_context_func .....
-
-Thread(id:19, group:1) started
-Thread(id:19, group:1) finished (TIME : 1 s and 5717 us)..... uthread_context_func .....
-
-Thread(id:27, group:1) started
-Thread(id:27, group:1) finished (TIME : 1 s and 6234 us)..... uthread_context_func .....
-
-Thread(id:35, group:1) started
-Thread(id:33, group:1) finished (TIME : 1 s and 6362 us)..... uthread_context_func .....
-
-Thread(id:41, group:1) started
-Thread(id:45, group:1) finished (TIME : 1 s and 7897 us)..... uthread_context_func .....
-
-Thread(id:53, group:1) started
-Thread(id:35, group:1) finished (TIME : 1 s and 9925 us)..... uthread_context_func .....
-
-Thread(id:43, group:1) started
-Thread(id:41, group:1) finished (TIME : 1 s and 10049 us)..... uthread_context_func .....
-
-Thread(id:49, group:1) started
-Thread(id:53, group:1) finished (TIME : 1 s and 11458 us)..... uthread_context_func .....
-
-Thread(id:61, group:1) started
-Thread(id:43, group:1) finished (TIME : 1 s and 13351 us)..... uthread_context_func .....
-
-Thread(id:51, group:1) started
-Thread(id:49, group:1) finished (TIME : 1 s and 13803 us)..... uthread_context_func .....
-
-Thread(id:57, group:1) started
-Thread(id:51, group:1) finished (TIME : 1 s and 16778 us)..... uthread_context_func .....
-
-Thread(id:59, group:1) started
-Thread(id:57, group:1) finished (TIME : 1 s and 17811 us)..... uthread_context_func .....
-
-Thread(id:65, group:1) started
-Thread(id:61, group:1) finished (TIME : 1 s and 18486 us)..... uthread_context_func .....
-
-Thread(id:69, group:1) started
-Thread(id:59, group:1) finished (TIME : 1 s and 20521 us)..... uthread_context_func .....
-
-Thread(id:67, group:1) started
-Thread(id:71, group:1) finished (TIME : 1 s and 30514 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 79 is set to 1549510383 s 545379 us
+..... uthread_context_func .....
 
 Thread(id:79, group:1) started
-Thread(id:65, group:1) finished (TIME : 1 s and 47915 us)..... uthread_context_func .....
+Thread(id:79, group:1) finished (TIME : 1 s and 18446744073709119909 us)In uthread 79 cpu time consumed: 20004
 
-Thread(id:73, group:1) started
-Thread(id:69, group:1) finished (TIME : 1 s and 49705 us)..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 87 is set to 1549510383 s 565479 us
+..... uthread_context_func .....
+
+Thread(id:87, group:1) started
+Thread(id:87, group:1) finished (TIME : 1 s and 18446744073709139954 us)In uthread 87 cpu time consumed: 19946
+
+in uthread_schedule, last_start_time of uthread 95 is set to 1549510383 s 585528 us
+..... uthread_context_func .....
+
+Thread(id:95, group:1) started
+Thread(id:95, group:1) finished (TIME : 1 s and 18446744073709160096 us)In uthread 95 cpu time consumed: 20042
+
+in uthread_schedule, last_start_time of uthread 103 is set to 1549510383 s 605666 us
+..... uthread_context_func .....
+
+Thread(id:103, group:1) startedIn uthread 103 cpu time consumed: 5211
+In uthread 103 cpu time consumed: 5211
+In uthread 122 cpu time consumed: 71989
+credits left: -43, uthread 122 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 82 is set to 1549510383 s 610963 us
+credits left: 15, uthread 103 inserted into UNDER queue
+
+in uthread_schedule, last_start_time of uthread 111 is set to 1549510383 s 611124 us
+..... uthread_context_func .....
+
+Thread(id:111, group:1) startedIn uthread 124 cpu time consumed: 103984
+In uthread 124 cpu time consumed: 103984
+In uthread 112 cpu time consumed: 95980
+credits left: -107, uthread 124 inserted into OVER queue
+credits left: -116, uthread 112 inserted into OVER queue
+
+
+
+in 61hread_scin 61hread_schedule, last_start_time of uthread 120 is set to 1549510383 s 614891 us
+..... uthread_context_func .....
+
+Thread(id:5, group:1) started..... uthread_context_func .....
+
+Thread(id:120, group:0) started
+Thread(id:5, group:1) finished (TIME : 1 s and 18446744073709169884 us)In uthread 5 cpu time consumed: 366
+
+in uthread_schedule, last_start_time of uthread 13 is set to 1549510383 s 615264 us
+..... uthread_context_func .....
+
+Thread(id:13, group:1) started
+Thread(id:13, group:1) finished (TIME : 1 s and 18446744073709170250 us)In uthread 13 cpu time consumed: 357
+
+in uthread_schedule, last_start_time of uthread 21 is set to 1549510383 s 615629 us
+..... uthread_context_func .....
+
+Thread(id:21, group:1) started
+Thread(id:21, group:1) finished (TIME : 1 s and 18446744073709170630 us)In uthread 21 cpu time consumed: 373
+
+in uthread_schedule, last_start_time of uthread 29 is set to 1549510383 s 616010 us
+..... uthread_context_func .....
+
+Thread(id:29, group:1) started
+Thread(id:29, group:1) finished (TIME : 1 s and 18446744073709171003 us)In uthread 29 cpu time consumed: 364
+
+in uthread_schedule, last_start_time of uthread 37 is set to 1549510383 s 616381 us
+..... uthread_context_func .....
+
+Thread(id:37, group:1) started
+Thread(id:37, group:1) finished (TIME : 1 s and 18446744073709189545 us)In uthread 37 cpu time consumed: 18540
+
+in uthread_schedule, last_start_time of uthread 45 is set to 1549510383 s 634931 us
+..... uthread_context_func .....
+
+Thread(id:45, group:1) started
+Thread(id:45, group:1) finished (TIME : 1 s and 18446744073709192064 us)In uthread 45 cpu time consumed: 2506
+
+in uthread_schedule, last_start_time of uthread 53 is set to 1549510383 s 637441 us
+..... uthread_context_func .....
+
+Thread(id:53, group:1) started
+Thread(id:53, group:1) finished (TIME : 1 s and 18446744073709194582 us)In uthread 53 cpu time consumed: 2514
+
+in uthread_schedule, last_start_time of uthread 61 is set to 1549510383 s 639967 us
+..... uthread_context_func .....
+
+Thread(id:61, group:1) started
+Thread(id:61, group:1) finished (TIME : 1 s and 18446744073709197084 us)In uthread 61 cpu time consumed: 2489
+
+in uthread_schedule, last_start_time of uthread 69 is set to 1549510383 s 642466 us
+..... uthread_context_func .....
+
+Thread(id:69, group:1) started
+Thread(id:82, group:0) finished (TIME : 1 s and 18446744073709209161 us)In uthread 82 cpu time consumed: 43574
+
+in uthread_schedule, last_start_time of uthread 3 is set to 1549510383 s 654546 us
+..... uthread_context_func .....
+
+Thread(id:3, group:1) started
+Thread(id:3, group:1) finished (TIME : 1 s and 18446744073709237603 us)In uthread 3 cpu time consumed: 28431
+
+in uthread_schedule, last_start_time of uthread 11 is set to 1549510383 s 682985 us
+..... uthread_context_func .....
+
+Thread(id:11, group:1) started
+Thread(id:11, group:1) finished (TIME : 1 s and 18446744073709237994 us)In uthread 11 cpu time consumed: 379
+
+in uthread_schedule, last_start_time of uthread 19 is set to 1549510383 s 683372 us
+..... uthread_context_func .....
+
+Thread(id:19, group:1) started
+Thread(id:19, group:1) finished (TIME : 1 s and 18446744073709238369 us)In uthread 19 cpu time consumed: 368
+
+in uthread_schedule, last_start_time of uthread 27 is set to 1549510383 s 683751 us
+..... uthread_context_func .....
+
+Thread(id:27, group:1) started
+Thread(id:27, group:1) finished (TIME : 1 s and 18446744073709238735 us)In uthread 27 cpu time consumed: 354
+
+in uthread_schedule, last_start_time of uthread 35 is set to 1549510383 s 684112 us
+..... uthread_context_func .....
+
+Thread(id:35, group:1) started
+Thread(id:35, group:1) finished (TIME : 1 s and 18446744073709241207 us)In uthread 35 cpu time consumed: 2467
+
+in uthread_schedule, last_start_time of uthread 43 is set to 1549510383 s 686586 us
+..... uthread_context_func .....
+
+Thread(id:43, group:1) started
+Thread(id:43, group:1) finished (TIME : 1 s and 18446744073709243745 us)In uthread 43 cpu time consumed: 2532
+
+in uthread_schedule, last_start_time of uthread 51 is set to 1549510383 s 689129 us
+..... uthread_context_func .....
+
+Thread(id:51, group:1) started
+Thread(id:51, group:1) finished (TIME : 1 s and 18446744073709274601 us)In uthread 51 cpu time consumed: 30846
+
+in uthread_schedule, last_start_time of uthread 59 is set to 1549510383 s 719983 us
+..... uthread_context_func .....
+
+Thread(id:59, group:1) started
+Thread(id:69, group:1) finished (TIME : 1 s and 18446744073709276682 us)In uthread 69 cpu time consumed: 79591
+
+in uthread_schedule, last_start_time of uthread 77 is set to 1549510383 s 722067 us
+..... uthread_context_func .....
 
 Thread(id:77, group:1) started
-Thread(id:67, group:1) finished (TIME : 1 s and 50658 us)..... uthread_context_func .....
+Thread(id:59, group:1) finished (TIME : 1 s and 18446744073709277210 us)In uthread 59 cpu time consumed: 2602
+
+in uthread_schedule, last_start_time of uthread 67 is set to 1549510383 s 722593 us
+..... uthread_context_func .....
+
+Thread(id:67, group:1) startedIn uthread 111 cpu time consumed: 119751
+credits left: -189, uthread 111 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 119 is set to 1549510383 s 731083 us
+..... uthread_context_func .....
+
+Thread(id:119, group:1) startedIn uthread 120 cpu time consumed: 119979
+credits left: -139, uthread 120 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 1 is set to 1549510383 s 734891 us
+..... uthread_context_func .....
+
+Thread(id:1, group:1) started
+Thread(id:1, group:1) finished (TIME : 1 s and 18446744073709289893 us)In uthread 1 cpu time consumed: 373
+
+in uthread_schedule, last_start_time of uthread 9 is set to 1549510383 s 735273 us
+..... uthread_context_func .....
+
+Thread(id:9, group:1) started
+Thread(id:9, group:1) finished (TIME : 1 s and 18446744073709290268 us)In uthread 9 cpu time consumed: 366
+
+in uthread_schedule, last_start_time of uthread 17 is set to 1549510383 s 735652 us
+..... uthread_context_func .....
+
+Thread(id:17, group:1) started
+Thread(id:17, group:1) finished (TIME : 1 s and 18446744073709290658 us)In uthread 17 cpu time consumed: 379
+
+in uthread_schedule, last_start_time of uthread 25 is set to 1549510383 s 736039 us
+..... uthread_context_func .....
+
+Thread(id:25, group:1) started
+Thread(id:25, group:1) finished (TIME : 1 s and 18446744073709291034 us)In uthread 25 cpu time consumed: 366
+
+in uthread_schedule, last_start_time of uthread 33 is set to 1549510383 s 736413 us
+..... uthread_context_func .....
+
+Thread(id:33, group:1) startedIn uthread 77 cpu time consumed: 20796
+credits left: 9, uthread 77 inserted into UNDER queue
+
+in uthread_schedule, last_start_time of uthread 85 is set to 1549510383 s 742886 us
+..... uthread_context_func .....
+
+Thread(id:85, group:1) startedIn uthread 67 cpu time consumed: 32286
+credits left: -39, uthread 67 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 75 is set to 1549510383 s 754902 us
+..... uthread_context_func .....
 
 Thread(id:75, group:1) started
-Thread(id:79, group:1) finished (TIME : 1 s and 59255 us)..... uthread_context_func .....
+Thread(id:33, group:1) finished (TIME : 1 s and 18446744073709313592 us)In uthread 33 cpu time consumed: 22553
 
-Thread(id:87, group:1) started..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 41 is set to 1549510383 s 758975 us
+..... uthread_context_func .....
+
+Thread(id:41, group:1) started
+Thread(id:41, group:1) finished (TIME : 1 s and 18446744073709316170 us)In uthread 41 cpu time consumed: 2567
+
+in uthread_schedule, last_start_time of uthread 49 is set to 1549510383 s 761551 us
+..... uthread_context_func .....
+
+Thread(id:49, group:1) started
+Thread(id:49, group:1) finished (TIME : 1 s and 18446744073709338737 us)In uthread 49 cpu time consumed: 22560
+
+in uthread_schedule, last_start_time of uthread 57 is set to 1549510383 s 784120 us
+..... uthread_context_func .....
+
+Thread(id:57, group:1) started
+Thread(id:57, group:1) finished (TIME : 1 s and 18446744073709341320 us)In uthread 57 cpu time consumed: 2574
+
+in uthread_schedule, last_start_time of uthread 65 is set to 1549510383 s 786703 us
+..... uthread_context_func .....
+
+Thread(id:65, group:1) started
+Thread(id:85, group:1) finished (TIME : 1 s and 18446744073709361098 us)In uthread 85 cpu time consumed: 63586
+
+in uthread_schedule, last_start_time of uthread 93 is set to 1549510383 s 806480 us
+..... uthread_context_func .....
+
+Thread(id:93, group:1) started
+Thread(id:75, group:1) finished (TIME : 1 s and 18446744073709385002 us)In uthread 75 cpu time consumed: 75475
+
+in uthread_schedule, last_start_time of uthread 83 is set to 1549510383 s 830390 us
+..... uthread_context_func .....
+
+Thread(id:83, group:1) startedIn uthread 119 cpu time consumed: 107801
+credits left: -140, uthread 119 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 127 is set to 1549510383 s 839095 us
+..... uthread_context_func .....
+
+Thread(id:127, group:1) startedIn uthread 93 cpu time consumed: 36385
+credits left: 28, uthread 93 inserted into UNDER queue
+
+in uthread_schedule, last_start_time of uthread 101 is set to 1549510383 s 842886 us
+..... uthread_context_func .....
+
+Thread(id:101, group:1) startedIn uthread 65 cpu time consumed: 68166
+credits left: -111, uthread 65 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 73 is set to 1549510383 s 854889 us
+..... uthread_context_func .....
+
+Thread(id:73, group:1) startedIn uthread 83 cpu time consumed: 32486
+credits left: 11, uthread 83 inserted into UNDER queue
+
+in uthread_schedule, last_start_time of uthread 91 is set to 1549510383 s 862894 us
+..... uthread_context_func .....
+
+Thread(id:91, group:1) started
+Thread(id:91, group:1) finished (TIME : 1 s and 18446744073709493127 us)In uthread 91 cpu time consumed: 75608
+
+in uthread_schedule, last_start_time of uthread 99 is set to 1549510383 s 938509 us
+..... uthread_context_func .....
+
+Thread(id:99, group:1) startedIn uthread 127 cpu time consumed: 115813
+credits left: -131, uthread 127 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 103 is set to 1549510383 s 955111 us
+In uthread 73 cpu time consumed: 103978
+In uthread 73 cpu time consumed: 103978
+In uthread 101 cpu time consumed: 115981
+credits left: -157, uthread 73 inserted into OVER queue
+credits left: -206, uthread 101 inserted into OVER queue
+
+
+
+in uthread_schedule, last_start_time of uthread 81 is set to 1549510383 s i58892 us
+in uthread_schedule, last_start_time of uthread 81 is set to 1549510383 s i58892 us
+n uthread_schedule, last_start_time of uthread 109 is set to 1549510383 s 958893 us
 ..... uthread_context_func .....
 
 Thread(id:81, group:1) started..... uthread_context_func .....
 
-Thread(id:95, group:1) started
-Thread(id:85, group:1) started..... uthread_context_func .....
+Thread(id:109, group:1) startedIn uthread 99 cpu time consumed: 32355
+credits left: -39, uthread 99 inserted into OVER queue
 
-Thread(id:83, group:1) started
-Thread(id:95, group:1) finished (TIME : 1 s and 95747 us)..... uthread_context_func .....
-
-Thread(id:103, group:1) started
-Thread(id:81, group:1) finished (TIME : 1 s and 96639 us)..... uthread_context_func .....
-
-Thread(id:89, group:1) started
-Thread(id:83, group:1) finished (TIME : 1 s and 96861 us)
-Thread(id:85, group:1) finished (TIME : 1 s and 96900 us)..... uthread_context_func .....
-
-Thread(id:93, group:1) started..... uthread_context_func .....
-
-Thread(id:91, group:1) started
-Thread(id:93, group:1) finished (TIME : 1 s and 126411 us)..... uthread_context_func .....
-
-Thread(id:101, group:1) started
-Thread(id:89, group:1) finished (TIME : 1 s and 126884 us)..... uthread_context_func .....
-
-Thread(id:97, group:1) started
-Thread(id:91, group:1) finished (TIME : 1 s and 127416 us)..... uthread_context_func .....
-
-Thread(id:99, group:1) started..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 107 is set to 1549510383 s 970887 us
 ..... uthread_context_func .....
 
-Thread(id:111, group:1) started
-Thread(id:105, group:1) started..... uthread_context_func .....
+Thread(id:107, group:1) started
+Thread(id:81, group:1) finished (TIME : 2 s and 18446744073708605481 us)In uthread 103 cpu time consumed: 103775
+In uthread 109 cpu time consumed: 103990
+In uthread 107 cpu time consumed: 92003
+In uthread 81 cpu time consumed: 111994
+credits left: -148, uthread 81 inserted into OVER queue
 
-Thread(id:109, group:1) started..... uthread_context_func .....
-
-Thread(id:107, group:1) started..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 89 is set to 1549510384 s 70910 us
 ..... uthread_context_func .....
 
-Thread(id:119, group:1) started
-Thread(id:113, group:1) started..... uthread_context_func .....
+Thread(id:89, group:1) started..... uthread_context_func .....
+ime of ucredits left: -192, uthread 103 inserted into OVER queue
+stealing uthread from another kthread
+
+in uthread_schedule, last_start_time of uthread 126 is set to 1549510384 s 71384 us
+in uthread_schedule, last_start_time of uthread 126 is set to 1549510384 s 71384 ucredits left: -157, uthread 109 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 117 is set to 1549510384 s 74880 us
+..... uthread_context_func .....
+
+Thread(id:117, group:1) started..... uthread_context_func .....
+ime of uthread 117 is set to 1549510384 s 74880 us
+ uthread 107 cpu time consumed: 92003
+credits left: -134, uthread 107 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 115 is set to 1549510384 s 78879 us
 ..... uthread_context_func .....
 
 Thread(id:115, group:1) started
-Thread(id:117, group:1) started..... uthread_context_func .....
+Thread(id:126, group:0) finished (TIME : 2 s and 18446744073708694270 us)In uthread 126 cpu time consumed: 68418
+
+in uthread_schedule, last_start_time of uthread 102 is set to 1549510384 s 139914 us
+In uthread 102 cpu time consumed: 34961
+credits left: -218, uthread 102 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 110 is set to 1549510384 s 175071 us
+In uthread 117 cpu time consumed: 103984
+credits left: -132, uthread 117 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 125 is set to 1549510384 s 178897 us
 ..... uthread_context_func .....
 
-Thread(id:121, group:1) started
-Thread(id:127, group:1) started..... uthread_context_func .....
+Thread(id:125, group:1) startedIn uthread 89 cpu time consumed: 115956
+credits left: -131, uthread 89 inserted into OVER queue
 
-Thread(id:125, group:1) started..... uthread_context_func .....
+in uthread_schedule, last_start_time of uthread 97 is set to 1549510384 s 186888 us
+..... uthread_context_func .....
+
+Thread(id:97, group:1) startedIn uthread 115 cpu time consumed: 111986
+credits left: -148, uthread 115 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 123 is set to 1549510384 s 190882 us
+..... uthread_context_func .....
 
 Thread(id:123, group:1) started
-Thread(id:73, group:1) finished (TIME : 1 s and 478055 us)
-Thread(id:77, group:1) finished (TIME : 1 s and 479628 us)
-Thread(id:75, group:1) finished (TIME : 1 s and 480411 us)
-Thread(id:87, group:1) finished (TIME : 1 s and 488069 us)
-Thread(id:111, group:1) finished (TIME : 2 s and 18446744073709459383 us)
-Thread(id:107, group:1) finished (TIME : 2 s and 18446744073709459612 us)
-Thread(id:105, group:1) finished (TIME : 2 s and 18446744073709464125 us)
-Thread(id:109, group:1) finished (TIME : 2 s and 18446744073709464391 us)
-Thread(id:115, group:1) finished (TIME : 2 s and 18446744073709502078 us)
-Thread(id:119, group:1) finished (TIME : 2 s and 18446744073709502448 us)
-Thread(id:113, group:1) finished (TIME : 2 s and 18446744073709507168 us)
-Thread(id:127, group:1) finished (TIME : 2 s and 18446744073709542775 us)stealing uthread from another kthread
+Thread(id:110, group:0) finished (TIME : 2 s and 18446744073708792529 us)In uthread 110 cpu time consumed: 62933
 
-Thread(id:123, group:1) finished (TIME : 2 s and 18446744073709543794 us)stealing uthread from another kthread
+in uthread_schedule, last_start_time of uthread 118 is set to 1549510384 s 238101 us
+In uthread 118 cpu time consumed: 36777
+credits left: -237, uthread 118 inserted into OVER queue
 
-Thread(id:121, group:1) finished (TIME : 2 s and 18446744073709550994 us)
-Thread(id:125, group:1) finished (TIME : 2 s and 22882 us)
-Thread(id:117, group:1) finished (TIME : 2 s and 33051 us)stealing uthread from another kthread
+in uthread_schedule, last_start_time of uthread 111 is set to 1549510384 s 275080 us
+In uthread 97 cpu time consumed: 95982
+credits left: -166, uthread 97 inserted into OVER queue
 
-Thread(id:102, group:0) finished (TIME : 2 s and 100187 us)
-Thread(id:96, group:0) finished (TIME : 2 s and 221323 us)
-Thread(id:97, group:1) finished (TIME : 2 s and 227677 us)
-Thread(id:100, group:0) finished (TIME : 2 s and 258217 us)
-Thread(id:99, group:1) finished (TIME : 2 s and 283077 us)
-Thread(id:101, group:1) finished (TIME : 2 s and 305210 us)
-Thread(id:98, group:0) finished (TIME : 2 s and 308830 us)
-Thread(id:103, group:1) finished (TIME : 2 s and 323358 us)Quitting kthread (2)
-Quitting kthread (0)
+in uthread_schedule, last_start_time of uthread 105 is set to 1549510384 s 282891 us
+..... uthread_context_func .....
+
+Thread(id:105, group:1) startedIn uthread 125 cpu time consumed: 107966
+credits left: -115, uthread 125 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 77 is set to 1549510384 s 286888 us
+In uthread 123 cpu time consumed: 102059
+credits left: -104, uthread 123 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 83 is set to 1549510384 s 292960 us
+
+Thread(id:77, group:1) finished (TIME : 2 s and 18446744073708881481 us)In uthread 77 cpu time consumed: 55977
+
+in uthread_schedule, last_start_time of uthread 93 is set to 1549510384 s 342876 us
+
+Thread(id:83, group:1) finished (TIME : 2 s and 18446744073708901337 us)In uthread 83 cpu time consumed: 53761
+stealing uthread from another kthread
+
+in uthread_schedule, last_start_time of uthread 103 is set to 1549510384 s 346739 us
+
+Thread(id:111, group:1) finished (TIME : 2 s and 18446744073708912675 us)In uthread 111 cpu time consumed: 83073
+
+in uthread_schedule, last_start_time of uthread 119 is set to 1549510384 s 358251 us
+
+Thread(id:93, group:1) finished (TIME : 2 s and 18446744073708925037 us)In uthread 93 cpu time consumed: 27537
+stealing uthread from another kthread
+
+in uthread_schedule, last_start_time of uthread 127 is set to 1549510384 s 370429 us
+In uthread 119 cpu time consumed: 28629
+credits left: -197, uthread 119 inserted into OVER queue
+stealing uthread from another kthread
+
+in uthread_schedule, last_start_time of uthread 118 is set to 1549510384 s 387225 us
+in uthread_schedule, last_start_time of uthread 118 is set to 1549510384 s 38722credits left: -163, uthread 127 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 68 is set to 1549510384 s 390890 us
+
+Thread(id:68, group:0) finished (TIME : 2 s and 18446744073708952449 us)In uthread 68 cpu time consumed: 6933
+
+in uthread_schedule, last_start_time of uthread 84 is set to 1549510384 s 397832 us
+In uthread 105 cpu time consumed: 115991
+credits left: -181, uthread 105 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 113 is set to 1549510384 s 398902 us
+..... uthread_context_func .....
+
+Thread(id:113, group:1) started
+Thread(id:118, group:0) finished (TIME : 2 s and 18446744073708964044 us)In uthread 118 cpu time consumed: 22299
+
+in uthread_schedule, last_start_time of uthread 102 is set to 1549510384 s 409620 us
+In uthread 103 cpu time consumed: 68124
+credits left: -328, uthread 103 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 66 is set to 1549510384 s 414883 us
+
+Thread(id:84, group:0) finished (TIME : 2 s and 18446744073708988897 us)In uthread 84 cpu time consumed: 36439
+
+in uthread_schedule, last_start_time of uthread 100 is set to 1549510384 s 434280 us
+
+Thread(id:102, group:0) finished (TIME : 2 s and 18446744073709023866 us)In uthread 102 cpu time consumed: 59735
+
+in uthread_schedule, last_start_time of uthread 119 is set to 1549510384 s 469454 us
+
+Thread(id:66, group:0) finished (TIME : 2 s and 18446744073709032650 us)In uthread 66 cpu time consumed: 63142
+
+in uthread_schedule, last_start_time of uthread 98 is set to 1549510384 s 478033 us
+In uthread 119 cpu time consumed: 17429
+credits left: -231, uthread 119 inserted into OVER queue
+stealing uthread from another kthread
+
+in uthread_schedule, last_start_time of uthread 119 is set to 1549510384 s 487176 us
+In uthread 100 cpu time consumed: 56585
+credits left: -160, uthread 100 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 108 is set to 1549510384 s 490896 us
+In uthread 113 cpu time consumed: 95964
+credits left: -116, uthread 113 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 121 is set to 1549510384 s 494892 us
+..... uthread_context_func .....
+
+Thread(id:121, group:1) startedIn uthread 98 cpu time consumed: 20842
+credits left: -80, uthread 98 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 106 is set to 1549510384 s 498895 us
+
+Thread(id:119, group:1) finished (TIME : 2 s and 18446744073709059720 us)In uthread 119 cpu time consumed: 18025
+In uthread 108 cpu time consumed: 111986
+credits left: -428, uthread 108 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 116 is set to 1549510384 s 602899 us
+In uthread 121 cpu time consumed: 119986
+credits left: -139, uthread 121 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 64 is set to 1549510384 s 614905 us
+In uthread 106 cpu time consumed: 123971
+credits left: -413, uthread 106 inserted into OVER queue
+
+in uthread_schedule, last_start_time of uthread 114 is set to 1549510384 s 622883 us
+
+Thread(id:64, group:0) finished (TIME : 2 s and 18446744073709268891 us)In uthread 64 cpu time consumed: 99362
+
+in uthread_schedule, last_start_time of uthread 72 is set to 1549510384 s 714276 us
+
+Thread(id:72, group:0) finished (TIME : 2 s and 18446744073709268991 us)In uthread 72 cpu time consumed: 86
+
+in uthread_schedule, last_start_time of uthread 80 is set to 1549510384 s 714370 us
+
+Thread(id:80, group:0) finished (TIME : 2 s and 18446744073709292859 us)In uthread 80 cpu time consumed: 23863
+
+in uthread_schedule, last_start_time of uthread 96 is set to 1549510384 s 738240 us
+
+Thread(id:116, group:0) finished (TIME : 3 s and 18446744073708661935 us)In uthread 116 cpu time consumed: 504414
+
+in uthread_schedule, last_start_time of uthread 124 is set to 1549510385 s 107323 us
+
+Thread(id:114, group:0) finished (TIME : 3 s and 18446744073708741048 us)In uthread 114 cpu time consumed: 563544
+
+in uthread_schedule, last_start_time of uthread 122 is set to 1549510385 s 186438 us
+
+Thread(id:124, group:0) finished (TIME : 3 s and 18446744073709126454 us)In uthread 124 cpu time consumed: 464509
+
+in uthread_schedule, last_start_time of uthread 101 is set to 1549510385 s 571841 us
+
+Thread(id:96, group:0) finished (TIME : 3 s and 18446744073709276885 us)In uthread 96 cpu time consumed: 984032
+
+in uthread_schedule, last_start_time of uthread 104 is set to 1549510385 s 722282 us
+
+Thread(id:122, group:0) finished (TIME : 3 s and 18446744073709403386 us)In uthread 122 cpu time consumed: 662333
+
+in uthread_schedule, last_start_time of uthread 67 is set to 1549510385 s 848782 us
+
+Thread(id:67, group:1) finished (TIME : 3 s and 18446744073709474776 us)In uthread 67 cpu time consumed: 71369
+
+in uthread_schedule, last_start_time of uthread 99 is set to 1549510385 s 920159 us
+
+Thread(id:101, group:1) finished (TIME : 4 s and 18446744073708575807 us)In uthread 101 cpu time consumed: 449343
+
+in uthread_schedule, last_start_time of uthread 109 is set to 1549510386 s 21194 us
+
+Thread(id:109, group:1) finished (TIME : 4 s and 18446744073709042341 us)In uthread 109 cpu time consumed: 466539
+
+in uthread_schedule, last_start_time of uthread 117 is set to 1549510386 s 487749 us
+
+Thread(id:104, group:0) finished (TIME : 4 s and 18446744073709193470 us)
+Thread(id:99, group:1) finished (TIME : 4 s and 18446744073709196729 us)In uthread 99 cpu time consumed: 721949
+
+in uthread_schedule, last_start_time of uthread 107 is set to 1549510386 s 642118 us
+In uthread 104 cpu time consumed: 936601
+
+in uthread_schedule, last_start_time of uthread 112 is set to 1549510386 s 658898 us
+
+Thread(id:117, group:1) finished (TIME : 4 s and 18446744073709510550 us)In uthread 117 cpu time consumed: 468179
+
+in uthread_schedule, last_start_time of uthread 125 is set to 1549510386 s 955939 us
+
+Thread(id:107, group:1) finished (TIME : 5 s and 18446744073708846860 us)In uthread 107 cpu time consumed: 650118
+
+in uthread_schedule, last_start_time of uthread 115 is set to 1549510387 s 292246 us
+
+Thread(id:125, group:1) finished (TIME : 5 s and 18446744073708973916 us)In uthread 125 cpu time consumed: 463353
+
+in uthread_schedule, last_start_time of uthread 100 is set to 1549510387 s 419305 us
+
+Thread(id:112, group:0) finished (TIME : 5 s and 18446744073709098183 us)In uthread 112 cpu time consumed: 884666
+
+in uthread_schedule, last_start_time of uthread 120 is set to 1549510387 s 543573 us
+
+Thread(id:115, group:1) finished (TIME : 5 s and 18446744073709461300 us)In uthread 115 cpu time consumed: 614431
+
+in uthread_schedule, last_start_time of uthread 123 is set to 1549510387 s 906687 us
+
+Thread(id:100, group:0) finished (TIME : 5 s and 18446744073709465219 us)In uthread 100 cpu time consumed: 491291
+
+in uthread_schedule, last_start_time of uthread 108 is set to 1549510387 s 910605 us
+
+Thread(id:108, group:0) finished (TIME : 6 s and 18446744073708801266 us)In uthread 108 cpu time consumed: 352274
+
+in uthread_schedule, last_start_time of uthread 127 is set to 1549510388 s 262888 us
+
+Thread(id:120, group:0) finished (TIME : 6 s and 18446744073708965386 us)In uthread 120 cpu time consumed: 867203
+
+in uthread_schedule, last_start_time of uthread 65 is set to 1549510388 s 410794 us
+
+Thread(id:127, group:1) finished (TIME : 6 s and 18446744073709026428 us)In uthread 127 cpu time consumed: 208915
+
+Thread(id:65, group:1) finished (TIME : 6 s and 18446744073709037111 us)In uthread 65 cpu time consumed: 71692
+
+in uthread_schedule, last_start_time of uthread 73 is set to 1549510388 s 482494 us
+
+Thread(id:73, group:1) finished (TIME : 6 s and 18446744073709061405 us)In uthread 73 cpu time consumed: 24286
+
+in uthread_schedule, last_start_time of uthread 81 is set to 1549510388 s 506788 us
+In uthread 81 cpu time consumed: 19
+
+in uthread_schedule, last_start_time of uthread 89 is set to 1549510388 s 506811 us
+
+Thread(id:89, group:1) finished (TIME : 2 s and 18446744073708725484 us)In uthread 89 cpu time consumed: 23
+
+in uthread_schedule, last_start_time of uthread 97 is set to 1549510388 s 506838 us
+
+Thread(id:123, group:1) finished (TIME : 6 s and 18446744073709079447 us)In uthread 123 cpu time consumed: 618138
+
+in uthread_schedule, last_start_time of uthread 98 is set to 1549510388 s 524837 us
+
+Thread(id:98, group:0) finished (TIME : 7 s and 18446744073708765125 us)In uthread 98 cpu time consumed: 685673
+
+in uthread_schedule, last_start_time of uthread 106 is set to 1549510389 s 210519 us
+
+Thread(id:97, group:1) finished (TIME : 7 s and 18446744073708971323 us)In uthread 97 cpu time consumed: 909874
+
+in uthread_schedule, last_start_time of uthread 105 is set to 1549510389 s 416744 us
+
+Thread(id:106, group:0) finished (TIME : 7 s and 18446744073709274964 us)In uthread 106 cpu time consumed: 509823
+
+in uthread_schedule, last_start_time of uthread 103 is set to 1549510389 s 720351 us
+
+Thread(id:103, group:1) finished (TIME : 7 s and 18446744073709480561 us)In uthread 103 cpu time consumed: 205585
+
+Thread(id:105, group:1) finished (TIME : 8 s and 18446744073708835686 us)In uthread 105 cpu time consumed: 864326
+
+in uthread_schedule, last_start_time of uthread 113 is set to 1549510390 s 281098 us
+
+Thread(id:113, group:1) finished (TIME : 9 s and 18446744073708746284 us)In uthread 113 cpu time consumed: 910573
+
+in uthread_schedule, last_start_time of uthread 121 is set to 1549510391 s 191681 us
+
+Thread(id:121, group:1) finished (TIME : 10 s and 18446744073708611876 us)In uthread 121 cpu time consumed: 865594
 Quitting kthread (1)
-mean uthread raw time for uthread set 0 is 499252
-Quitting kthread (3)
-standard deviation of uthread raw time for uthread set 0 is 498647.356842
+Quitting kthread (0)
+mean uthread raw time for uthread set 0 is 323010
+standard deviation of uthread raw time for uthread set 0 is 321563.823262
 
-mean uthread raw time for uthread set 1 is 499755
-standard deviation of uthread raw time for uthread set 1 is 498626.308362
+mean uthread raw time for uthread set 1 is 325883
+standard deviation of uthread raw time for uthread set 1 is 319235.720156
 
-mean uthread raw time for uthread set 2 is 500258
-standard deviation of uthread raw time for uthread set 2 is 498605.746318
+mean uthread raw time for uthread set 2 is 326337
+standard deviation of uthread raw time for uthread set 2 is 319228.733551
 
-mean uthread raw time for uthread set 3 is 500741
-standard deviation of uthread raw time for uthread set 3 is 498601.534787
+mean uthread raw time for uthread set 3 is 326769
+standard deviation of uthread raw time for uthread set 3 is 319208.636182
 
-mean uthread raw time for uthread set 4 is 504576
-standard deviation of uthread raw time for uthread set 4 is 498397.082690
+mean uthread raw time for uthread set 4 is 333878
+standard deviation of uthread raw time for uthread set 4 is 324271.242365
 
-mean uthread raw time for uthread set 5 is 508509
-standard deviation of uthread raw time for uthread set 5 is 497987.071694
+mean uthread raw time for uthread set 5 is 338555
+standard deviation of uthread raw time for uthread set 5 is 322412.236296
 
-mean uthread raw time for uthread set 6 is 512497
-standard deviation of uthread raw time for uthread set 6 is 497517.259790
+mean uthread raw time for uthread set 6 is 354712
+standard deviation of uthread raw time for uthread set 6 is 322461.871907
 
-mean uthread raw time for uthread set 7 is 516615
-standard deviation of uthread raw time for uthread set 7 is 497975.673015
+mean uthread raw time for uthread set 7 is 357370
+standard deviation of uthread raw time for uthread set 7 is 322389.404163
 
-mean uthread raw time for uthread set 8 is 546791
-standard deviation of uthread raw time for uthread set 8 is 497806.457309
+mean uthread raw time for uthread set 8 is 1789848
+standard deviation of uthread raw time for uthread set 8 is 1617546.370642
 
-mean uthread raw time for uthread set 9 is 926149
-standard deviation of uthread raw time for uthread set 9 is 466141.229146
+mean uthread raw time for uthread set 9 is 1291584
+standard deviation of uthread raw time for uthread set 9 is 1688005.045842
 
-mean uthread raw time for uthread set 10 is 645511
-standard deviation of uthread raw time for uthread set 10 is 561852.562630
+mean uthread raw time for uthread set 10 is 1018436
+standard deviation of uthread raw time for uthread set 10 is 421827.761476
 
-mean uthread raw time for uthread set 11 is 622626
-standard deviation of uthread raw time for uthread set 11 is 496378.296053
+mean uthread raw time for uthread set 11 is 640717
+standard deviation of uthread raw time for uthread set 11 is 439480.610186
 
-mean uthread raw time for uthread set 12 is 2253266
-standard deviation of uthread raw time for uthread set 12 is 67749.047121
+mean uthread raw time for uthread set 12 is 4417419
+standard deviation of uthread raw time for uthread set 12 is 1866279.662331
 
-mean uthread raw time for uthread set 13 is 1409353
-standard deviation of uthread raw time for uthread set 13 is 500682.119289
+mean uthread raw time for uthread set 13 is 4160425
+standard deviation of uthread raw time for uthread set 13 is 2079901.296021
 
-mean uthread raw time for uthread set 14 is 1462998
-standard deviation of uthread raw time for uthread set 14 is 509843.801475
+mean uthread raw time for uthread set 14 is 3603304
+standard deviation of uthread raw time for uthread set 14 is 2157008.034571
 
-mean uthread raw time for uthread set 15 is 1499117
-standard deviation of uthread raw time for uthread set 15 is 502121.458968
+mean uthread raw time for uthread set 15 is 4558036
+standard deviation of uthread raw time for uthread set 15 is 2272419.549736
 
 **************************************************************
 
-mean uthread cpu time for uthread set 0 is 495
-standard deviation of uthread cpu time for uthread set 0 is 74.949149
+mean uthread cpu time for uthread set 0 is 4453
+standard deviation of uthread cpu time for uthread set 0 is 9135.909171
 
-mean uthread cpu time for uthread set 1 is 495
-standard deviation of uthread cpu time for uthread set 1 is 74.771318
+mean uthread cpu time for uthread set 1 is 2430
+standard deviation of uthread cpu time for uthread set 1 is 5105.008815
 
-mean uthread cpu time for uthread set 2 is 494
-standard deviation of uthread cpu time for uthread set 2 is 63.506889
+mean uthread cpu time for uthread set 2 is 451
+standard deviation of uthread cpu time for uthread set 2 is 142.739273
 
-mean uthread cpu time for uthread set 3 is 470
-standard deviation of uthread cpu time for uthread set 3 is 24.634833
+mean uthread cpu time for uthread set 3 is 437
+standard deviation of uthread cpu time for uthread set 3 is 125.928551
 
-mean uthread cpu time for uthread set 4 is 3853
-standard deviation of uthread cpu time for uthread set 4 is 706.040721
+mean uthread cpu time for uthread set 4 is 7125
+standard deviation of uthread cpu time for uthread set 4 is 7816.223073
 
-mean uthread cpu time for uthread set 5 is 3899
-standard deviation of uthread cpu time for uthread set 5 is 852.780965
+mean uthread cpu time for uthread set 5 is 4686
+standard deviation of uthread cpu time for uthread set 5 is 5248.643920
 
-mean uthread cpu time for uthread set 6 is 3975
-standard deviation of uthread cpu time for uthread set 6 is 1114.950391
+mean uthread cpu time for uthread set 6 is 16162
+standard deviation of uthread cpu time for uthread set 6 is 11246.364401
 
-mean uthread cpu time for uthread set 7 is 4101
-standard deviation of uthread cpu time for uthread set 7 is 1112.935982
+mean uthread cpu time for uthread set 7 is 2662
+standard deviation of uthread cpu time for uthread set 7 is 261.695195
 
-mean uthread cpu time for uthread set 8 is 30176
-standard deviation of uthread cpu time for uthread set 8 is 1674.066494
+mean uthread cpu time for uthread set 8 is 80255
+standard deviation of uthread cpu time for uthread set 8 is 39909.637802
 
-mean uthread cpu time for uthread set 9 is 29348
-standard deviation of uthread cpu time for uthread set 9 is 497.178288
+mean uthread cpu time for uthread set 9 is 72643
+standard deviation of uthread cpu time for uthread set 9 is 37024.926825
 
-mean uthread cpu time for uthread set 10 is 29882
-standard deviation of uthread cpu time for uthread set 10 is 894.738020
+mean uthread cpu time for uthread set 10 is 72174
+standard deviation of uthread cpu time for uthread set 10 is 34683.132655
 
-mean uthread cpu time for uthread set 11 is 29721
-standard deviation of uthread cpu time for uthread set 11 is 917.539713
+mean uthread cpu time for uthread set 11 is 66913
+standard deviation of uthread cpu time for uthread set 11 is 31624.346232
 
-mean uthread cpu time for uthread set 12 is 248378
-standard deviation of uthread cpu time for uthread set 12 is 12059.945693
+mean uthread cpu time for uthread set 12 is 652141
+standard deviation of uthread cpu time for uthread set 12 is 267629.562523
 
-mean uthread cpu time for uthread set 13 is 242623
-standard deviation of uthread cpu time for uthread set 13 is 2883.384383
+mean uthread cpu time for uthread set 13 is 629142
+standard deviation of uthread cpu time for uthread set 13 is 298990.290840
 
-mean uthread cpu time for uthread set 14 is 246535
-standard deviation of uthread cpu time for uthread set 14 is 7215.055890
+mean uthread cpu time for uthread set 14 is 615542
+standard deviation of uthread cpu time for uthread set 14 is 294699.446096
 
-mean uthread cpu time for uthread set 15 is 244320
-standard deviation of uthread cpu time for uthread set 15 is 4609.933649
+mean uthread cpu time for uthread set 15 is 634549
+standard deviation of uthread cpu time for uthread set 15 is 268524.554367
 

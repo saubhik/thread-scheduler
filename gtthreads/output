@@ -1,0 +1,1362 @@
+kthread_sched_arg: 1
+kthread(1) created !!
+kthread(2) created !!
+kthread(3) created !!
+Thread(id: 0) scheduled in
+
+in uthread_schedule, last_start_time of uthread 0 is set to 1549504199 s 248571 us
+Thread(id: 2) scheduled in
+
+in uthread_schedule, last_start_time of uthread 2 is set to 1549504199 s 248578 us
+Thread(id: 4) scheduled in
+
+in uthread_schedule, last_start_time of uthread 4 is set to 1549504199 s 248582 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 0 is set to 1549504199 s 248597 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 4 is set to 1549504199 s 248612 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 2 is set to 1549504199 s 248625 us
+Thread(id: 6) scheduled in
+
+in uthread_schedule, last_start_time of uthread 6 is set to 1549504199 s 248821 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 6 is set to 1549504199 s 248833 us
+Thread(id: 8) scheduled in
+
+in uthread_schedule, last_start_time of uthread 8 is set to 1549504199 s 249077 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 8 is set to 1549504199 s 249087 us
+Thread(id: 10) scheduled in
+
+in uthread_schedule, last_start_time of uthread 10 is set to 1549504199 s 249186 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 10 is set to 1549504199 s 249194 us
+Thread(id: 12) scheduled in
+
+in uthread_schedule, last_start_time of uthread 12 is set to 1549504199 s 249308 us
+Thread(id: 14) scheduled in
+
+in uthread_schedule, last_start_time of uthread 14 is set to 1549504199 s 249322 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 12 is set to 1549504199 s 249342 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 14 is set to 1549504199 s 249349 us
+Thread(id: 16) scheduled in
+
+in uthread_schedule, last_start_time of uthread 16 is set to 1549504199 s 249542 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 16 is set to 1549504199 s 249551 us
+Thread(id: 18) scheduled in
+
+in uthread_schedule, last_start_time of uthread 18 is set to 1549504199 s 249649 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 18 is set to 1549504199 s 249656 us
+Thread(id: 20) scheduled in
+
+in uthread_schedule, last_start_time of uthread 20 is set to 1549504199 s 249813 us
+..... uthread_context_func .....
+Thread(id: 22) scheduled in
+
+in uthread_schedule, last_start_time of uthread 22 is set to 1549504199 s 249820 us
+
+in uthread_mulmat, last_start_time of uthread 20 is set to 1549504199 s 249823 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 22 is set to 1549504199 s 249828 us
+Thread(id: 24) scheduled in
+
+in uthread_schedule, last_start_time of uthread 24 is set to 1549504199 s 250011 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 24 is set to 1549504199 s 250018 us
+Thread(id: 26) scheduled in
+
+in uthread_schedule, last_start_time of uthread 26 is set to 1549504199 s 250116 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 26 is set to 1549504199 s 250126 us
+Thread(id: 28) scheduled in
+
+in uthread_schedule, last_start_time of uthread 28 is set to 1549504199 s 250297 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 28 is set to 1549504199 s 250306 us
+Thread(id: 30) scheduled in
+
+in uthread_schedule, last_start_time of uthread 30 is set to 1549504199 s 250305 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 30 is set to 1549504199 s 250314 us
+Thread(id: 32) scheduled in
+
+in uthread_schedule, last_start_time of uthread 32 is set to 1549504199 s 250493 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 32 is set to 1549504199 s 250500 us
+Thread(id: 34) scheduled in
+
+in uthread_schedule, last_start_time of uthread 34 is set to 1549504199 s 250598 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 34 is set to 1549504199 s 250635 us
+Thread(id: 36) scheduled in
+
+in uthread_schedule, last_start_time of uthread 36 is set to 1549504199 s 250759 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 36 is set to 1549504199 s 250768 us
+Thread(id: 38) scheduled in
+
+in uthread_schedule, last_start_time of uthread 38 is set to 1549504199 s 250770 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 38 is set to 1549504199 s 250779 us
+Thread(id: 40) scheduled in
+
+in uthread_schedule, last_start_time of uthread 40 is set to 1549504199 s 254105 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 40 is set to 1549504199 s 254112 us
+Thread(id: 42) scheduled in
+
+in uthread_schedule, last_start_time of uthread 42 is set to 1549504199 s 254202 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 42 is set to 1549504199 s 254211 us
+Thread(id: 46) scheduled in
+
+in uthread_schedule, last_start_time of uthread 46 is set to 1549504199 s 254354 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 46 is set to 1549504199 s 254362 us
+Thread(id: 44) scheduled in
+
+in uthread_schedule, last_start_time of uthread 44 is set to 1549504199 s 254365 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 44 is set to 1549504199 s 254373 us
+Thread(id: 48) scheduled in
+
+in uthread_schedule, last_start_time of uthread 48 is set to 1549504199 s 257476 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 48 is set to 1549504199 s 257491 us
+Thread(id: 50) scheduled in
+
+in uthread_schedule, last_start_time of uthread 50 is set to 1549504199 s 257835 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 50 is set to 1549504199 s 257848 us
+Thread(id: 52) scheduled in
+
+in uthread_schedule, last_start_time of uthread 52 is set to 1549504199 s 258246 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 52 is set to 1549504199 s 258254 us
+Thread(id: 54) scheduled in
+
+in uthread_schedule, last_start_time of uthread 54 is set to 1549504199 s 258933 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 54 is set to 1549504199 s 258942 us
+Thread(id: 56) scheduled in
+
+in uthread_schedule, last_start_time of uthread 56 is set to 1549504199 s 261009 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 56 is set to 1549504199 s 261023 us
+Thread(id: 58) scheduled in
+
+in uthread_schedule, last_start_time of uthread 58 is set to 1549504199 s 261133 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 58 is set to 1549504199 s 261147 us
+Thread(id: 60) scheduled in
+
+in uthread_schedule, last_start_time of uthread 60 is set to 1549504199 s 263222 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 60 is set to 1549504199 s 263236 us
+Thread(id: 62) scheduled in
+
+in uthread_schedule, last_start_time of uthread 62 is set to 1549504199 s 263393 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 62 is set to 1549504199 s 263403 us
+Thread(id: 66) scheduled in
+
+in uthread_schedule, last_start_time of uthread 66 is set to 1549504199 s 264728 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 66 is set to 1549504199 s 264735 us
+Thread(id: 64) scheduled in
+
+in uthread_schedule, last_start_time of uthread 64 is set to 1549504199 s 264882 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 64 is set to 1549504199 s 264894 us
+Thread(id: 68) scheduled in
+
+in uthread_schedule, last_start_time of uthread 68 is set to 1549504199 s 266808 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 68 is set to 1549504199 s 266816 us
+Thread(id: 70) scheduled in
+
+in uthread_schedule, last_start_time of uthread 70 is set to 1549504199 s 266990 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 70 is set to 1549504199 s 267027 us
+Thread(id: 74) scheduled in
+
+in uthread_schedule, last_start_time of uthread 74 is set to 1549504199 s 294357 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 74 is set to 1549504199 s 294375 us
+Thread(id: 72) scheduled in
+
+in uthread_schedule, last_start_time of uthread 72 is set to 1549504199 s 294925 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 72 is set to 1549504199 s 294940 us
+Thread(id: 76) scheduled in
+
+in uthread_schedule, last_start_time of uthread 76 is set to 1549504199 s 297857 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 76 is set to 1549504199 s 297868 us
+Thread(id: 78) scheduled in
+
+in uthread_schedule, last_start_time of uthread 78 is set to 1549504199 s 301031 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 78 is set to 1549504199 s 301042 us
+Thread(id: 76) scheduled out
+In uthread In uthread 74Thread(id: 27992
+7278) scheduled out
+) scheduled out
+In uthread 78 cpu time consumed: s left: 26, uthread , uthread 21329 inserted into UNDER queue
+ inserted into UNDER queue
+credits left: 29, uthread 78 inserted into UNDER queue
+Thread(id: Th86) scheduled in
+
+in uthread_schedule, last_start_time of uthread 
+i is set d_s86 is set to 1549504199154322374 us
+322374 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 82 is set to 1549504199 s 322394 us
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 84 is set to 1549504199 s 322402 us
+In uthread 72 cpu time consumed: 27412
+
+in uthread_mulmat, last_start_time of uthread 86 is set to 1549504199 s 322406 us
+credits left: 23, uthread 72 inserted into UNDER queue
+Thread(id: 80) scheduled in
+
+in uthread_schedule, last_start_time of uthread 80 is set to 1549504199 s 322409 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 80 is set to 1549504199 s 322470 us
+Thread(id: 90) scheduled in
+
+in uthread_schedule, last_start_time of uthread 90 is set to 1549504199 s 351473 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 90 is set to 1549504199 s 351490 us
+Thread(id: 94) scheduled in
+
+in uthread_schedule, last_start_time of uthread 94 is set to 1549504199 s 351525 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 94 is set to 1549504199 s 351540 us
+Thread(id: 92) scheduled in
+
+in uthread_schedule, last_start_time of uthread 92 is set to 1549504199 s 352172 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 92 is set to 1549504199 s 352184 us
+Thread(id: 88) scheduled in
+
+in uthread_schedule, last_start_time of uthread 88 is set to 1549504199 s 352787 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 88 is set to 1549504199 s 352797 us
+Thread(id: 98) scheduled in
+
+in uthread_schedule, last_start_time of uthread 98 is set to 1549504199 s 380725 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 98 is set to 1549504199 s 380748 us
+Thread(id: 102) scheduled in
+
+in uthread_schedule, last_start_time of uthread 102 is set to 1549504199 s 381792 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 102 is set to 1549504199 s 381804 us
+Thread(id: 100) scheduled in
+
+in uthread_schedule, last_start_time of uthread 100 is set to 1549504199 s 382175 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 100 is set to 1549504199 s 382185 us
+Thread(id: 96) scheduled in
+
+in uthread_schedule, last_start_time of uthread 96 is set to 1549504199 s 383045 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 96 is set to 1549504199 s 383055 us
+Thread(id: 96) scheduled out
+In uthread 98 cpu time consumed: In uthread 45543
+96 cpu time consumed: 43234
+credits left: -20, uthread 98 inserted into OVER queue
+Thread(id: 106) scheduled in
+
+in uthread_schedule, last_start_time of uthread 106 is set to 1549504199 s 426330 us
+
+
+in uthread_schedule, last_start_time of uthread 74 is set to 1549504199 s 294357 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 74 is set to 1549504199 s 294375 us
+Thread(id: 72) scheduled in
+
+in uthread_schedule, last_start_time of uthread 72 is set to 1549504199 s 294925 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 72 is set to 1549504199 s 294940 us
+Thread(id: 76) scheduled in
+
+in uthread_schedule, last_start_time of uthread 76 is set to 1549504199 s 297857 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 76 is set to 1549504199 s 297868 us
+Thread(id: 78) scheduled in
+
+in uthread_schedule, last_start_time of uthread 78 is set to 1549504199 s 301031 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 78 is set to 1549504199 s 301042 us
+Thread(id: 76) scheduled out
+In uthread In uthread 74Thread(id: 27992
+7278) scheduled out
+) scheduled out
+In uthread 78 cpu time consumed: s left: 26, uthread , uthread 21329 inserted into UNDER queue
+ inserted into UNDER queue
+credits left: 29, uthread 78 inserted into UNDER queue
+Thread(id: Th86) scheduled in
+
+in uthread_schedule, last_start_time of uthread 
+i is set d_s86 is set to 1549504199154322374 us
+322374 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 82 is set to 1549504199 s 322394 us
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 84 is set to 1549504199 s 322402 us
+In uthread 72 cpu time consumed: 27412
+
+in uthread_mulmat, last_start_time of uthread 86 is set to 1549504199 s 322406 us
+credits left: 23, uthread 72 inserted into UNDER queue
+Thread(id: 80) scheduled in
+
+in uthread_schedule, last_start_time of uthread 80 is set to 1549504199 s 322409 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 80 is set to 1549504199 s 322470 us
+Thread(id: 90) scheduled in
+
+in uthread_schedule, last_start_time of uthread 90 is set to 1549504199 s 351473 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 90 is set to 1549504199 s 351490 us
+Thread(id: 94) scheduled in
+
+in uthread_schedule, last_start_time of uthread 94 is set to 1549504199 s 351525 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 94 is set to 1549504199 s 351540 us
+Thread(id: 92) scheduled in
+
+in uthread_schedule, last_start_time of uthread 92 is set to 1549504199 s 352172 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 92 is set to 1549504199 s 352184 us
+Thread(id: 88) scheduled in
+
+in uthread_schedule, last_start_time of uthread 88 is set to 1549504199 s 352787 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 88 is set to 1549504199 s 352797 us
+Thread(id: 98) scheduled in
+
+in uthread_schedule, last_start_time of uthread 98 is set to 1549504199 s 380725 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 98 is set to 1549504199 s 380748 us
+Thread(id: 102) scheduled in
+
+in uthread_schedule, last_start_time of uthread 102 is set to 1549504199 s 381792 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 102 is set to 1549504199 s 381804 us
+Thread(id: 100) scheduled in
+
+in uthread_schedule, last_start_time of uthread 100 is set to 1549504199 s 382175 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 100 is set to 1549504199 s 382185 us
+Thread(id: 96) scheduled in
+
+in uthread_schedule, last_start_time of uthread 96 is set to 1549504199 s 383045 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 96 is set to 1549504199 s 383055 us
+Thread(id: 96) scheduled out
+In uthread 98 cpu time consumed: In uthread 45543
+96 cpu time consumed: 43234
+credits left: -20, credits left: -18, uthread 96 inserted into OVER queue
+Thread(id: 104) scheduled in
+
+in uthread_schedule, last_start_time of uthread 104 is set to 1549504199 s 426341 us
+
+in uthread_mulmat, last_start_time of uthread 106 is set to 1549504199 s 426342 us
+Thread(id: 100) scheduled out
+In uthread 100 cpu time consumed: 44112
+..... uthread_context_func .....
+credits left: -19, uthread 100 inserted into OVER queue
+Thread(id: 108) scheduled in
+
+in uthread_schedule, last_start_time of uthread 108 is set to 1549504199 s 426350 us
+Thread(id: 102) scheduled out
+
+in uthread_mulmat, last_start_time of uthread 102104 cpu time consumed: 44486 s 
+426353 us
+credits left: -19, uthread 102 inserted into OVER queue
+Thread(id: 110) scheduled in
+
+in uthread_schedule, last_start_time of uthread 110 is set to 1549504199 s 426355 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread ... is set to 1549504199 s 426360 us
+
+in uthread_mulmat, last_start_time of uthread 110 is set to 1549504199 s 426366 us
+Thread(id: Thread(id: 110) scheduled out
+In uthread In uthread 110 cpu time consumed: 103932103924
+credits left: credits left: --53153110 inserted into OVER queue
+Thread(id: 104) scheduled out
+In uthread 104 cpu time consumed: 103936
+Thread(id: Thread(id: Thr116118) scheduled in
+
+in uthread_schedule, last_start_time of uthread 
+in uthread_sccre is set to 114 is set to , uthread 530154 us inserted  us
+530296 us
+Thread(id: 112) scheduled in
+
+in uthread_schedule, last_start_time of uthread 112 is set to 1549504199 s 530298 us
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 118 is set to 1549504199 s 530307 us
+
+in uthread_mulmat, last_start_time of uthread 112 is set to 1549504199 s 530313 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 116 is set to 1549504199 s 530323 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 114 is set to 1549504199 s 530331 us
+Thread(id: 118) scheduled out
+In uthread 118 cpu time consumed: 103989
+credits left: Thread(id: Thread(id: 118112) scheduleinto OVER queue
+In uthread 116103988
+In uthread 116 cpu time consumed: 103974
+credits left: -28, uthread 112 inserted into OVER queue
+credits left: -Th, uthread , uthread 114 in inserted into OVER queue
+Thread(id: 
+in uthread_schedule, last_start_time of uthread ) scheduled in
+126 is set to _schedule, last_start_time of uthread 120 is set to 1549504199 s 1549504199 s 634303634303 us
+Thread(id: 122) scheduled in
+124) scheduled in
+
+in uthread_schedule, last_start_time of uthread 
+in uthread_schedule, last_start_time of uthread 122 is set to  is set to 1549504199 s 634304 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 120 is set to 1549504199 s 634315 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 126 is set to 1549504199 s 634322 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 124 is set to 1549504199 s 634329 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 122 is set to 1549504199 s 634336 us
+Thread(id: Thread(id: 122) scheduled out
+In uthread 120In uthread 103972 cpu time consumed: 103954
+credits left: -3credits left: 120-3, uthread 122 inserted into OVER queue
+Thread(id: Th) scheduled in
+72) scheduled in
+
+in uthread_schedule, last_start_time of uthread 74 is set to 1549504199 s 738295738295 us
+Thread(id: 126) scheduled out
+Thread(id: 126 cpu time consumed: 124) scheduled out
+In uthread 124 cpu time consumed: 103962
+credits left: -3, uthread 126 inserted into OVER queue
+credits left: -3, uthread 124 inserted into OVER queue
+Thread(id: 78) scheduled in
+
+in uthread_schedule, last_start_time of uthread 78 is set to 1549504199 s 738300 us
+Thread(id: 76) scheduled in
+
+in uthread_schedule, last_start_time of uthread 76 is set to 1549504199 s 738301 us
+Thread(id: 3) scheduled in
+
+in uthread_schedule, last_start_time of uthread 3 is set to 1549504199 s 739366 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 3 is set to 1549504199 s 739404 us
+Thread(id: 11) scheduled in
+
+in uthread_schedule, last_start_time of uthread 11 is set to 1549504199 s 739936 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 11 is set to 1549504199 s 739944 us
+Thread(id: 19) scheduled in
+
+in uthread_schedule, last_start_time of uthread 19 is set to 1549504199 s 740472 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 19 is set to 1549504199 s 740482 us
+Thread(id: 27) scheduled in
+
+in uthread_schedule, last_start_time of uthread 27 is set to 1549504199 s 741005 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 27 is set to 1549504199 s 741014 us
+Thread(id: 35) scheduled in
+
+in uthread_schedule, last_start_time of uthread 35 is set to 1549504199 s 741544 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 35 is set to 1549504199 s 741551 us
+Thread(id: 1) scheduled in
+
+in uthread_schedule, last_start_time of uthread 1 is set to 1549504199 s 741839 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 1 is set to 1549504199 s 741849 us
+Thread(id: 9) scheduled in
+
+in uthread_schedule, last_start_time of uthread 9 is set to 1549504199 s 742369 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 9 is set to 1549504199 s 742379 us
+Thread(id: 17) scheduled in
+
+in uthread_schedule, last_start_time of uthread 17 is set to 1549504199 s 742903 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 17 is set to 1549504199 s 742913 us
+Thread(id: 25) scheduled in
+
+in uthread_schedule, last_start_time of uthread 25 is set to 1549504199 s 743436 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 25 is set to 1549504199 s 743444 us
+Thread(id: 33) scheduled in
+
+in uthread_schedule, last_start_time of uthread 33 is set to 1549504199 s 743969 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 33 is set to 1549504199 s 743977 us
+Thread(id: 5) scheduled in
+
+in uthread_schedule, last_start_time of uthread 5 is set to 1549504199 s 744813 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 5 is set to 1549504199 s 744826 us
+Thread(id: 43) scheduled in
+
+in uthread_schedule, last_start_time of uthread 43 is set to 1549504199 s 745252 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 43 is set to 1549504199 s 745260 us
+Thread(id: 13) scheduled in
+
+in uthread_schedule, last_start_time of uthread 13 is set to 1549504199 s 745310 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 13 is set to 1549504199 s 745322 us
+Thread(id: 21) scheduled in
+
+in uthread_schedule, last_start_time of uthread 21 is set to 1549504199 s 745804 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 21 is set to 1549504199 s 745812 us
+Thread(id: 29) scheduled in
+
+in uthread_schedule, last_start_time of uthread 29 is set to 1549504199 s 746319 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 29 is set to 1549504199 s 746327 us
+Thread(id: 37) scheduled in
+
+in uthread_schedule, last_start_time of uthread 37 is set to 1549504199 s 746855 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 37 is set to 1549504199 s 746864 us
+Thread(id: 7) scheduled in
+
+in uthread_schedule, last_start_time of uthread 7 is set to 1549504199 s 747322 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 7 is set to 1549504199 s 747331 us
+Thread(id: 41) scheduled in
+
+in uthread_schedule, last_start_time of uthread 41 is set to 1549504199 s 747680 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 41 is set to 1549504199 s 747688 us
+Thread(id: 15) scheduled in
+
+in uthread_schedule, last_start_time of uthread 15 is set to 1549504199 s 747841 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 15 is set to 1549504199 s 747866 us
+Thread(id: 23) scheduled in
+
+in uthread_schedule, last_start_time of uthread 23 is set to 1549504199 s 748395 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 23 is set to 1549504199 s 748404 us
+Thread(id: 51) scheduled in
+
+in uthread_schedule, last_start_time of uthread 51 is set to 1549504199 s 748919 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 51 is set to 1549504199 s 748928 us
+Thread(id: 31) scheduled in
+
+in uthread_schedule, last_start_time of uthread 31 is set to 1549504199 s 749011 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 31 is set to 1549504199 s 749021 us
+Thread(id: 39) scheduled in
+
+in uthread_schedule, last_start_time of uthread 39 is set to 1549504199 s 750169 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 39 is set to 1549504199 s 750181 us
+Thread(id: 45) scheduled in
+
+in uthread_schedule, last_start_time of uthread 45 is set to 1549504199 s 750520 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 45 is set to 1549504199 s 750529 us
+Thread(id: 49) scheduled in
+
+in uthread_schedule, last_start_time of uthread 49 is set to 1549504199 s 751871 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 49 is set to 1549504199 s 751891 us
+Thread(id: 59) scheduled in
+
+in uthread_schedule, last_start_time of uthread 59 is set to 1549504199 s 752638 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 59 is set to 1549504199 s 752649 us
+Thread(id: 53) scheduled in
+
+in uthread_schedule, last_start_time of uthread 53 is set to 1549504199 s 754242 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 53 is set to 1549504199 s 754255 us
+Thread(id: 57) scheduled in
+
+in uthread_schedule, last_start_time of uthread 57 is set to 1549504199 s 755283 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 57 is set to 1549504199 s 755296 us
+Thread(id: 67) scheduled in
+
+in uthread_schedule, last_start_time of uthread 67 is set to 1549504199 s 756393 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 67 is set to 1549504199 s 756430 us
+Thread(id: 47) scheduled in
+
+in uthread_schedule, last_start_time of uthread 47 is set to 1549504199 s 757548 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 47 is set to 1549504199 s 757564 us
+Thread(id: 61) scheduled in
+
+in uthread_schedule, last_start_time of uthread 61 is set to 1549504199 s 757796 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 61 is set to 1549504199 s 757809 us
+Thread(id: 65) scheduled in
+
+in uthread_schedule, last_start_time of uthread 65 is set to 1549504199 s 759364 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 65 is set to 1549504199 s 759391 us
+Thread(id: 55) scheduled in
+
+in uthread_schedule, last_start_time of uthread 55 is set to 1549504199 s 761133 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 55 is set to 1549504199 s 761142 us
+Thread(id: 69) scheduled in
+
+in uthread_schedule, last_start_time of uthread 69 is set to 1549504199 s 761490 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 69 is set to 1549504199 s 761499 us
+Thread(id: 63) scheduled in
+
+in uthread_schedule, last_start_time of uthread 63 is set to 1549504199 s 764789 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 63 is set to 1549504199 s 764797 us
+Thread(id: 71) scheduled in
+
+in uthread_schedule, last_start_time of uthread 71 is set to 1549504199 s 769372 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 71 is set to 1549504199 s 769414 us
+Thread(id: 75) scheduled in
+
+in uthread_schedule, last_start_time of uthread 75 is set to 1549504199 s 785983 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 75 is set to 1549504199 s 786026 us
+Thread(id: 73) scheduled in
+
+in uthread_schedule, last_start_time of uthread 73 is set to 1549504199 s 791058 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 73 is set to 1549504199 s 791075 us
+Thread(id: 77) scheduled in
+
+in uthread_schedule, last_start_time of uthread 77 is set to 1549504199 s 791115 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 77 is set to 1549504199 s 791125 us
+Thread(id: 79) scheduled in
+
+in uthread_schedule, last_start_time of uthread 79 is set to 1549504199 s 803075 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 79 is set to 1549504199 s 803094 us
+Thread(id: 83) scheduled in
+
+in uthread_schedule, last_start_time of uthread 83 is set to 1549504199 s 815465 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 83 is set to 1549504199 s 815487 us
+Thread(id: 85) scheduled in
+
+in uthread_schedule, last_start_time of uthread 85 is set to 1549504199 s 820831 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 85 is set to 1549504199 s 820841 us
+Thread(id: 81) scheduled in
+
+in uthread_schedule, last_start_time of uthread 81 is set to 1549504199 s 822304 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 81 is set to 1549504199 s 822338 us
+Thread(id: 87) scheduled in
+
+in uthread_schedule, last_start_time of uthread 87 is set to 1549504199 s 835692 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 87 is set to 1549504199 s 835708 us
+Thread(id: 91) scheduled in
+
+in uthread_schedule, last_start_time of uthread 91 is set to 1549504199 s 845240 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 91 is set to 1549504199 s 845259 us
+Thread(id: 87) scheduled out
+In uthread 87 cpu time consumed: Threa
+85) scheduled out
+In uthread 85credits left: 612944687 inserted into UNDER queue
+91) scheduled out
+In uthread credits left:  cpu time consumed: 46, uthread 5027Thread(id:  inserted into UNDER queue
+81) scheduled out
+In uthread credits left: Th, uthread cpu time consumed: 95) scheduled in
+91 ins
+in uthread_schedule, lThread(id: 95) scheduled in
+1549504199 s credits left:8502891549504199, uthread 85 inserte99) scheduled in
+
+in uthread_schedule, last_start_time of uthread 99 is set to 1549504199 s 850290 us
+Thread(id: 89) scheduled in
+
+in uthread_schedule, last_start_time of uthread 89 is set to 1549504199 s 850291 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 95 is set to 1549504199 s 850302 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 89 is set to 1549504199 s 850308 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 93 is set to 1549504199 s 850316 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 99 is set to 1549504199 s 850321 us
+Thread(id: 101) scheduled in
+
+in uthread_schedule, last_start_time of uthread 101 is set to 1549504199 s 879568 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 101 is set to 1549504199 s 879585 us
+Thread(id: 103) scheduled in
+
+in uthread_schedule, last_start_time of uthread 103 is set to 1549504199 s 880484 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 103 is set to 1549504199 s 880500 us
+Thread(id: 97) scheduled in
+
+in uthread_schedule, last_start_time of uthread 97 is set to 1549504199 s 881456 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 97 is set to 1549504199 s 881486 us
+Thread(id: Thread(id: 97) scheduled out
+In uthread In uthread 97 cpu time consumed: 99969
+68802
+credits left: -43-74, uthread 97 inserted into OVER queue
+Thread(id: Thr107) scheduled in
+
+in uthread_schedule, last_start_time of uthread 
+in is set to 154 is set s 1549504199 s 950295 us
+Thread(id: 103) scheduled out
+In uthread 103 cpu time consumed: 69789
+credits left: -44, uthread 103 inserted into OVER queue
+Thread(id: 111) scheduled in
+
+in uthread_schedule, last_start_time of uthread 111 is set to 1549504199 s 950323 us
+us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 73 is set to 1549504199 s 791075 us
+Thread(id: 77) scheduled in
+
+in uthread_schedule, last_start_time of uthread 77 is set to 1549504199 s 791115 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 77 is set to 1549504199 s 791125 us
+Thread(id: 79) scheduled in
+
+in uthread_schedule, last_start_time of uthread 79 is set to 1549504199 s 803075 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 79 is set to 1549504199 s 803094 us
+Thread(id: 83) scheduled in
+
+in uthread_schedule, last_start_time of uthread 83 is set to 1549504199 s 815465 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 83 is set to 1549504199 s 815487 us
+Thread(id: 85) scheduled in
+
+in uthread_schedule, last_start_time of uthread 85 is set to 1549504199 s 820831 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 85 is set to 1549504199 s 820841 us
+Thread(id: 81) scheduled in
+
+in uthread_schedule, last_start_time of uthread 81 is set to 1549504199 s 822304 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 81 is set to 1549504199 s 822338 us
+Thread(id: 87) scheduled in
+
+in uthread_schedule, last_start_time of uthread 87 is set to 1549504199 s 835692 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 87 is set to 1549504199 s 835708 us
+Thread(id: 91) scheduled in
+
+in uthread_schedule, last_start_time of uthread 91 is set to 1549504199 s 845240 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 91 is set to 1549504199 s 845259 us
+Thread(id: 87) scheduled out
+In uthread 87 cpu time consumed: Threa
+85) scheduled out
+In uthread 85credits left: 612944687 inserted into UNDER queue
+91) scheduled out
+In uthread credits left:  cpu time consumed: 46, uthread 5027Thread(id:  inserted into UNDER queue
+81) scheduled out
+In uthread credits left: Th, uthread cpu time consumed: 95) scheduled in
+91 ins
+in uthread_schedule, lThread(id: 95) scheduled in
+1549504199 s credits left:8502891549504199, uthread 85 inserte99) scheduled in
+
+in uthread_schedule, last_start_time of uthread 99 is set to 1549504199 s 850290 us
+Thread(id: 89) scheduled in
+
+in uthread_schedule, last_start_time of uthread 89 is set to 1549504199 s 850291 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 95 is set to 1549504199 s 850302 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 89 is set to 1549504199 s 850308 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 93 is set to 1549504199 s 850316 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 99 is set to 1549504199 s 850321 us
+Thread(id: 101) scheduled in
+
+in uthread_schedule, last_start_time of uthread 101 is set to 1549504199 s 879568 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 101 is set to 1549504199 s 879585 us
+Thread(id: 103) scheduled in
+
+in uthread_schedule, last_start_time of uthread 103 is set to 1549504199 s 880484 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 103 is set to 1549504199 s 880500 us
+Thread(id: 97) scheduled in
+
+in uthread_schedule, last_start_time of uthread 97 is set to 1549504199 s 881456 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 97 is set to 1549504199 s 881486 us
+Thread(id: Thread(id: 97) scheduled out
+In uthread In uthread 97 cpu time consumed: 99969
+68802
+credits left: -43-74, uthread 97 inserted into OVER queue
+Thread(id: Thr107) scheduled in
+
+in uthread_schedule, last_start_time of uthread 
+in is set to 154 is set s 1549504199 s 950295 us
+ThrThread(id: 101) scheduled out
+In uthread 101 cpu time consumed: 70712
+credits left: -45, uthread 101 inserted into OVER queue
+Thread(id: 109) scheduled in
+
+in uthread_schedule, last_start_time of uthread 109 is set to 1549504199 s 950333 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 73 is set to 1549504199 s 791075 us
+Thread(id: 77) scheduled in
+
+in uthread_schedule, last_start_time of uthread 77 is set to 1549504199 s 791115 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 77 is set to 1549504199 s 791125 us
+Thread(id: 79) scheduled in
+
+in uthread_schedule, last_start_time of uthread 79 is set to 1549504199 s 803075 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 79 is set to 1549504199 s 803094 us
+Thread(id: 83) scheduled in
+
+in uthread_schedule, last_start_time of uthread 83 is set to 1549504199 s 815465 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 83 is set to 1549504199 s 815487 us
+Thread(id: 85) scheduled in
+
+in uthread_schedule, last_start_time of uthread 85 is set to 1549504199 s 820831 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 85 is set to 1549504199 s 820841 us
+Thread(id: 81) scheduled in
+
+in uthread_schedule, last_start_time of uthread 81 is set to 1549504199 s 822304 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 81 is set to 1549504199 s 822338 us
+Thread(id: 87) scheduled in
+
+in uthread_schedule, last_start_time of uthread 87 is set to 1549504199 s 835692 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 87 is set to 1549504199 s 835708 us
+Thread(id: 91) scheduled in
+
+in uthread_schedule, last_start_time of uthread 91 is set to 1549504199 s 845240 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 91 is set to 1549504199 s 845259 us
+Thread(id: 87) scheduled out
+In uthread 87 cpu time consumed: Threa
+85) scheduled out
+In uthread 85credits left: 612944687 inserted into UNDER queue
+91) scheduled out
+In uthread credits left:  cpu time consumed: 46, uthread 5027Thread(id:  inserted into UNDER queue
+81) scheduled out
+In uthread credits left: Th, uthread cpu time consumed: 95) scheduled in
+91 ins
+in uthread_schedule, lThread(id: 95) scheduled in
+1549504199 s credits left:8502891549504199, uthread 85 inserte99) scheduled in
+
+in uthread_schedule, last_start_time of uthread 99 is set to 1549504199 s 850290 us
+Thread(id: 89) scheduled in
+
+in uthread_schedule, last_start_time of uthread 89 is set to 1549504199 s 850291 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 95 is set to 1549504199 s 850302 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 89 is set to 1549504199 s 850308 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 93 is set to 1549504199 s 850316 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 99 is set to 1549504199 s 850321 us
+Thread(id: 101) scheduled in
+
+in uthread_schedule, last_start_time of uthread 101 is set to 1549504199 s 879568 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 101 is set to 1549504199 s 879585 us
+Thread(id: 103) scheduled in
+
+in uthread_schedule, last_start_time of uthread 103 is set to 1549504199 s 880484 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 103 is set to 1549504199 s 880500 us
+Thread(id: 97) scheduled in
+
+in uthread_schedule, last_start_time of uthread 97 is set to 1549504199 s 881456 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 97 is set to 1549504199 s 881486 us
+Thread(id: Thread(id: 97) scheduled out
+In uthread In uthread 97 cpu time consumed: 99969
+68802
+credits left: -43-74, uthread 97 inserted into OVER queue
+Thread(id: Thr107) scheduled in
+
+in uthread_schedule, last_start_time of uthread 
+in is set to 154 is set s 1549504199 s 950295 us
+Thr..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 107 is set to 1549504199 s 950345 us
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 109 is set to 1549504199 s 950351 us
+
+in uthread_mulmat, last_start_time of uthread 111 is set to 1549504199 s 950357 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 105 is set to 1549504199 s 950415 us
+Thread(id: 109) scheduled out
+In uthread In uthread 107109 cpu time consumed: Thread(id: 105Thread(id: ) scheduled out
+credits left: In uthread t: -85105107111 cpu time consumed: ue
+ inserted into OVER queue
+135877135941
+credits left: credits left: -85-85, uthread 111105 inserted into OVER queue
+ inserted into OVER queue
+Thread(id: Thread(id: 115) s) scheduled in
+
+in uthread_schedule, last_start_time of uthread 115117 is set to 1549504200 s Threa us
+119) scheduled in
+
+in uthread_schedule, last_start_time of uthread 113 is set to 1549504200 s 86301 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 115 is set to 1549504200 s 86316 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 119 is set to 1549504200 s 86321 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 113 is set to 1549504200 s 86327 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 117 is set to 1549504200 s 86404 us
+Thread(id: Thread(id: 119) scheduled out
+In uthread 117 cpu time consumed: 99888
+credits left: -24, uthread 119 inserted into OVER queue
+credits left: -24, uthread 117 inserted into OVER queue
+Thread(id: Thr) schedu125Thread(id: 
+in uthread_schedule, last_start_time of uthread 113) scheduled out
+1549504200  s 186297 us
+99962
+In uthread 115 cpu time consumed: 99975
+credits left: -24credits left: 124 inserted into OVER queue
+115 inserted into OVER queue
+Thread(id: 123) scheduled in
+121) scheduled in
+123 is set to 
+in uthread_schedule, last_start_time of uthread 154 is set s 154950 us
+186300 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 125 is set to 1549504200 s 186312 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 121 is set to 1549504200 s 186319 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 127 is set to 1549504200 s 186326 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 123 is set to 1549504200 s 186332 us
+Thread(id: 121) scheduled out
+In uthread 121 cpu time consumed: 99970
+credits left: 1, uthread 121 inserted into UNDER queue
+Thread(id: 81) scheduled in
+
+in uthread_schedule, last_start_time of uthread 81 is set to 1549504200 s 286296 us
+Thread(id: 127) scheduled out
+In uthread 127 cpu time consumed: 99964
+Thread(id: 1, uthread 127 inserted into UNDER queue
+125) scheduled out
+In uthread 123125Thread(id: 87) scheduled in
+9998087 is set to 1549504200 s 286299 us
+credits left: 1, uthread 125 inserted into UNDER queue
+credits left: 1, uthread 123 inserted into UNDER queue
+Thread(id: 85) scheduled in
+
+in uthread_schedule, last_start_time of uthread 8591 is set to 1549504200 s 286301 us
+Thread(id: 125) scheduled in
+
+in uthread_schedule, last_start_time of uthread 125 is set to 1549504200 s 286581 us
+Thread(id: 121) scheduled in
+
+in uthread_schedule, last_start_time of uthread 121 is set to 1549504200 s 289334 us
+Thread(id: 127) scheduled in
+
+in uthread_schedule, last_start_time of uthread 127 is set to 1549504200 s 307165 us
+Thread(id: 123) scheduled in
+
+in uthread_schedule, last_start_time of uthread 123 is set to 1549504200 s 315163 us
+Thread(id: Thread(id: Thread(id: 127125) scheduled out
+In uthread In uthread 125 cpu time consumed: 127121 cpu time consumed: 83128
+credits left: credits left: -82credits hrcred123125-10,, uthread 121 inserted into OVER queue
+stealing uthread from another kthreadstealing uthread from another kthread
+Thread(id: Thread(id: ) s) scheduled in
+
+in uthread_schedule, last_start_time of uthread 126 is set to 1549504200 s 398297 us
+uthread_mulmat, last_start_time of uthread 107 is set to 1549504199 s 950345 us
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 109 is set to 1549504199 s 950351 us
+
+in uthread_mulmat, last_start_time of uthread 111 is set to 1549504199 s 950357 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 105 is set to 1549504199 s 950415 us
+Thread(id: 109) scheduled out
+In uthread In uthread 107109 cpu time consumed: Thread(id: 105Thread(id: ) scheduled out
+credits left: In uthread t: -85105107111 cpu time consumed: ue
+ inserted into OVER queue
+135877135941
+credits left: credits left: -85-85, uthread 111105 inserted into OVER queue
+ inserted into OVER queue
+Thread(id: Thread(id: 115) s) scheduled in
+
+in uthread_schedule, last_start_time of uthread 115117 is set to 1549504200 s Threa us
+119) scheduled in
+
+in uthread_schedule, last_start_time of uthread 113 is set to 1549504200 s 86301 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 115 is set to 1549504200 s 86316 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 119 is set to 1549504200 s 86321 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 113 is set to 1549504200 s 86327 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 117 is set to 1549504200 s 86404 us
+Thread(id: Thread(id: 119) scheduled out
+In uthread 117 cpu time consumed: 99888
+credits left: -24, uthread 119 inserted into OVER queue
+credits left: -24, uthread 117 inserted into OVER queue
+Thread(id: Thr) schedu125Thread(id: 
+in uthread_schedule, last_start_time of uthread 113) scheduled out
+1549504200  s 186297 us
+99962
+In uthread 115 cpu time consumed: 99975
+credits left: -24credits left: 124 inserted into OVER queue
+115 inserted into OVER queue
+Thread(id: 123) scheduled in
+121) scheduled in
+123 is set to 
+in uthread_schedule, last_start_time of uthread 154 is set s 154950 us
+186300 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 125 is set to 1549504200 s 186312 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 121 is set to 1549504200 s 186319 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 127 is set to 1549504200 s 186326 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 123 is set to 1549504200 s 186332 us
+Thread(id: 121) scheduled out
+In uthread 121 cpu time consumed: 99970
+credits left: 1, uthread 121 inserted into UNDER queue
+Thread(id: 81) scheduled in
+
+in uthread_schedule, last_start_time of uthread 81 is set to 1549504200 s 286296 us
+Thread(id: 127) scheduled out
+In uthread 127 cpu time consumed: 99964
+Thread(id: 1, uthread 127 inserted into UNDER queue
+125) scheduled out
+In uthread 123125Thread(id: 87) scheduled in
+9998087 is set to 1549504200 s 286299 us
+credits left: 1, uthread 125 inserted into UNDER queue
+credits left: 1, uthread 123 inserted into UNDER queue
+Thread(id: 85) scheduled in
+
+in uthread_schedule, last_start_time of uthread 8591 is set to 1549504200 s 286301 us
+Thread(id: 125) scheduled in
+
+in uthread_schedule, last_start_time of uthread 125 is set to 1549504200 s 286581 us
+Thread(id: 121) scheduled in
+
+in uthread_schedule, last_start_time of uthread 121 is set to 1549504200 s 289334 us
+Thread(id: 127) scheduled in
+
+in uthread_schedule, last_start_time of uthread 127 is set to 1549504200 s 307165 us
+Thread(id: 123) scheduled in
+
+in uthread_schedule, last_start_time of uthread 123 is set to 1549504200 s 315163 us
+Thread(id: Thread(id: Thread(id: 127125) scheduled out
+In uthread In uthread 125 cpu time consumed: 127121 cpu time consumed: 83128
+credits left: credits left: -82credits hrcred123125-10,, uthread 121 inserted into OVER queue
+stealing uthread from another kthreadstealing uthread from another kthread
+Thread(id: Thread(id: ) s) scheduled in
+
+in uthread_schedule, last_start_time of uthread 126 is set to 1549504200 s 398297 us
+uthread_mulmat, last_start_time of uthread 107 is set to 1549504199 s 950345 us
+..... uthread_context_func .....
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 109 is set to 1549504199 s 950351 us
+
+in uthread_mulmat, last_start_time of uthread 111 is set to 1549504199 s 950357 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 105 is set to 1549504199 s 950415 us
+Thread(id: 109) scheduled out
+In uthread In uthread 107109 cpu time consumed: Thread(id: 105Thread(id: ) scheduled out
+credits left: In uthread t: -85105107111 cpu time consumed: ue
+ inserted into OVER queue
+135877135941
+credits left: credits left: -85-85, uthread 111105 inserted into OVER queue
+ inserted into OVER queue
+Thread(id: Thread(id: 115) s) scheduled in
+
+in uthread_schedule, last_start_time of uthread 115117 is set to 1549504200 s Threa us
+119) scheduled in
+
+in uthread_schedule, last_start_time of uthread 113 is set to 1549504200 s 86301 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 115 is set to 1549504200 s 86316 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 119 is set to 1549504200 s 86321 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 113 is set to 1549504200 s 86327 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 117 is set to 1549504200 s 86404 us
+Thread(id: Thread(id: 119) scheduled out
+In uthread 117 cpu time consumed: 99888
+credits left: -24, uthread 119 inserted into OVER queue
+credits left: -24, uthread 117 inserted into OVER queue
+Thread(id: Thr) schedu125Thread(id: 
+in uthread_schedule, last_start_time of uthread 113) scheduled out
+1549504200  s 186297 us
+99962
+In uthread 115 cpu time consumed: 99975
+credits left: -24credits left: 124 inserted into OVER queue
+115 inserted into OVER queue
+Thread(id: 123) scheduled in
+121) scheduled in
+123 is set to 
+in uthread_schedule, last_start_time of uthread 154 is set s 154950 us
+186300 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 125 is set to 1549504200 s 186312 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 121 is set to 1549504200 s 186319 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 127 is set to 1549504200 s 186326 us
+..... uthread_context_func .....
+
+in uthread_mulmat, last_start_time of uthread 123 is set to 1549504200 s 186332 us
+Thread(id: 121) scheduled out
+In uthread 121 cpu time consumed: 99970
+credits left: 1, uthread 121 inserted into UNDER queue
+Thread(id: 81) scheduled in
+
+in uthread_schedule, last_start_time of uthread 81 is set to 1549504200 s 286296 us
+Thread(id: 127) scheduled out
+In uthread 127 cpu time consumed: 99964
+Thread(id: 1, uthread 127 inserted into UNDER queue
+125) scheduled out
+In uthread 123125Thread(id: 87) scheduled in
+9998087 is set to 1549504200 s 286299 us
+credits left: 1, uthread 125 inserted into UNDER queue
+credits left: 1, uthread 123 inserted into UNDER queue
+Thread(id: 85) scheduled in
+
+in uthread_schedule, last_start_time of uthread 8591 is set to 1549504200 s 286301 us
+Thread(id: 125) scheduled in
+
+in uthread_schedule, last_start_time of uthread 125 is set to 1549504200 s 286581 us
+Thread(id: 121) scheduled in
+
+in uthread_schedule, last_start_time of uthread 121 is set to 1549504200 s 289334 us
+Thread(id: 127) scheduled in
+
+in uthread_schedule, last_start_time of uthread 127 is set to 1549504200 s 307165 us
+Thread(id: 123) scheduled in
+
+in uthread_schedule, last_start_time of uthread 123 is set to 1549504200 s 315163 us
+Thread(id: Thread(id: Thread(id: 127125) scheduled out
+In uthread In uthread 125 cpu time consumed: 127121 cpu time consumed: 83128
+credits left: credits left: -82credits hrcred123125-10,, uthread 121 inserted into OVER queue
+stealing uthread from another kthreadstealing uthread from another kthread
+Thread(id: Thread(id: ) s) scheduled in
+
+in uthread_schedule, last_start_time of uthread 

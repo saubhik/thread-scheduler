@@ -95,8 +95,6 @@ static void print_matrix(matrix_t *mat)
 
 static int uthread_mulmat(void *p)
 {
-	uthread_struct_t *cur_uthread_started = kthread_cpu_map[kthread_apic_id()]->krunqueue.cur_uthread;
-	gettimeofday(&(cur_uthread_started->last_start_time), NULL);
 	int i, j, k;
 	int start_row, end_row;
 	int start_col, end_col;
@@ -146,10 +144,6 @@ static int uthread_mulmat(void *p)
 
 #undef ptr
 
-	uthread_struct_t *cur_uthread_finished = kthread_cpu_map[kthread_apic_id()]->krunqueue.cur_uthread;
-	struct timeval cur_time;
-	gettimeofday(&cur_time, NULL);
-	cur_uthread_finished->tot_cpu_time += (cur_time.tv_sec*1000000 + cur_time.tv_usec) - (cur_uthread_finished->last_start_time.tv_sec*1000000 + cur_uthread_finished->last_start_time.tv_usec);
 	return 0;
 }
 

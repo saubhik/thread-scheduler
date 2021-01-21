@@ -24,4 +24,4 @@ Please refer to the Georgia Tech [honor code](http://www.honor.gatech.edu/).
 
 We have tried to complie a list of frequently asked questions. 
 Though we encourage you to ask questions we will request you to kindly read through the FAQs before posting any questing. 
-You can find the FAQs at [wiki page](https://github.gatech.edu/cs6210-spring21/project1/wiki/FAQs)
+You can find the FAQs at [wiki page](https://github.gatech.edu/cs6210-spring21/project1/wiki/FAQs).

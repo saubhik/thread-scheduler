@@ -61,10 +61,11 @@ Students are required to finish following implementations with GTThreads library
    When an uthread executes this function, it should yield the CPU to the scheduler, which then schedules the next thread (per its scheduling scheme). 
 On voluntary preemption, the thread should be charged credits only for the actual CPU cycles used.
 For this, students need to implement a library function for voluntary preemption **gt_yield()**.
+Also, *students should print logs for the credit change*.
 
 * Load balancing
 
-   Implement uthread migration if a kthread is idle.
+   Implement uthread migration if a kthread is idle. To show the correctness, *students should print queue status after load balancing*.
 
 * Complete Makefile and README
 

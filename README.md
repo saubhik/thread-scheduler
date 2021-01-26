@@ -19,8 +19,7 @@ Please refer to the Georgia Tech [honor code](http://www.honor.gatech.edu/).
 * [Project Description](./doc/project_1_description.md)
 * [Project Submission](./doc/project_1_submission.md)
 * [VM Cluster for Experiments](./doc/vm_userguide.md)
-
-* FAQs
+* [FAQs](https://github.gatech.edu/cs6210-spring21/project1/wiki/FAQs)
 
 We have tried to complie a list of frequently asked questions. 
 Though we encourage you to ask questions we will request you to kindly read through the FAQs before posting any questing. 

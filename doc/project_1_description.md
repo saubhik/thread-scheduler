@@ -63,6 +63,8 @@ On voluntary preemption, the thread should be charged credits only for the actua
 For this, students need to implement a library function for voluntary preemption **gt_yield()**.
 Also, *students should print logs for the credit change*.
 
+gt\_yield function is a pluggable module, it is recommend to add an input arguement to enable/disable it.
+
 * Load balancing
 
    Implement uthread migration if a kthread is idle. To show the correctness, *students should print queue status after load balancing*.
@@ -89,7 +91,8 @@ There is no specific style for the report, but make sure to cover at least follo
    - Credits are ranging in {25, 50, 75, 100}.
    - Matrix sizes are ranging in {32, 64, 128, 256}.
    - So there are 16 possible combinations of credit and matrix size. 
-   
+   - Turn off gt\_yield function
+ 
       Since there will be 128 uthreads, there will be 8 uthreads for each combination. (It isn't always interesting to parallelize matrix multiplication. Here multiple sets of threads need to be running over your scheduler with different workloads and priorities).
 
    - Collect the time taken (to the accuracy of micro-seconds) by each uthread, from the time it was created, to the time it completed its task. Also measure the CPU time that each uthread spent running (i.e., excluding the time that it spent waiting to be scheduled) every time it was scheduled. 

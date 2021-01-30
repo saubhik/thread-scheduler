@@ -79,7 +79,7 @@ There is no specific style for the report, but make sure to cover at least follo
 * Present briefly how the credit scheduler works (max. 2 pages), try to explain its basic algorithm and rules. 
 * Sketch your design of credit scheduler. Show how do you implement it with the provided package.
 
-   Clearly show when does your design add or deduct credit, why and when does it call gt\_yield, and how to do load balancing.
+   Clearly show when does your design add or deduct credit, when does it call gt\_yield, and how to do load balancing, and what happened to the scheduling process.
 
 * Experiments
 

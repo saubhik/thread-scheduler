@@ -78,6 +78,8 @@ extern void kthread_init_runqueue(kthread_runqueue_t *kthread_runq);
  * Called by kthread handling VTALRM. */
 extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_runq);
 
+extern uthread_struct_t *sched_find_next_uthread(kthread_runqueue_t *kthread_runq);
+
 /* Find the highest priority uthread from uthread_group u_gid.
  * Called by kthread handling SIGUSR1(RELAYED signal).
  * Also globally sets the penalty, if choosing a lower priority uthread. */

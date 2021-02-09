@@ -218,6 +218,100 @@ extern uthread_struct_t *sched_find_best_uthread(kthread_runqueue_t *kthread_run
 }
 
 
+extern uthread_struct_t *sched_find_next_uthread(kthread_runqueue_t *kthread_runq)
+{
+	runqueue_t *runq;
+	prio_struct_t  *prioq;
+	uthread_head_t *u_head;
+	uthread_struct_t *u_obj;
+	unsigned int i, j, uprio, ugroup;
+
+	gt_spin_lock(&(kthread_runq->kthread_runqlock));
+
+	runq = kthread_runq->active_runq;
+
+	if (!(runq->uthread_mask))
+	{
+		/* No jobs in active. Switch runqueue. */
+		assert(!runq->uthread_tot);
+		kthread_runq->active_runq = kthread_runq->expires_runq;
+		kthread_runq->expires_runq = runq;
+
+		runq = kthread_runq->active_runq;
+		if (!runq->uthread_mask)
+		{
+			assert(!runq->uthread_tot);
+			gt_spin_unlock(&(kthread_runq->kthread_runqlock));
+
+			int inx;
+			kthread_context_t *tmp_k_ctx, *tgt_k_ctx, *k_ctx;
+			kthread_runqueue_t *tgt_kthread_runq;
+			runqueue_t *tgt_runq;
+
+			k_ctx = kthread_cpu_map[kthread_apic_id()];
+
+			for(inx=0; inx<GT_MAX_KTHREADS; inx++)
+			{
+				if((tmp_k_ctx = kthread_cpu_map[inx]) && (tmp_k_ctx != k_ctx))
+					if(tmp_k_ctx->kthread_flags & KTHREAD_DONE)
+						continue;
+				tgt_k_ctx = tmp_k_ctx;
+				break;
+			}
+
+			if (tgt_k_ctx)
+			{
+				tgt_kthread_runq = &(tgt_k_ctx->krunqueue);
+				tgt_runq = tgt_kthread_runq->active_runq;
+				if (tgt_runq->uthread_mask) {
+					uprio = LOWEST_BIT_SET(runq->uthread_mask);
+					prioq = &(runq->prio_array[uprio]);
+					assert(prioq->group_mask);
+					ugroup = LOWEST_BIT_SET(prioq->group_mask);
+					u_head = &(prioq->group[ugroup]);
+					u_obj = TAILQ_LAST(u_head, uthread_head);
+					// Stealing from another kthread's run queue.
+					rem_from_runqueue(tgt_runq, &(tgt_kthread_runq->kthread_runqlock), u_obj);
+				}
+			}
+
+			return u_obj;
+		}
+
+		for(i=0; i<MAX_UTHREAD_PRIORITY; i++)
+		{
+			if (runq->uthread_prio_tot > 0)
+				for(j=0; j<MAX_UTHREAD_GROUPS; j++)
+				{
+					u_head = &((runq)->prio_array[i].group[j]);
+					TAILQ_FOREACH(u_obj, u_head, uthread_runq)
+					{
+						if (u_obj->uthread_credit + u_obj->uthread_weight > 0)
+							u_obj->uthread_credit = u_obj->uthread_credit + u_obj->uthread_weight;
+						else
+							u_obj->uthread_credit = 1;
+					}
+				}
+		}
+
+	}
+
+	/* Find the highest priority bucket */
+	uprio = LOWEST_BIT_SET(runq->uthread_mask);
+	prioq = &(runq->prio_array[uprio]);
+
+	assert(prioq->group_mask);
+	ugroup = LOWEST_BIT_SET(prioq->group_mask);
+
+	u_head = &(prioq->group[ugroup]);
+	u_obj = TAILQ_FIRST(u_head);
+	__rem_from_runqueue(runq, u_obj);
+
+	gt_spin_unlock(&(kthread_runq->kthread_runqlock));
+	return(u_obj);
+}
+
+
 
 /* XXX: More work to be done !!! */
 extern gt_spinlock_t uthread_group_penalty_lock;

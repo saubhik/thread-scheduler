@@ -31,7 +31,7 @@ static int uthread_init(uthread_struct_t *u_new);
 /* uthread creation */
 #define UTHREAD_DEFAULT_SSIZE (16 * 1024)
 
-extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid);
+extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid, int u_weight, int u_cap);
 
 /**********************************************************************/
 /** DEFNITIONS **/
@@ -127,6 +127,15 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 
 	if((u_obj = kthread_runq->cur_uthread))
 	{
+		struct timeval tv;
+		gettimeofday(&tv, NULL);
+		timersub(&tv, &(u_obj->last_scheduled_at), &tv);
+		timeradd(&(u_obj->agg_cpu_time), &tv, &(u_obj->agg_cpu_time));
+
+		/* Assuming credit-to-CPU-time conversion of 1 credit = 2ms */
+		u_int64_t debit = (tv.tv_sec * (u_int64_t)500) + (tv.tv_usec / 2000);
+		u_obj->uthread_credit -= debit;
+
 		/*Go through the runq and schedule the next thread to run */
 		kthread_runq->cur_uthread = NULL;
 
@@ -151,7 +160,23 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 		{
 			/* XXX: Apply uthread_group_penalty before insertion */
 			u_obj->uthread_state = UTHREAD_RUNNABLE;
-			add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+			if (ksched_shared_info.uthread_scheduler == 0) {
+				/* For O(1) priority scheduler */
+				add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+			}
+			else
+			{
+				if (u_obj->uthread_credit < 0)
+				{
+					/* Add to expires run queue as priority is OVER */
+					add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
+				}
+				else
+				{
+					/* Add to active run queue as priority is UNDER */
+					add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock), u_obj);
+				}
+			}
 			/* XXX: Save the context (signal mask not saved) */
 			if(sigsetjmp(u_obj->uthread_env, 0))
 				return;
@@ -230,7 +255,7 @@ static void uthread_context_func(int signo)
 
 extern kthread_runqueue_t *ksched_find_target(uthread_struct_t *);
 
-extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid)
+extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid, int u_weight, int u_cap)
 {
 	kthread_runqueue_t *kthread_runq;
 	uthread_struct_t *u_new;
@@ -251,6 +276,10 @@ extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, 
 	u_new->uthread_gid = u_gid;
 	u_new->uthread_func = u_func;
 	u_new->uthread_arg = u_arg;
+
+	u_new->uthread_weight = u_weight;
+	u_new->uthread_credit = u_weight;
+	u_new->uthread_cap = u_cap;
 
 	/* Allocate new stack for uthread */
 	u_new->uthread_stack.ss_flags = 0; /* Stack enabled for signal handling */

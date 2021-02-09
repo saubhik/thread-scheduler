@@ -297,7 +297,16 @@ static void gtthread_app_start(void *arg)
 			/* XXX: gtthread app cleanup has to be done. */
 			continue;
 		}
-		uthread_schedule(&sched_find_best_uthread);
+		if (ksched_shared_info.uthread_scheduler == 0)
+		{
+			/* O(1) priority scheduler */
+			uthread_schedule(&sched_find_best_uthread);
+		}
+		else
+		{
+			/* Credit scheduler */
+			uthread_schedule(&sched_find_next_uthread);
+		}
 	}
 	kthread_exit();
 

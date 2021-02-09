@@ -61,6 +61,8 @@ typedef struct __ksched_shared_info
 
 	gt_spinlock_t __malloc_lock; /* making malloc thread-safe (check particular glibc to see if needed) */
 	unsigned int reserved[2];
+
+	unsigned short uthread_scheduler; /* 0 for O(1) priority scheduler, 1 for credit scheduler */
 } ksched_shared_info_t;
 
 

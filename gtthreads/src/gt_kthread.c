@@ -396,7 +396,7 @@ yield_again:
 	return;
 }
 
-extern u_long** gtthread_app_exit()
+extern struct timeval** gtthread_app_exit()
 {
 	/* gtthread_app_exit called by only main thread. */
 	/* For main thread, trigger start again. */
@@ -435,7 +435,7 @@ extern u_long** gtthread_app_exit()
 		__asm__ __volatile__ ("pause\n");
 	}
 
-	return (u_long **) ksched_shared_info.thread_run_time;
+	return (struct timeval **) ksched_shared_info.thread_run_time;
 }
 
 /**********************************************************************/

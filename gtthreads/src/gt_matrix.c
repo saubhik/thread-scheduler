@@ -55,10 +55,6 @@ typedef struct __uthread_arg
 	unsigned int gid;
 	int start_row; /* start_row -> (start_row + PER_THREAD_ROWS) */
 	int start_col; /* start_col -> (start_col + PER_GROUP_COLS) */
-
-	int combination; /* Matrix size x credit combination */
-	int rank_in_set; /* Thread number in set of 8 threads */
-
 }uthread_arg_t;
 
 struct timeval tv1;
@@ -94,8 +90,6 @@ static void print_matrix(matrix_t *mat)
 
 	return;
 }
-
-extern int uthread_create(uthread_t *, void *, void *, uthread_group_t, int, int);
 
 static void * uthread_mulmat(void *p)
 {
@@ -140,7 +134,7 @@ static void * uthread_mulmat(void *p)
 //			ptr->tid, ptr->gid, cpuid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 //#else
 	gettimeofday(&tv2,NULL);
-	thread_completed_at[ptr->combination][ptr->rank_in_set] = tv2;
+	thread_completed_at[ptr->tid / 8][ptr->tid % 8] = tv2;
 	fprintf(stderr, "\nThread(id:%d, group:%d) finished (TIME : %lu s and %d us)",
 			ptr->tid, ptr->gid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 //#endif
@@ -207,9 +201,9 @@ static void print_creation_to_completion_time_stats()
 	}
 }
 
-static void print_thread_run_time_stats(u_long** run_time)
+static void print_thread_run_time_stats(struct timeval** run_time)
 {
-	u_long mean;
+	u_long mean, tmp[16][8];
 	double stddev;
 	int i, j;
 
@@ -220,14 +214,16 @@ static void print_thread_run_time_stats(u_long** run_time)
 		stddev = 0;
 
 		/* For each thread in set */
-		for (j = 0; j < 8; ++j)
-			mean += run_time[i][j];
+		for (j = 0; j < 8; ++j) {
+			tmp[i][j] = run_time[i][j].tv_sec * 1000000 + run_time[i][j].tv_usec;
+			mean += tmp[i][j];
+		}
 		mean /= 8;
 		printf("Mean of thread %d's run time in combination %d is %lu\n", j, i, mean);
 
 		/* For each thread in set */
 		for (j = 0; j < 8; ++j)
-			stddev += (double)(run_time[i][j] - mean) * (double)(run_time[i][j] - mean);
+			stddev += (double)(tmp[i][j] - mean) * (double)(tmp[i][j] - mean);
 		stddev = sqrt(stddev / 8);
 		printf("Standard Deviation of thread %d's run time in combination %d is %f\n", j, i, stddev);
 	}
@@ -305,9 +301,8 @@ int main(int argc, char** argv)
 
 				uarg->gid = (inx % NUM_GROUPS);
 
-				uarg->combination = combination;
-				uarg->rank_in_set = k;
-
+				// combination == uarg->tid / 8
+				// k == uarg->tid % 8
 				gettimeofday(&thread_created_at[combination][k], NULL);
 
 //		uarg->start_row = (inx * PER_THREAD_ROWS);
@@ -321,15 +316,12 @@ int main(int argc, char** argv)
 		}
 	}
 
-	u_long** thread_run_time = gtthread_app_exit();
+	struct timeval** thread_run_time = gtthread_app_exit();
 
 	print_creation_to_completion_time_stats();
 	print_thread_run_time_stats(thread_run_time);
 
 	deallocate_matrices();
-	for (i = 0; i < 16; ++i)
-		free(thread_run_time[i]);
-	free(thread_run_time);
 
 	// print_matrix(&C);
 	// fprintf(stderr, "********************************");

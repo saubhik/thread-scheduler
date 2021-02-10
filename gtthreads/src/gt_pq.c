@@ -145,6 +145,26 @@ extern void kthread_init_runqueue(kthread_runqueue_t *kthread_runq)
 	return;
 }
 
+extern void print_runq(runqueue_t *runq, char *runq_str)
+{
+	int i, j;
+	uthread_head_t *u_head;
+	uthread_struct_t *u_obj;
+
+	printf("******************************************************\n");
+	printf("Run queue(%s) state : \n", runq_str);
+	printf("Threads in current run queue:\n");
+	for (i = 0; i < MAX_UTHREAD_PRIORITY; ++i)
+		if (runq->uthread_prio_tot > 0)
+			for (j = 0; j < MAX_UTHREAD_GROUPS; ++j)
+			{
+				u_head = &((runq)->prio_array[i].group[j]);
+				TAILQ_FOREACH(u_obj, u_head, uthread_runq)
+					printf("Thread(id:%d, group:%d) with priority:%d belongs to this run queue\n", u_obj->uthread_tid, u_obj->uthread_gid, i);
+			}
+	printf("******************************************************\n");
+}
+
 static void print_runq_stats(runqueue_t *runq, char *runq_str)
 {
 	int inx;
@@ -232,18 +252,21 @@ extern uthread_struct_t *sched_find_next_uthread(kthread_runqueue_t *kthread_run
 
 	if (!(runq->uthread_mask))
 	{
-		/* No jobs in active. Switch runqueue. */
+		/* No threads in ACTIVE runq. Switch runq and bump credits. */
 		assert(!runq->uthread_tot);
 		kthread_runq->active_runq = kthread_runq->expires_runq;
 		kthread_runq->expires_runq = runq;
 
-		runq = kthread_runq->expires_runq;
+		runq = kthread_runq->active_runq;
 		if (!runq->uthread_mask)
 		{
+			/* Both EXPIRES and ACTIVE runq are empty, load balance from another kthread */
 			assert(!runq->uthread_tot);
 			gt_spin_unlock(&(kthread_runq->kthread_runqlock));
 			return NULL;
 		}
+
+		printf("No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq\n");
 
 		for (i = 0; i < MAX_UTHREAD_PRIORITY; ++i)
 		{
@@ -253,10 +276,14 @@ extern uthread_struct_t *sched_find_next_uthread(kthread_runqueue_t *kthread_run
 					u_head = &((runq)->prio_array[i].group[j]);
 					TAILQ_FOREACH(u_obj, u_head, uthread_runq)
 					{
+						printf("CREDIT CHANGE: Thread(id:%d, group:%d, weight:%d)'s previous credit:%d\n", u_obj->uthread_tid, u_obj->uthread_gid, u_obj->uthread_weight, u_obj->uthread_credit);
+
 						if (u_obj->uthread_credit + u_obj->uthread_weight > 0)
 							u_obj->uthread_credit = u_obj->uthread_credit + u_obj->uthread_weight;
 						else
 							u_obj->uthread_credit = 1;
+
+						printf("CREDIT CHANGE: Thread(id:%d, group:%d, weight:%d)'s current credit:%d\n", u_obj->uthread_tid, u_obj->uthread_gid, u_obj->uthread_weight, u_obj->uthread_credit);
 					}
 				}
 		}

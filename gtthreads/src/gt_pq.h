@@ -70,6 +70,8 @@ extern void rem_from_runqueue(runqueue_t *runq, gt_spinlock_t *runq_lock, uthrea
 extern void switch_runqueue(runqueue_t *from_runq, gt_spinlock_t *from_runqlock, 
 		runqueue_t *to_runq, gt_spinlock_t *to_runqlock, uthread_struct_t *u_elem);
 
+/* For printing queue status */
+extern void print_runq(runqueue_t *runq, char *runq_str);
 
 /* kthread runqueue */
 extern void kthread_init_runqueue(kthread_runqueue_t *kthread_runq);

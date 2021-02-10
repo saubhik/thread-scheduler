@@ -136,6 +136,7 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 		/* Assuming credit-to-CPU-time conversion of 1 credit = 2ms */
 		u_int64_t debit = (tv.tv_sec * (u_int64_t)500) + (tv.tv_usec / 2000);
 		u_obj->uthread_credit -= debit;
+		printf("CREDIT CHANGE: %lu debited from Thread(id:%d, group:%d)\n", debit, u_obj->uthread_tid, u_obj->uthread_gid);
 
 		/*Go through the runq and schedule the next thread to run */
 		kthread_runq->cur_uthread = NULL;
@@ -218,10 +219,16 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 					ugroup = LOWEST_BIT_SET(prioq->group_mask);
 					u_head = &(prioq->group[ugroup]);
 					u_obj = TAILQ_LAST(u_head, uthread_head);
-					rem_from_runqueue(tgt_runq,
-									  &(tgt_kthread_runq->kthread_runqlock),
-									  u_obj);
+
 					printf("Migrating Thread(id:%d, group:%d) from another kthread\n", u_obj->uthread_tid, u_obj->uthread_gid);
+
+					printf("Printing target kthread's runq before balancing\n");
+					print_runq(tgt_runq, "ACTIVE");
+
+					rem_from_runqueue(tgt_runq, &(tgt_kthread_runq->kthread_runqlock), u_obj);
+
+					printf("Printing target kthread's runq after balancing\n");
+					print_runq(tgt_runq, "ACTIVE");
 				}
 			}
 		}

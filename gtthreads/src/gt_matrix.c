@@ -250,7 +250,8 @@ void parse_args(int argc, char* argv[])
 			if(!strcmp(&argv[inx][1], "lb"))
 			{
 				load_balance = 1;
-				printf("enabling load balancing\n");
+				printf("Enabling load balancing\n");
+				printf("NOTE: Meant for use with credit scheduler\n");
 			}
 			else if(!strcmp(&argv[inx][1], "s"))
 			{
@@ -258,12 +259,12 @@ void parse_args(int argc, char* argv[])
 				if(!strcmp(&argv[inx][0], "0"))
 				{
 					uthread_scheduler = 0;
-					printf("using priority scheduler\n");
+					printf("Using priority scheduler\n");
 				}
 				else if(!strcmp(&argv[inx][0], "1"))
 				{
 					uthread_scheduler = 1;
-					printf("using credit scheduler\n");
+					printf("Using credit scheduler\n");
 				}
 			}
 		}

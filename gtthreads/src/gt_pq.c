@@ -278,10 +278,10 @@ extern uthread_struct_t *sched_find_next_uthread(kthread_runqueue_t *kthread_run
 			return u_obj;
 		}
 
-		for(i=0; i<MAX_UTHREAD_PRIORITY; i++)
+		for (i = 0; i < MAX_UTHREAD_PRIORITY; ++i)
 		{
 			if (runq->uthread_prio_tot > 0)
-				for(j=0; j<MAX_UTHREAD_GROUPS; j++)
+				for (j = 0; j < MAX_UTHREAD_GROUPS; ++j)
 				{
 					u_head = &((runq)->prio_array[i].group[j]);
 					TAILQ_FOREACH(u_obj, u_head, uthread_runq)

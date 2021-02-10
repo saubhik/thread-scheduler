@@ -130,7 +130,7 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 		struct timeval tv;
 		gettimeofday(&tv, NULL);
 		timersub(&tv, &(u_obj->last_scheduled_at), &tv);
-		printf("uthread %d consumed %lu s and %d us CPU time\n", u_obj->uthread_tid, tv.tv_sec, tv.tv_usec);
+		printf("Thread(id:%d, group:%d) consumed %lu s and %ld us of CPU time\n", u_obj->uthread_tid, u_obj->uthread_gid, tv.tv_sec, tv.tv_usec);
 		timeradd(&(u_obj->agg_cpu_time), &tv, &(u_obj->agg_cpu_time));
 
 		/* Assuming credit-to-CPU-time conversion of 1 credit = 2ms */
@@ -174,13 +174,13 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 				{
 					/* Add to expires run queue as priority is OVER */
 					add_to_runqueue(kthread_runq->expires_runq, &(kthread_runq->kthread_runqlock), u_obj);
-					printf("uthread %d inserted into expires runqueue, because it's credit %d < 0", u_obj->uthread_tid, u_obj->uthread_credit);
+					printf("Thread(id:%d, group:%d) inserted into expires runqueue, because it's credit %d < 0\n", u_obj->uthread_tid, u_obj->uthread_gid, u_obj->uthread_credit);
 				}
 				else
 				{
 					/* Add to active run queue as priority is UNDER */
 					add_to_runqueue(kthread_runq->active_runq, &(kthread_runq->kthread_runqlock), u_obj);
-					printf("uthread %d inserted into active runqueue, because it's credit %d >= 0", u_obj->uthread_tid, u_obj->uthread_credit);
+					printf("Thread(id:%d, group:%d) inserted into active runqueue, because it's credit %d >= 0\n", u_obj->uthread_tid, u_obj->uthread_gid, u_obj->uthread_credit);
 				}
 			}
 			/* XXX: Save the context (signal mask not saved) */
@@ -192,6 +192,40 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 	/* kthread_best_sched_uthread acquires kthread_runqlock. Dont lock it up when calling the function. */
 	if(!(u_obj = kthread_best_sched_uthread(kthread_runq)))
 	{
+		if (ksched_shared_info.uthread_scheduler == 1 && ksched_shared_info.load_balance == 1) {
+			/* Load balancing: Implement uthread migration if a kthread is idle. */
+			int inx;
+			kthread_context_t  *tgt_k_ctx = NULL, *tmp_k_ctx;
+			prio_struct_t  *prioq;
+			uthread_head_t *u_head;
+			unsigned int uprio, ugroup;
+
+			for (inx = 0; inx < GT_MAX_KTHREADS; inx++) {
+				if ((tmp_k_ctx = kthread_cpu_map[inx]) && (tmp_k_ctx != k_ctx))
+					if (tmp_k_ctx->kthread_flags & KTHREAD_DONE)
+						continue;
+				tgt_k_ctx = tmp_k_ctx;
+				break;
+			}
+
+			if (tgt_k_ctx) {
+				kthread_runqueue_t *tgt_kthread_runq = &(tgt_k_ctx->krunqueue);
+				runqueue_t *tgt_runq = tgt_kthread_runq->active_runq;
+				if (tgt_runq->uthread_mask) {
+					uprio = LOWEST_BIT_SET(tgt_runq->uthread_mask);
+					prioq = &(tgt_runq->prio_array[uprio]);
+					assert(prioq->group_mask);
+					ugroup = LOWEST_BIT_SET(prioq->group_mask);
+					u_head = &(prioq->group[ugroup]);
+					u_obj = TAILQ_LAST(u_head, uthread_head);
+					rem_from_runqueue(tgt_runq,
+									  &(tgt_kthread_runq->kthread_runqlock),
+									  u_obj);
+					printf("Migrating Thread(id:%d, group:%d) from another kthread\n", u_obj->uthread_tid, u_obj->uthread_gid);
+				}
+			}
+		}
+
 		/* Done executing all uthreads. Return to main */
 		/* XXX: We can actually get rid of KTHREAD_DONE flag */
 		if(ksched_shared_info.kthread_tot_uthreads && !ksched_shared_info.kthread_cur_uthreads)
@@ -200,14 +234,16 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 			k_ctx->kthread_flags |= KTHREAD_DONE;
 		}
 
-		siglongjmp(k_ctx->kthread_env, 1);
-		return;
+		if (!u_obj) {
+			siglongjmp(k_ctx->kthread_env, 1);
+			return;
+		}
 	}
 
 	kthread_runq->cur_uthread = u_obj;
 
 	gettimeofday(&(u_obj->last_scheduled_at), NULL);
-	printf("uthread %d is scheduled. last_scheduled_at changed to %lu s and %d ms", u_obj->uthread_tid, u_obj->last_scheduled_at.tv_sec, u_obj->last_scheduled_at.tv_usec);
+	printf("Thread(id:%d, group:%d) is scheduled.\n", u_obj->uthread_tid, u_obj->uthread_gid);
 
 	if((u_obj->uthread_state == UTHREAD_INIT) && (uthread_init(u_obj)))
 	{

@@ -237,45 +237,12 @@ extern uthread_struct_t *sched_find_next_uthread(kthread_runqueue_t *kthread_run
 		kthread_runq->active_runq = kthread_runq->expires_runq;
 		kthread_runq->expires_runq = runq;
 
-		runq = kthread_runq->active_runq;
+		runq = kthread_runq->expires_runq;
 		if (!runq->uthread_mask)
 		{
 			assert(!runq->uthread_tot);
 			gt_spin_unlock(&(kthread_runq->kthread_runqlock));
-
-			int inx;
-			kthread_context_t *tmp_k_ctx, *tgt_k_ctx, *k_ctx;
-			kthread_runqueue_t *tgt_kthread_runq;
-			runqueue_t *tgt_runq;
-
-			k_ctx = kthread_cpu_map[kthread_apic_id()];
-
-			for(inx=0; inx<GT_MAX_KTHREADS; inx++)
-			{
-				if((tmp_k_ctx = kthread_cpu_map[inx]) && (tmp_k_ctx != k_ctx))
-					if(tmp_k_ctx->kthread_flags & KTHREAD_DONE)
-						continue;
-				tgt_k_ctx = tmp_k_ctx;
-				break;
-			}
-
-			if (tgt_k_ctx)
-			{
-				tgt_kthread_runq = &(tgt_k_ctx->krunqueue);
-				tgt_runq = tgt_kthread_runq->active_runq;
-				if (tgt_runq->uthread_mask) {
-					uprio = LOWEST_BIT_SET(runq->uthread_mask);
-					prioq = &(runq->prio_array[uprio]);
-					assert(prioq->group_mask);
-					ugroup = LOWEST_BIT_SET(prioq->group_mask);
-					u_head = &(prioq->group[ugroup]);
-					u_obj = TAILQ_LAST(u_head, uthread_head);
-					// Stealing from another kthread's run queue.
-					rem_from_runqueue(tgt_runq, &(tgt_kthread_runq->kthread_runqlock), u_obj);
-				}
-			}
-
-			return u_obj;
+			return NULL;
 		}
 
 		for (i = 0; i < MAX_UTHREAD_PRIORITY; ++i)

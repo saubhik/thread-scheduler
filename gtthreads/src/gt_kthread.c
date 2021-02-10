@@ -35,7 +35,7 @@ static void kthread_exit();
 
 /**********************************************************************/
 /* kthread schedule */
-static inline void ksched_info_init(ksched_shared_info_t *ksched_info, int uthread_scheduler);
+static inline void ksched_info_init(ksched_shared_info_t *ksched_info, int uthread_scheduler, int load_balance);
 static void ksched_announce_cosched_group();
 static void ksched_priority(int );
 static void ksched_cosched(int );
@@ -139,9 +139,10 @@ static inline void kthread_exit()
 /* kthread schedule */
 
 /* Initialize the ksched_shared_info */
-static inline void ksched_info_init(ksched_shared_info_t *ksched_info, int uthread_scheduler)
+static inline void ksched_info_init(ksched_shared_info_t *ksched_info, int uthread_scheduler, int load_balance)
 {
 	ksched_info->uthread_scheduler = uthread_scheduler;
+	ksched_info->load_balance = load_balance;
 	gt_spinlock_init(&(ksched_info->ksched_lock));
 	gt_spinlock_init(&(ksched_info->uthread_init_lock));
 	gt_spinlock_init(&(ksched_info->__malloc_lock));
@@ -330,7 +331,7 @@ static void gtthread_app_start(void *arg)
 }
 
 
-extern void gtthread_app_init(int uthread_scheduler)
+extern void gtthread_app_init(int uthread_scheduler, int load_balance)
 {
 	kthread_context_t *k_ctx, *k_ctx_main;
 	kthread_t k_tid;
@@ -338,7 +339,7 @@ extern void gtthread_app_init(int uthread_scheduler)
 
 
 	/* Initialize shared schedule information */
-	ksched_info_init(&ksched_shared_info, uthread_scheduler);
+	ksched_info_init(&ksched_shared_info, uthread_scheduler, load_balance);
 
 	/* kthread (virtual processor) on the first logical processor */
 	k_ctx_main = (kthread_context_t *)MALLOCZ_SAFE(sizeof(kthread_context_t));
@@ -435,7 +436,16 @@ extern struct timeval** gtthread_app_exit()
 		__asm__ __volatile__ ("pause\n");
 	}
 
-	return (struct timeval **) ksched_shared_info.thread_run_time;
+	int i, j;
+	struct timeval** thread_run_time = (struct timeval**) malloc(16 * sizeof(*thread_run_time));
+	for (i = 0; i < 16; ++i)
+		thread_run_time[i] = (struct timeval*) malloc(8 * sizeof(*(thread_run_time[0])));
+
+	for (i = 0; i < 16; ++i)
+		for (j = 0; j < 8; ++j)
+			thread_run_time[i][j] = ksched_shared_info.thread_run_time[i][j];
+
+	return thread_run_time;
 }
 
 /**********************************************************************/

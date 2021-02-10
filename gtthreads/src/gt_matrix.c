@@ -9,20 +9,23 @@
 #include <setjmp.h>
 #include <errno.h>
 #include <assert.h>
+#include <string.h>
+#include <math.h>
 
 #include "gt_include.h"
 
 
-#define ROWS 512
-#define COLS ROWS
-#define SIZE COLS
-
+//#define ROWS 512
+//#define COLS ROWS
+//#define SIZE COLS
+//
 #define NUM_CPUS 2
 #define NUM_GROUPS NUM_CPUS
-#define PER_GROUP_COLS (SIZE/NUM_GROUPS)
-
-#define NUM_THREADS 32
-#define PER_THREAD_ROWS (SIZE/NUM_THREADS)
+//#define PER_GROUP_COLS (SIZE/NUM_GROUPS)
+//
+//#define NUM_THREADS 32
+#define NUM_THREADS 128
+//#define PER_THREAD_ROWS (SIZE/NUM_THREADS)
 
 
 /* A[SIZE][SIZE] X B[SIZE][SIZE] = C[SIZE][SIZE]
@@ -30,9 +33,12 @@
  * T(g, t) is responsible for multiplication : 
  * A(rows)[(t-1)*SIZE -> (t*SIZE - 1)] X B(cols)[(g-1)*SIZE -> (g*SIZE - 1)] */
 
+struct timeval thread_created_at[16][8];
+struct timeval thread_completed_at[16][8];
+
 typedef struct matrix
 {
-	int m[SIZE][SIZE];
+	int **m;
 
 	int rows;
 	int cols;
@@ -50,18 +56,25 @@ typedef struct __uthread_arg
 	int start_row; /* start_row -> (start_row + PER_THREAD_ROWS) */
 	int start_col; /* start_col -> (start_col + PER_GROUP_COLS) */
 
+	int combination; /* Matrix size x credit combination */
+	int rank_in_set; /* Thread number in set of 8 threads */
+
 }uthread_arg_t;
 
 struct timeval tv1;
 
-static void generate_matrix(matrix_t *mat, int val)
+static void generate_matrix(matrix_t *mat, int size, int val)
 {
-
+	/* Generate matrix of size `size` populated with val. */
 	int i,j;
-	mat->rows = SIZE;
-	mat->cols = SIZE;
-	for(i = 0; i < mat->rows;i++)
-		for( j = 0; j < mat->cols; j++ )
+	mat->rows = size;
+	mat->cols = size;
+
+	u_long len = sizeof(int *) * mat->rows + sizeof(int) * mat->rows * mat->cols;
+	mat->m = (int **)MALLOC_SAFE(len);
+
+	for(i = 0; i < mat->rows; i++)
+		for( j = 0; j < mat->cols; j++)
 		{
 			mat->m[i][j] = val;
 		}
@@ -72,9 +85,9 @@ static void print_matrix(matrix_t *mat)
 {
 	int i, j;
 
-	for(i=0;i<SIZE;i++)
+	for(i=0;i<mat->rows;i++)
 	{
-		for(j=0;j<SIZE;j++)
+		for(j=0;j<mat->cols;j++)
 			printf(" %d ",mat->m[i][j]);
 		printf("\n");
 	}
@@ -110,46 +123,119 @@ static void * uthread_mulmat(void *p)
 	end_col = ptr->_B->cols;
 //#endif
 
-#ifdef GT_THREADS
-	cpuid = kthread_cpu_map[kthread_apic_id()]->cpuid;
-	fprintf(stderr, "\nThread(id:%d, group:%d, cpu:%d) started",ptr->tid, ptr->gid, cpuid);
-#else
+//#ifdef GT_THREADS
+//	cpuid = kthread_cpu_map[kthread_apic_id()]->cpuid;
+//	fprintf(stderr, "\nThread(id:%d, group:%d, cpu:%d) started",ptr->tid, ptr->gid, cpuid);
+//#else
 	fprintf(stderr, "\nThread(id:%d, group:%d) started",ptr->tid, ptr->gid);
-#endif
+//#endif
 
 	for(i = start_row; i < end_row; i++)
 		for(j = start_col; j < end_col; j++)
 			for(k = 0; k < ptr->_A->cols; k++)  /* _A->cols == _B->rows */
 				ptr->_C->m[i][j] += ptr->_A->m[i][k] * ptr->_B->m[k][j];
 
-#ifdef GT_THREADS
-	fprintf(stderr, "\nThread(id:%d, group:%d, cpu:%d) finished (TIME : %lu s and %lu us)",
-			ptr->tid, ptr->gid, cpuid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
-#else
+//#ifdef GT_THREADS
+//	fprintf(stderr, "\nThread(id:%d, group:%d, cpu:%d) finished (TIME : %lu s and %lu us)",
+//			ptr->tid, ptr->gid, cpuid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
+//#else
 	gettimeofday(&tv2,NULL);
-	fprintf(stderr, "\nThread(id:%d, group:%d) finished (TIME : %lu s and %lu us)",
+	thread_completed_at[ptr->combination][ptr->rank_in_set] = tv2;
+	fprintf(stderr, "\nThread(id:%d, group:%d) finished (TIME : %lu s and %d us)",
 			ptr->tid, ptr->gid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
-#endif
+//#endif
 
 #undef ptr
 	return 0;
 }
 
-matrix_t A, B, C;
+/* NUM_THREADS triplets of matrices, one triplet for one uthread */
+matrix_t A[NUM_THREADS], B[NUM_THREADS], C[NUM_THREADS];
 
 static void init_matrices()
 {
-	generate_matrix(&A, 1);
-	generate_matrix(&B, 1);
-	generate_matrix(&C, 0);
+	int sizes[] = {32, 64, 128, 256}, size;
+	for (int i = 0; i < NUM_THREADS; ++i)
+	{
+		size = sizes[i/32];
+		generate_matrix(&A[i], size, 1);
+		generate_matrix(&B[i], size, 1);
+		generate_matrix(&C[i], size, 0);
+	}
 
 	return;
 }
 
-
-void parse_args(int argc, char* argv[])
+static void deallocate_matrices()
 {
-	int inx;
+	for (int i = 0; i < NUM_THREADS; ++i)
+	{
+		for (int j = 0; j < A[i].rows; ++j)
+			free(A[i].m[j]);
+		free(A[i].m);
+	}
+}
+
+static void print_creation_to_completion_time_stats()
+{
+	u_long mean, tmp[16][8];
+	double stddev;
+	struct timeval tv;
+	int i, j;
+
+	/* For each combination */
+	for (i = 0; i < 16; ++i)
+	{
+		mean = 0;
+		stddev = 0;
+
+		/* For each thread in set */
+		for (j = 0; j < 8; ++j)
+		{
+			timersub(&thread_completed_at[i][j], &thread_created_at[i][j], &tv);
+			tmp[i][j] = tv.tv_sec * 1000000 + tv.tv_usec;
+			mean += tmp[i][j];
+		}
+		mean /= 8;
+		printf("Mean of thread %d's creation to completion time in combination %d is %lu\n", j, i, mean);
+
+		/* For each thread in set */
+		for (j = 0; j < 8; ++j)
+			stddev += (double)(tmp[i][j] - mean) * (double)(tmp[i][j] - mean);
+		stddev = sqrt(stddev / 8);
+		printf("Standard Deviation of thread %d's creation to completion time in combination %d is %f\n", j, i, stddev);
+	}
+}
+
+static void print_thread_run_time_stats(u_long** run_time)
+{
+	u_long mean;
+	double stddev;
+	int i, j;
+
+	/* For each combination */
+	for (i = 0; i < 16; ++i)
+	{
+		mean = 0;
+		stddev = 0;
+
+		/* For each thread in set */
+		for (j = 0; j < 8; ++j)
+			mean += run_time[i][j];
+		mean /= 8;
+		printf("Mean of thread %d's run time in combination %d is %lu\n", j, i, mean);
+
+		/* For each thread in set */
+		for (j = 0; j < 8; ++j)
+			stddev += (double)(run_time[i][j] - mean) * (double)(run_time[i][j] - mean);
+		stddev = sqrt(stddev / 8);
+		printf("Standard Deviation of thread %d's run time in combination %d is %f\n", j, i, stddev);
+	}
+}
+
+int parse_args(int argc, char* argv[])
+{
+	int inx, uthread_scheduler;
 
 	for(inx=0; inx<argc; inx++)
 	{
@@ -162,21 +248,22 @@ void parse_args(int argc, char* argv[])
 			}
 			else if(!strcmp(&argv[inx][1], "s"))
 			{
-				//TODO: add different types of scheduler
 				inx++;
 				if(!strcmp(&argv[inx][0], "0"))
 				{
+					uthread_scheduler= 0;
 					printf("use priority scheduler\n");
 				}
 				else if(!strcmp(&argv[inx][0], "1"))
 				{
+					uthread_scheduler = 1;
 					printf("use credit scheduler\n");
 				}
 			}
 		}
 	}
 
-	return;
+	return uthread_scheduler;
 }
 
 
@@ -184,29 +271,44 @@ void parse_args(int argc, char* argv[])
 uthread_arg_t uargs[NUM_THREADS];
 uthread_t utids[NUM_THREADS];
 
-int main()
+int main(int argc, char** argv)
 {
 	uthread_arg_t *uarg;
-	int inx;
+	int uthread_scheduler, combination, credits[] = {25, 50, 75, 100};
+	int inx, i, j, k;
 
-	//parse_args(argc, argv);
+	uthread_scheduler = parse_args(argc, argv);
 
-	gtthread_app_init();
+	gtthread_app_init(uthread_scheduler);
 
 	init_matrices();
 
 	gettimeofday(&tv1,NULL);
 
-	for(inx=0; inx<NUM_THREADS; inx++)
+	/* For each matrix size */
+	for (i = 0; i < 4; ++i)
 	{
-		uarg = &uargs[inx];
-		uarg->_A = &A;
-		uarg->_B = &B;
-		uarg->_C = &C;
+		/* For each credit */
+		for (j = 0; j < 4; ++j)
+		{
+			combination = 4 * i + j;
+			/* For each of 8 threads to the combination */
+			for (k = 0; k < 8; ++k)
+			{
+				inx = combination * 8 + k;
+				uarg = &uargs[inx];
+				uarg->_A = &A[inx];
+				uarg->_B = &B[inx];
+				uarg->_C = &C[inx];
 
-		uarg->tid = inx;
+				uarg->tid = inx;
 
-		uarg->gid = (inx % NUM_GROUPS);
+				uarg->gid = (inx % NUM_GROUPS);
+
+				uarg->combination = combination;
+				uarg->rank_in_set = k;
+
+				gettimeofday(&thread_created_at[combination][k], NULL);
 
 //		uarg->start_row = (inx * PER_THREAD_ROWS);
 //#ifdef GT_GROUP_SPLIT
@@ -214,10 +316,20 @@ int main()
 //		uarg->start_col = (uarg->gid * PER_GROUP_COLS);
 //#endif
 
-		uthread_create(&utids[inx], uthread_mulmat, uarg, uarg->gid, 0, 0);
+				uthread_create(&utids[inx], uthread_mulmat, uarg, uarg->gid, credits[j], 0);
+			}
+		}
 	}
 
-	gtthread_app_exit();
+	u_long** thread_run_time = gtthread_app_exit();
+
+	print_creation_to_completion_time_stats();
+	print_thread_run_time_stats(thread_run_time);
+
+	deallocate_matrices();
+	for (i = 0; i < 16; ++i)
+		free(thread_run_time[i]);
+	free(thread_run_time);
 
 	// print_matrix(&C);
 	// fprintf(stderr, "********************************");

@@ -145,7 +145,7 @@ extern void kthread_init_runqueue(kthread_runqueue_t *kthread_runq)
 	return;
 }
 
-extern void print_runq(runqueue_t *runq, char *runq_str)
+static void print_runq(runqueue_t *runq, char *runq_str)
 {
 	int i, j;
 	uthread_head_t *u_head;
@@ -243,7 +243,7 @@ extern uthread_struct_t *sched_find_next_uthread(kthread_runqueue_t *kthread_run
 	runqueue_t *runq;
 	prio_struct_t  *prioq;
 	uthread_head_t *u_head;
-	uthread_struct_t *u_obj;
+	uthread_struct_t *u_obj = NULL;
 	unsigned int i, j, uprio, ugroup;
 
 	gt_spin_lock(&(kthread_runq->kthread_runqlock));
@@ -263,6 +263,54 @@ extern uthread_struct_t *sched_find_next_uthread(kthread_runqueue_t *kthread_run
 			/* Both EXPIRES and ACTIVE runq are empty, load balance from another kthread */
 			assert(!runq->uthread_tot);
 			gt_spin_unlock(&(kthread_runq->kthread_runqlock));
+
+			if (ksched_shared_info.load_balance == 1) {
+				/* Load balancing: Implement uthread migration if a kthread is idle. */
+				int inx;
+				kthread_context_t  *tgt_k_ctx = NULL, *tmp_k_ctx, *k_ctx;
+
+				k_ctx = kthread_cpu_map[kthread_apic_id()];
+
+				for (inx = 0; inx < GT_MAX_KTHREADS; inx++) {
+					if ((tmp_k_ctx = kthread_cpu_map[inx]) && (tmp_k_ctx != k_ctx))
+						if (tmp_k_ctx->kthread_flags & KTHREAD_DONE)
+							continue;
+					tgt_k_ctx = tmp_k_ctx;
+					break;
+				}
+
+				if (tgt_k_ctx) {
+					kthread_runqueue_t *tgt_kthread_runq = &(tgt_k_ctx->krunqueue);
+					runqueue_t *tgt_runq = tgt_kthread_runq->active_runq;
+
+					gt_spin_lock(&(tgt_kthread_runq->kthread_runqlock));
+
+					if (tgt_runq->uthread_mask) {
+						uprio = LOWEST_BIT_SET(tgt_runq->uthread_mask);
+						prioq = &(tgt_runq->prio_array[uprio]);
+
+						assert(prioq->group_mask);
+						ugroup = LOWEST_BIT_SET(prioq->group_mask);
+
+						u_head = &(prioq->group[ugroup]);
+						u_obj = TAILQ_LAST(u_head, uthread_head);
+
+						printf("Migrating Thread(id:%d, group:%d) from another kthread\n", u_obj->uthread_tid, u_obj->uthread_gid);
+
+						printf("Printing target kthread's runq before balancing\n");
+						print_runq(tgt_runq, "ACTIVE");
+
+						__rem_from_runqueue(tgt_runq, u_obj);
+
+						printf("Printing target kthread's runq after balancing\n");
+						print_runq(tgt_runq, "ACTIVE");
+					}
+
+					gt_spin_unlock(&(tgt_kthread_runq->kthread_runqlock));
+					return(u_obj);
+				}
+			}
+
 			return NULL;
 		}
 

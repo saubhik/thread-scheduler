@@ -326,10 +326,8 @@ extern uthread_struct_t *sched_find_next_uthread(kthread_runqueue_t *kthread_run
 					{
 						printf("CREDIT CHANGE: Thread(id:%d, group:%d, weight:%d)'s previous credit:%d\n", u_obj->uthread_tid, u_obj->uthread_gid, u_obj->uthread_weight, u_obj->uthread_credit);
 
-						if (u_obj->uthread_credit + u_obj->uthread_weight > 0)
-							u_obj->uthread_credit = u_obj->uthread_credit + u_obj->uthread_weight;
-						else
-							u_obj->uthread_credit = 1;
+						while (u_obj->uthread_credit < 0)
+							u_obj->uthread_credit += u_obj->uthread_weight;
 
 						printf("CREDIT CHANGE: Thread(id:%d, group:%d, weight:%d)'s current credit:%d\n", u_obj->uthread_tid, u_obj->uthread_gid, u_obj->uthread_weight, u_obj->uthread_credit);
 					}

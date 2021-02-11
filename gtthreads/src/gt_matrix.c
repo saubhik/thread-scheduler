@@ -36,6 +36,8 @@
 struct timeval thread_created_at[16][8];
 struct timeval thread_completed_at[16][8];
 
+unsigned short use_gt_yield;
+
 typedef struct matrix
 {
 	int **m;
@@ -122,13 +124,21 @@ static int uthread_mulmat(void *p)
 //	cpuid = kthread_cpu_map[kthread_apic_id()]->cpuid;
 //	fprintf(stderr, "\nThread(id:%d, group:%d, cpu:%d) started",ptr->tid, ptr->gid, cpuid);
 //#else
-	fprintf(stderr, "\nThread(id:%d, group:%d) started\n",ptr->tid, ptr->gid);
+	fprintf(stderr, "\nThread(id:%d, group:%d) started\n", ptr->tid, ptr->gid);
 //#endif
 
-	for(i = start_row; i < end_row; i++)
-		for(j = start_col; j < end_col; j++)
-			for(k = 0; k < ptr->_A->cols; k++)  /* _A->cols == _B->rows */
+	for (i = start_row; i < end_row; i++)
+	{
+		for (j = start_col; j < end_col; j++)
+			for (k = 0; k < ptr->_A->cols; k++)  /* _A->cols == _B->rows */
 				ptr->_C->m[i][j] += ptr->_A->m[i][k] * ptr->_B->m[k][j];
+
+		if (use_gt_yield && i == ptr->_A->rows / 2)
+		{
+			printf("Calling gt_yield(). Preempting.\n");
+			gt_yield();
+		}
+	}
 
 //#ifdef GT_THREADS
 //	fprintf(stderr, "\nThread(id:%d, group:%d, cpu:%d) finished (TIME : %lu s and %lu us)",
@@ -243,6 +253,8 @@ void parse_args(int argc, char* argv[])
 {
 	int inx, load_balance = 0, uthread_scheduler = 0;
 
+	use_gt_yield = 0;
+
 	for(inx=0; inx<argc; inx++)
 	{
 		if(argv[inx][0]=='-')
@@ -266,6 +278,11 @@ void parse_args(int argc, char* argv[])
 					uthread_scheduler = 1;
 					printf("Using credit scheduler\n");
 				}
+			}
+			else if (!strcmp(&argv[inx][1], "gt_yield"))
+			{
+				use_gt_yield = 1;
+				printf("Voluntary Preemption using GT Yield enabled\n");
 			}
 		}
 	}

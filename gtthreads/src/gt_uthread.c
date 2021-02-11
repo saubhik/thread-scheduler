@@ -258,6 +258,8 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 		exit(0);
 	}
 
+	assert(u_obj->uthread_state == UTHREAD_RUNNABLE || u_obj->uthread_state == UTHREAD_RUNNING);
+
 	u_obj->uthread_state = UTHREAD_RUNNING;
 
 	/* Re-install the scheduling signal handlers */
@@ -299,11 +301,7 @@ static void uthread_context_func(int signo)
 	cur_uthread->uthread_func(cur_uthread->uthread_arg);
 	cur_uthread->uthread_state = UTHREAD_DONE;
 
-	if (ksched_shared_info.uthread_scheduler == 0)
-		uthread_schedule(&sched_find_best_uthread);
-	else
-		/* For credit scheduler */
-		uthread_schedule(&sched_find_next_uthread);
+	gt_yield();
 	return;
 }
 

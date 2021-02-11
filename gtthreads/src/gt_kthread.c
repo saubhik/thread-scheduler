@@ -215,9 +215,9 @@ static void ksched_cosched(int signal)
 	cur_k_ctx = kthread_cpu_map[kthread_apic_id()];
 	KTHREAD_PRINT_SCHED_DEBUGINFO(cur_k_ctx, "RELAY(USR)");
 
-#ifdef CO_SCHED
-	uthread_schedule(&sched_find_best_uthread_group);
-#else
+//#ifdef CO_SCHED
+//	uthread_schedule(&sched_find_best_uthread_group);
+//#else
 	if (ksched_shared_info.uthread_scheduler == 0) {
 		uthread_schedule(&sched_find_best_uthread);
 	}
@@ -226,7 +226,7 @@ static void ksched_cosched(int signal)
 		/* For credit scheduler */
 		uthread_schedule(&sched_find_next_uthread);
 	}
-#endif
+//#endif
 
 	// kthread_unblock_signal(SIGVTALRM);
 	// kthread_unblock_signal(SIGUSR1);

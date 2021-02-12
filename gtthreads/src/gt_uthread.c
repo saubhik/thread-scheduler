@@ -127,14 +127,15 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 
 	if((u_obj = kthread_runq->cur_uthread))
 	{
-		struct timeval tv;
+		struct timeval tv, curr_consumed_tv;
 		gettimeofday(&tv, NULL);
-		timersub(&tv, &(u_obj->last_scheduled_at), &tv);
-		printf("Thread(id:%d, group:%d) consumed %lu s and %ld us of CPU time\n", u_obj->uthread_tid, u_obj->uthread_gid, tv.tv_sec, tv.tv_usec);
-		timeradd(&(u_obj->agg_cpu_time), &tv, &(u_obj->agg_cpu_time));
+
+		timersub(&tv, &(u_obj->last_scheduled_at), &curr_consumed_tv);
+		printf("Thread(id:%d, group:%d) consumed %lu s and %ld us of CPU time\n", u_obj->uthread_tid, u_obj->uthread_gid, curr_consumed_tv.tv_sec, curr_consumed_tv.tv_usec);
+		timeradd(&(u_obj->agg_cpu_time), &curr_consumed_tv, &(u_obj->agg_cpu_time));
 
 		/* Assuming credit-to-CPU-time conversion of 1 credit = 2ms */
-		u_int64_t debit = (tv.tv_sec * (u_int64_t)500) + (tv.tv_usec / 2000);
+		u_int64_t debit = (curr_consumed_tv.tv_sec * (u_int64_t)500) + (curr_consumed_tv.tv_usec / 2000);
 		u_obj->uthread_credit -= debit;
 		printf("CREDIT CHANGE: %lu debited from Thread(id:%d, group:%d)\n", debit, u_obj->uthread_tid, u_obj->uthread_gid);
 
@@ -143,8 +144,13 @@ extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(kt
 
 		if(u_obj->uthread_state & (UTHREAD_DONE | UTHREAD_CANCELLED))
 		{
-			/* Thread will not be scheduled again, update thread_run_time */
-			ksched_shared_info.thread_run_time[u_obj->uthread_tid / 8][u_obj->uthread_tid % 8] = u_obj->agg_cpu_time;
+			/* Thread will not be scheduled again, update thread_cpu_time */
+			ksched_shared_info.thread_cpu_time[u_obj->uthread_tid / 8][u_obj->uthread_tid % 8] = u_obj->agg_cpu_time;
+
+			/* Update thread creation to completion time since uthread has completed task */
+			struct timeval c2c_time;
+			timersub(&tv, &(u_obj->created_at), &c2c_time);
+			ksched_shared_info.thread_c2c_time[u_obj->uthread_tid / 8][u_obj->uthread_tid % 8] = c2c_time;
 
 			/* XXX: Inserting uthread into zombie queue is causing improper
 			 * cleanup/exit of uthread (core dump) */
@@ -306,6 +312,9 @@ extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, 
 	u_new->last_scheduled_at.tv_usec = 0;
 	u_new->agg_cpu_time.tv_sec = 0;
 	u_new->agg_cpu_time.tv_usec = 0;
+
+	/* Set created_at */
+	gettimeofday(&(u_new->created_at), NULL);
 
 	/* Allocate new stack for uthread */
 	u_new->uthread_stack.ss_flags = 0; /* Stack enabled for signal handling */

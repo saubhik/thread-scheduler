@@ -27,12 +27,14 @@ typedef struct uthread_struct
 	int (*uthread_func)(void*);
 	void *uthread_arg;
 
+	/* For credit scheduler */
 	int uthread_weight;
 	int uthread_credit;
 	int uthread_cap;
 
 	struct timeval last_scheduled_at; /* Last scheduled time */
 	struct timeval agg_cpu_time; /* Aggregated sum of CPU time */
+	struct timeval created_at; /* Thread creation time */
 
 	void *exit_status; /* exit status */
 	int reserved1;

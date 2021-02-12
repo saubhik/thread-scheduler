@@ -64,7 +64,8 @@ typedef struct __ksched_shared_info
 
 	unsigned short uthread_scheduler; /* 0 for O(1) priority scheduler, 1 for credit scheduler */
 	unsigned short load_balance; /* 1 for load balancing, 0 for not */
-	struct timeval thread_run_time[16][8]; /* Thread run times for each combination */
+	struct timeval thread_cpu_time[16][8]; /* Thread run times for each thread in each combination */
+	struct timeval thread_c2c_time[16][8]; /* Thread creation to completion time for each thread in each combination */
 
 } ksched_shared_info_t;
 
@@ -122,6 +123,6 @@ static inline void *MALLOCZ_SAFE(unsigned int size)
 /**********************************************************************/
 /* gt-thread api(s) */
 extern void gtthread_app_init(int uthread_scheduler, int load_balance);
-extern struct timeval** gtthread_app_exit();
+extern void gtthread_app_exit();
 
 #endif

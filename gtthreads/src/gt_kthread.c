@@ -11,6 +11,7 @@
 #include <errno.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <math.h>
 
 #include "gt_include.h"
 
@@ -397,7 +398,7 @@ yield_again:
 	return;
 }
 
-extern struct timeval** gtthread_app_exit()
+extern void gtthread_app_exit()
 {
 	/* gtthread_app_exit called by only main thread. */
 	/* For main thread, trigger start again. */
@@ -430,22 +431,54 @@ extern struct timeval** gtthread_app_exit()
 	kthread_block_signal(SIGVTALRM);
 	kthread_block_signal(SIGUSR1);
 
+	int i, j;
+	u_long mean_cpu_time, mean_c2c_time;
+	double stddev_cpu_time, stddev_c2c_time;
+
 	while(ksched_shared_info.kthread_cur_uthreads)
 	{
 		/* Main thread has to wait for other kthreads */
 		__asm__ __volatile__ ("pause\n");
 	}
 
-	int i, j;
-	struct timeval** thread_run_time = (struct timeval**) malloc(16 * sizeof(*thread_run_time));
 	for (i = 0; i < 16; ++i)
-		thread_run_time[i] = (struct timeval*) malloc(8 * sizeof(*(thread_run_time[0])));
+	{
+		mean_cpu_time = 0;
+		mean_c2c_time = 0;
 
-	for (i = 0; i < 16; ++i)
+		stddev_cpu_time = 0;
+		stddev_c2c_time = 0;
+
+		u_long cpu_time[8], c2c_time[8];
+
+		/* For each thread in set */
 		for (j = 0; j < 8; ++j)
-			thread_run_time[i][j] = ksched_shared_info.thread_run_time[i][j];
+		{
+			cpu_time[j] = ksched_shared_info.thread_cpu_time[i][j].tv_sec * 1000000 + ksched_shared_info.thread_cpu_time[i][j].tv_usec;
+			c2c_time[j] = ksched_shared_info.thread_c2c_time[i][j].tv_sec * 1000000 + ksched_shared_info.thread_c2c_time[i][j].tv_usec;
+			mean_cpu_time += cpu_time[j];
+			mean_c2c_time += c2c_time[j];
+		}
+		mean_cpu_time /= 8;
+		mean_c2c_time /= 8;
 
-	return thread_run_time;
+		/* For each thread in set */
+		for (j = 0; j < 8; ++j)
+		{
+			stddev_cpu_time += (cpu_time[j] - mean_cpu_time) * (cpu_time[j] - mean_cpu_time);
+			stddev_c2c_time += (c2c_time[j] - mean_c2c_time) * (c2c_time[j] - mean_c2c_time);
+		}
+		stddev_cpu_time = sqrt(stddev_cpu_time / 8);
+		stddev_c2c_time = sqrt(stddev_c2c_time / 8);
+
+		printf("***************************** Thread Combination: [%d]\n", i);
+		printf("Mean of threads' CPU times is: %lu us\n", mean_cpu_time);
+		printf("Standard Deviation of threads' CPU times is: %.2f us\n", stddev_cpu_time);
+		printf("Mean of threads' creation to completion times is: %lu us\n", mean_c2c_time);
+		printf("Standard deviation of threads' creation to completion times is: %.2f us\n", stddev_c2c_time);
+		printf("Mean of threads' wait times is: %lu us\n", mean_c2c_time - mean_cpu_time);
+		printf("*******************************************************\n\n");
+	}
 }
 
 /**********************************************************************/

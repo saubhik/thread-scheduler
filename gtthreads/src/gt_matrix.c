@@ -10,7 +10,6 @@
 #include <errno.h>
 #include <assert.h>
 #include <string.h>
-#include <math.h>
 
 #include "gt_include.h"
 
@@ -32,9 +31,6 @@
  * Let T(g, t) be thread 't' in group 'g'. 
  * T(g, t) is responsible for multiplication : 
  * A(rows)[(t-1)*SIZE -> (t*SIZE - 1)] X B(cols)[(g-1)*SIZE -> (g*SIZE - 1)] */
-
-struct timeval thread_created_at[16][8];
-struct timeval thread_completed_at[16][8];
 
 unsigned short use_gt_yield;
 
@@ -124,7 +120,7 @@ static int uthread_mulmat(void *p)
 //	cpuid = kthread_cpu_map[kthread_apic_id()]->cpuid;
 //	fprintf(stderr, "\nThread(id:%d, group:%d, cpu:%d) started",ptr->tid, ptr->gid, cpuid);
 //#else
-	fprintf(stderr, "\nThread(id:%d, group:%d) started\n", ptr->tid, ptr->gid);
+//	fprintf(stderr, "\nThread(id:%d, group:%d) started\n", ptr->tid, ptr->gid);
 //#endif
 
 	for (i = start_row; i < end_row; i++)
@@ -144,10 +140,9 @@ static int uthread_mulmat(void *p)
 //	fprintf(stderr, "\nThread(id:%d, group:%d, cpu:%d) finished (TIME : %lu s and %lu us)",
 //			ptr->tid, ptr->gid, cpuid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 //#else
-	gettimeofday(&tv2,NULL);
-	thread_completed_at[ptr->tid / 8][ptr->tid % 8] = tv2;
-	fprintf(stderr, "\nThread(id:%d, group:%d) finished (TIME : %lu s and %ld us)\n",
-			ptr->tid, ptr->gid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
+//	gettimeofday(&tv2,NULL);
+//	fprintf(stderr, "\nThread(id:%d, group:%d) finished (TIME : %lu s and %ld us)\n",
+//			ptr->tid, ptr->gid, (tv2.tv_sec - tv1.tv_sec), (tv2.tv_usec - tv1.tv_usec));
 //#endif
 
 #undef ptr
@@ -178,74 +173,6 @@ static void deallocate_matrices()
 		for (int j = 0; j < matrices[i].rows; ++j)
 			free(matrices[i].m[j]);
 		free(matrices[i].m);
-	}
-}
-
-static void print_creation_to_completion_time_stats()
-{
-	u_long mean;
-	double stddev;
-	struct timeval tv;
-	int i, j;
-
-	/* For each combination */
-	for (i = 0; i < 16; ++i)
-	{
-		mean = 0;
-		stddev = 0;
-		u_long tmp[8];
-
-		/* For each thread in set */
-		for (j = 0; j < 8; ++j)
-		{
-			timersub(&thread_completed_at[i][j], &thread_created_at[i][j], &tv);
-			tmp[j] = tv.tv_sec * 1000000 + tv.tv_usec;
-			mean += tmp[j];
-		}
-		mean /= 8;
-
-		/* For each thread in set */
-		for (j = 0; j < 8; ++j)
-			stddev += (tmp[j] - mean) * (tmp[j] - mean);
-		stddev = sqrt(stddev / 8);
-
-		printf("***************************** Thread Combination: [%d]\n", i);
-		printf("Mean of threads' creation to completion time is: %lu us\n", mean);
-		printf("Standard Deviation of threads' creation to completion time is: %f us\n", stddev);
-		printf("*******************************************************\n\n");
-	}
-}
-
-static void print_thread_run_time_stats(struct timeval** run_time)
-{
-	u_long mean;
-	double stddev;
-	int i, j;
-
-	/* For each combination */
-	for (i = 0; i < 16; ++i)
-	{
-		mean = 0;
-		stddev = 0;
-		u_long tmp[8];
-
-		/* For each thread in set */
-		for (j = 0; j < 8; ++j) {
-			tmp[j] = run_time[i][j].tv_sec * 1000000 + run_time[i][j].tv_usec;
-			mean += tmp[j];
-		}
-		mean /= 8;
-
-		/* For each thread in set */
-		for (j = 0; j < 8; ++j)
-			stddev += (tmp[j] - mean) * (tmp[j] - mean);
-		stddev = sqrt(stddev / 8);
-
-		printf("***************************** Thread Combination: [%d]\n", i);
-		printf("Mean of threads' run time is: %lu us\n", mean);
-		printf("Standard Deviation of threads' run time is: %f us\n", stddev);
-		printf("*******************************************************\n\n");
-
 	}
 }
 
@@ -327,10 +254,6 @@ int main(int argc, char** argv)
 
 				uarg->gid = (inx % NUM_GROUPS);
 
-				// combination == uarg->tid / 8
-				// k == uarg->tid % 8
-				gettimeofday(&thread_created_at[combination][k], NULL);
-
 //		uarg->start_row = (inx * PER_THREAD_ROWS);
 //#ifdef GT_GROUP_SPLIT
 //		/* Wanted to split the columns by groups !!! */
@@ -342,10 +265,7 @@ int main(int argc, char** argv)
 		}
 	}
 
-	struct timeval** thread_run_time = gtthread_app_exit();
-
-	print_creation_to_completion_time_stats();
-	print_thread_run_time_stats(thread_run_time);
+	gtthread_app_exit();
 
 	deallocate_matrices();
 

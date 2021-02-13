@@ -11,6 +11,7 @@
 #include <errno.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <math.h>
 
 #include "gt_include.h"
 
@@ -35,7 +36,7 @@ static void kthread_exit();
 
 /**********************************************************************/
 /* kthread schedule */
-static inline void ksched_info_init(ksched_shared_info_t *ksched_info);
+static inline void ksched_info_init(ksched_shared_info_t *ksched_info, int uthread_scheduler, int load_balance);
 static void ksched_announce_cosched_group();
 static void ksched_priority(int );
 static void ksched_cosched(int );
@@ -139,8 +140,10 @@ static inline void kthread_exit()
 /* kthread schedule */
 
 /* Initialize the ksched_shared_info */
-static inline void ksched_info_init(ksched_shared_info_t *ksched_info)
+static inline void ksched_info_init(ksched_shared_info_t *ksched_info, int uthread_scheduler, int load_balance)
 {
+	ksched_info->uthread_scheduler = uthread_scheduler;
+	ksched_info->load_balance = load_balance;
 	gt_spinlock_init(&(ksched_info->ksched_lock));
 	gt_spinlock_init(&(ksched_info->uthread_init_lock));
 	gt_spinlock_init(&(ksched_info->__malloc_lock));
@@ -213,11 +216,18 @@ static void ksched_cosched(int signal)
 	cur_k_ctx = kthread_cpu_map[kthread_apic_id()];
 	KTHREAD_PRINT_SCHED_DEBUGINFO(cur_k_ctx, "RELAY(USR)");
 
-#ifdef CO_SCHED
-	uthread_schedule(&sched_find_best_uthread_group);
-#else
-	uthread_schedule(&sched_find_best_uthread);
-#endif
+//#ifdef CO_SCHED
+//	uthread_schedule(&sched_find_best_uthread_group);
+//#else
+	if (ksched_shared_info.uthread_scheduler == 0) {
+		uthread_schedule(&sched_find_best_uthread);
+	}
+	else
+	{
+		/* For credit scheduler */
+		uthread_schedule(&sched_find_next_uthread);
+	}
+//#endif
 
 	// kthread_unblock_signal(SIGVTALRM);
 	// kthread_unblock_signal(SIGUSR1);
@@ -264,7 +274,15 @@ static void ksched_priority(int signo)
 		}
 	}
 
-	uthread_schedule(&sched_find_best_uthread);
+	if (ksched_shared_info.uthread_scheduler == 0)
+	{
+		uthread_schedule(&sched_find_best_uthread);
+	}
+	else
+	{
+		/* For credit scheduler */
+		uthread_schedule(&sched_find_next_uthread);
+	}
 
 	// kthread_unblock_signal(SIGVTALRM);
 	// kthread_unblock_signal(SIGUSR1);
@@ -297,7 +315,16 @@ static void gtthread_app_start(void *arg)
 			/* XXX: gtthread app cleanup has to be done. */
 			continue;
 		}
-		uthread_schedule(&sched_find_best_uthread);
+		if (ksched_shared_info.uthread_scheduler == 0)
+		{
+			/* O(1) priority scheduler */
+			uthread_schedule(&sched_find_best_uthread);
+		}
+		else
+		{
+			/* Credit scheduler */
+			uthread_schedule(&sched_find_next_uthread);
+		}
 	}
 	kthread_exit();
 
@@ -305,7 +332,7 @@ static void gtthread_app_start(void *arg)
 }
 
 
-extern void gtthread_app_init()
+extern void gtthread_app_init(int uthread_scheduler, int load_balance)
 {
 	kthread_context_t *k_ctx, *k_ctx_main;
 	kthread_t k_tid;
@@ -313,7 +340,7 @@ extern void gtthread_app_init()
 
 
 	/* Initialize shared schedule information */
-	ksched_info_init(&ksched_shared_info);
+	ksched_info_init(&ksched_shared_info, uthread_scheduler, load_balance);
 
 	/* kthread (virtual processor) on the first logical processor */
 	k_ctx_main = (kthread_context_t *)MALLOCZ_SAFE(sizeof(kthread_context_t));
@@ -390,18 +417,68 @@ extern void gtthread_app_exit()
 			/* XXX: gtthread app cleanup has to be done. */
 			continue;
 		}
-		uthread_schedule(&sched_find_best_uthread);
+		if (ksched_shared_info.uthread_scheduler == 0)
+		{
+			uthread_schedule(&sched_find_best_uthread);
+		}
+		else
+		{
+			/* For credit scheduler */
+			uthread_schedule(&sched_find_next_uthread);
+		}
 	}
 
 	kthread_block_signal(SIGVTALRM);
 	kthread_block_signal(SIGUSR1);
+
+	int i, j;
+	u_long mean_cpu_time, mean_c2c_time;
+	double stddev_cpu_time, stddev_c2c_time;
 
 	while(ksched_shared_info.kthread_cur_uthreads)
 	{
 		/* Main thread has to wait for other kthreads */
 		__asm__ __volatile__ ("pause\n");
 	}
-	return;	
+
+	for (i = 0; i < 16; ++i)
+	{
+		mean_cpu_time = 0;
+		mean_c2c_time = 0;
+
+		stddev_cpu_time = 0;
+		stddev_c2c_time = 0;
+
+		u_long cpu_time[8], c2c_time[8];
+
+		/* For each thread in set */
+		for (j = 0; j < 8; ++j)
+		{
+			cpu_time[j] = ksched_shared_info.thread_cpu_time[i][j].tv_sec * 1000000 + ksched_shared_info.thread_cpu_time[i][j].tv_usec;
+			c2c_time[j] = ksched_shared_info.thread_c2c_time[i][j].tv_sec * 1000000 + ksched_shared_info.thread_c2c_time[i][j].tv_usec;
+			mean_cpu_time += cpu_time[j];
+			mean_c2c_time += c2c_time[j];
+		}
+		mean_cpu_time /= 8;
+		mean_c2c_time /= 8;
+
+		/* For each thread in set */
+		for (j = 0; j < 8; ++j)
+		{
+			stddev_cpu_time += (cpu_time[j] - mean_cpu_time) * (cpu_time[j] - mean_cpu_time);
+			stddev_c2c_time += (c2c_time[j] - mean_c2c_time) * (c2c_time[j] - mean_c2c_time);
+		}
+		stddev_cpu_time = sqrt(stddev_cpu_time / 8);
+		stddev_c2c_time = sqrt(stddev_c2c_time / 8);
+
+		printf("***************************** Thread Combination: [%d]\n", i);
+		printf("Mean of threads' CPU times is: %lu us\n", mean_cpu_time);
+		printf("Standard Deviation of threads' CPU times is: %.2f us\n", stddev_cpu_time);
+		printf("Mean of threads' creation to completion times is: %lu us\n", mean_c2c_time);
+		printf("Standard deviation of threads' creation to completion times is: %.2f us\n", stddev_c2c_time);
+		printf("Mean of threads' wait times is: %lu us\n", mean_c2c_time - mean_cpu_time);
+		printf("*******************************************************\n\n");
+	}
 }
 
 /**********************************************************************/

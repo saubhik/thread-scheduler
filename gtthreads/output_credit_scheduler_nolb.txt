@@ -1,0 +1,3089 @@
+Using credit scheduler
+kthread(1) created !!
+kthread(2) created !!
+kthread(3) created !!
+Thread(id:0, group:0) is scheduled.
+Thread(id:2, group:0) is scheduled.
+Thread(id:..... uthread_context_func .....
+4, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:0, group:0) consumed 0 s and 390 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:0, group:0)
+Thread(id:8, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:2, group:0) consumed 0 s and 404 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:2, group:0)
+Thread(id:10, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:4, group:0) consumed 0 s and 428 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:4, group:0)
+Thread(id:12, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:8, group:0) consumed 0 s and 331 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:8, group:0)
+Thread(id:16, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:10, group:0) consumed 0 s and 335 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:10, group:0)
+Thread(id:18, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:12, group:0) consumed 0 s and 332 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:12, group:0)
+Thread(id:20, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:6, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:16, group:0) consumed 0 s and 336 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:16, group:0)
+Thread(id:24, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:18, group:0) consumed 0 s and 336 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:18, group:0)
+Thread(id:26, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:20, group:0) consumed 0 s and 333 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:20, group:0)
+Thread(id:28, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:6, group:0) consumed 0 s and 349 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:6, group:0)
+Thread(id:14, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:24, group:0) consumed 0 s and 338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:24, group:0)
+Thread(id:32, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:26, group:0) consumed 0 s and 338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:26, group:0)
+Thread(id:34, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:28, group:0) consumed 0 s and 349 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:28, group:0)
+Thread(id:36, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:14, group:0) consumed 0 s and 338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:14, group:0)
+Thread(id:22, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:22, group:0) consumed 0 s and 332 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:22, group:0)
+Thread(id:30, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:30, group:0) consumed 0 s and 344 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:30, group:0)
+Thread(id:38, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:32, group:0) consumed 0 s and 2488 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:32, group:0)
+Thread(id:40, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:34, group:0) consumed 0 s and 2476 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:34, group:0)
+Thread(id:42, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:36, group:0) consumed 0 s and 2459 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:36, group:0)
+Thread(id:44, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:38, group:0) consumed 0 s and 2498 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:38, group:0)
+Thread(id:46, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:Thread(id:0) consumed 0 s and 2479 us of CPU time
+40, group:0) consumed d:42, group:0)
+Thread(id:50, group:0) is scheduled.
+..... uthread_context_func .....
+ !!
+Thread(id:0, group:0) is scheduled.
+Thread(id:2, group:0) is scheduled.
+Thread(id:..... uthread_context_func .....
+4, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:0, group:0) consumed 0 s and 390 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:0, group:0)
+Thread(id:8, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:2, group:0) consumed 0 s and 404 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:2, group:0)
+Thread(id:10, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:4, group:0) consumed 0 s and 428 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:4, group:0)
+Thread(id:12, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:8, group:0) consumed 0 s and 331 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:8, group:0)
+Thread(id:16, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:10, group:0) consumed 0 s and 335 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:10, group:0)
+Thread(id:18, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:12, group:0) consumed 0 s and 332 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:12, group:0)
+Thread(id:20, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:6, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:16, group:0) consumed 0 s and 336 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:16, group:0)
+Thread(id:24, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:18, group:0) consumed 0 s and 336 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:18, group:0)
+Thread(id:26, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:20, group:0) consumed 0 s and 333 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:20, group:0)
+Thread(id:28, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:6, group:0) consumed 0 s and 349 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:6, group:0)
+Thread(id:14, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:24, group:0) consumed 0 s and 338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:24, group:0)
+Thread(id:32, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:26, group:0) consumed 0 s and 338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:26, group:0)
+Thread(id:34, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:28, group:0) consumed 0 s and 349 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:28, group:0)
+Thread(id:36, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:14, group:0) consumed 0 s and 338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:14, group:0)
+Thread(id:22, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:22, group:0) consumed 0 s and 332 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:22, group:0)
+Thread(id:30, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:30, group:0) consumed 0 s and 344 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:30, group:0)
+Thread(id:38, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:32, group:0) consumed 0 s and 2488 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:32, group:0)
+Thread(id:40, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:34, group:0) consumed 0 s and 2476 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:34, group:0)
+Thread(id:42, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:36, group:0) consumed 0 s and 2459 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:36, group:0)
+Thread(id:44, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:38, group:0) consumed 0 s and 2498 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:38, group:0)
+Thread(id:46, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:Thread(id:0) consumed 0 s and 2479 us of CPU time
+40, group:0) consumed 0 s and 2495 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:40, group:0)
+Thread(id:48, group:0) is scheduled.
+..... uthread_context_func .....
+2, group:0) is scheduled.
+Thread(id:..... uthread_context_func .....
+4, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:0, group:0) consumed 0 s and 390 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:0, group:0)
+Thread(id:8, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:2, group:0) consumed 0 s and 404 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:2, group:0)
+Thread(id:10, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:4, group:0) consumed 0 s and 428 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:4, group:0)
+Thread(id:12, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:8, group:0) consumed 0 s and 331 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:8, group:0)
+Thread(id:16, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:10, group:0) consumed 0 s and 335 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:10, group:0)
+Thread(id:18, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:12, group:0) consumed 0 s and 332 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:12, group:0)
+Thread(id:20, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:6, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:16, group:0) consumed 0 s and 336 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:16, group:0)
+Thread(id:24, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:18, group:0) consumed 0 s and 336 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:18, group:0)
+Thread(id:26, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:20, group:0) consumed 0 s and 333 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:20, group:0)
+Thread(id:28, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:6, group:0) consumed 0 s and 349 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:6, group:0)
+Thread(id:14, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:24, group:0) consumed 0 s and 338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:24, group:0)
+Thread(id:32, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:26, group:0) consumed 0 s and 338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:26, group:0)
+Thread(id:34, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:28, group:0) consumed 0 s and 349 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:28, group:0)
+Thread(id:36, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:14, group:0) consumed 0 s and 338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:14, group:0)
+Thread(id:22, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:22, group:0) consumed 0 s and 332 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:22, group:0)
+Thread(id:30, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:30, group:0) consumed 0 s and 344 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:30, group:0)
+Thread(id:38, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:32, group:0) consumed 0 s and 2488 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:32, group:0)
+Thread(id:40, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:34, group:0) consumed 0 s and 2476 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:34, group:0)
+Thread(id:42, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:36, group:0) consumed 0 s and 2459 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:36, group:0)
+Thread(id:44, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:38, group:0) consumed 0 s and 2498 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:38, group:0)
+Thread(id:46, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:Thread(id:0) consumed 0 s and 2479 us of CPU time
+40, group:0) consumed 0 s and 2495 us Thread(id:44, group:0) consumed 0 s and 2490 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:44, group:0)
+Thread(id:52, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:46, group:0) consumed 0 s and 2481 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:46, group:0)
+Thread(id:54, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:50, group:0) consumed 0 s and 2489 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:50, group:0)
+Thread(id:58, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:48, group:0) consumed 0 s and 2485 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:48, group:0)
+Thread(id:56, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:52, group:0) consumed 0 s and 2620 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:52, group:0)
+Thread(id:60, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:54, group:0) consumed 0 s and 2492 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:54, group:0)
+Thread(id:62, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:56, group:0) consumed 0 s and 2463 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:56, group:0)
+Thread(id:64, group:0) is scheduled.
+Thread(id:58, group:0) consumed 0 s and 2476 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:58, group:0)
+Thread(id:66, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:60, group:0) consumed 0 s and 2452 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:60, group:0)
+Thread(id:68, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:62, group:0) consumed 0 s and 2564 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:62, group:0)
+Thread(id:70, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:66, group:0) consumed 0 s and 19884 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:66, group:0)
+Thread(id:74, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:64, group:0) consumed 0 s and 20069 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:64, group:0)
+Thread(id:72, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:68, group:0) consumed 0 s and 20361 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:68, group:0)
+Thread(id:76, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:70, group:0) consumed 0 s and 19903 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:70, group:0)
+Thread(id:78, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:78, group:0) consumed 0 s and 3992 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:78, group:0)
+Thread(id:78, group:0) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:Thread(id:86, group:0) is scheduled.
+72, group:0) consumed 0 s and 4770 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:72, group:0)
+Thread(id:72, group:0) inserted into active runqueue, because it's credit 48 >= 0
+Thread(id:80, group:0) is scheduled.
+Thread(id:76, group:0) consumed 0 s and 4326 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:76, group:0)
+Thread(id:76, group:0) inserted into active runqueue, because it's credit 48 >= 0
+Thread(id:84, group:0) is scheduled.
+Thread(id:74, group:0) consumed 0 s and 4959 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:74, group:0)
+Thread(id:74, group:0) inserted into active runqueue, because it's credit 48 >= 0
+Thread(id:82, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:80, group:0) consumed 0 s and 19975 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:80, group:0)
+Thread(id:88, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:86, group:0) consumed 0 s and 20228 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:86, group:0)
+Thread(id:94, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:82, group:0) consumed 0 s and 20510 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:82, group:0)
+Thread(id:90, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:84, group:0) consumed 0 s and 21024 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:84, group:0)
+Thread(id:92, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:88, group:0) consumed 0 s and 7993 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:88, group:0)
+Thread(id:88, group:0) inserted into active runqueue, because it's credit 97 >= 0
+Thread(id:96, group:0) is scheduled.
+Thread(id:94, group:0) consumed 0 s and 7747 us of CPU time
+Thread(id:NGE: 3 debited from Thread(id:94, group:0)
+90, group:094, group:0 s and ted into active runqueue, because it's credit 74 >= 0
+ us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:90, group:0)
+Thread(id:102, group:0) is scheduled.
+Thread(id:90, group:0) inserted into active runqueue, because it's credit 97 >= 0
+Thread(id:98, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:92, group:0) consumed 0 s and 9739 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:92, group:0)
+Thread(id:92, group:0) inserted into active runqueue, because it's credit 96 >= 0
+Thread(id:100, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:96, group:0) consumed 0 s and 31995 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 10 >= 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 31986 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+Thread(id:102, group:0Thread(id:100, group:Thread(id:110, group:0) consumed 0 s and 29217 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:100, group:0)
+..... uthr100, group:0) inserted into active runqueue, because it's credit 11 >= 0
+Thread(id:108, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:98, group:0) consumed 0 s and 32034 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:106, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:110, group:0) consumed 0 s and 28004 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:110, group:T)
+Thr, group10Thread(id:) inserte27973 us of CPU time
+e, because it's credit 10 >= 0
+28024Thread(id:CRE, group:0) i14 debited from Thread(id:104, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 37 >= 0
+Thread(id:104, group:0) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:112, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 28015 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:116, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:118, group:, group:)) consumed 0 s and 3202732029 us of CPU time
+CREDIT CHANGE: CREDIT Ced from16 debited from Thread1)
+0)
+Thread(id:118, group:T) inserte112, group:0) inserted into active runqueue, because it's credit 59 >= 0
+Thread(id:120, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 32022 us of CPU time
+Thread(id:CREDIT CHANGE: 16 debited from Thread(id:116, group:0) consumed 0 s and 32028 us of CPU time
+CREDIT CHA116, group:0) debited from Thread(id:114, group:0)
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 59 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:122, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:120, group:0) consumed 0 s and 27949 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 87 >= 0
+Thread(id:72, group:0) is scheduled.
+ext_func .....
+Thread(id:84, group:0) consumed 0 s and 21024 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:84, group:0)
+Thread(id:92, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:88, group:0) consumed 0 s and 7993 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:88, group:0)
+Thread(id:88, group:0) inserted into active runqueue, because it's credit 97 >= 0
+Thread(id:96, group:0) is scheduled.
+Thread(id:94, group:0) consumed 0 s and 7747 us of CPU time
+Thread(id:NGE: 3 debited from Thread(id:94, group:0)
+90, group:094, group:0 s and ted into active runqueue, because it's credit 74 >= 0
+ us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:90, group:0)
+Thread(id:102, group:0) is scheduled.
+Thread(id:90, group:0) inserted into active runqueue, because it's credit 97 >= 0
+Thread(id:98, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:92, group:0) consumed 0 s and 9739 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:92, group:0)
+Thread(id:92, group:0) inserted into active runqueue, because it's credit 96 >= 0
+Thread(id:100, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:96, group:0) consumed 0 s and 31995 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 10 >= 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 31986 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+Thread(id:102, group:0Thread(id:100, group:Thread(id:110, group:0) consumed 0 s and 29217 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:100, group:0)
+..... uthr100, group:0) inserted into active runqueue, because it's credit 11 >= 0
+Thread(id:108, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:98, group:0) consumed 0 s and 32034 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:106, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:110, group:0) consumed 0 s and 28004 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:110, group:T)
+Thr, group10Thread(id:) inserte27973 us of CPU time
+e, because it's credit 10 >= 0
+28024Thread(id:CRE, group:0) i14 debited from Thread(id:104, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 37 >= 0
+Thread(id:104, group:0) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:112, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 28015 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:116, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:118, group:, group:)) consumed 0 s and 3202732029 us of CPU time
+CREDIT CHANGE: CREDIT Ced from16 debited from Thread1)
+0)
+Thread(id:118, group:T) inserte112, group:0) inserted into active runqueue, because it's credit 59 >= 0
+Thread(id:120, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 32022 us of CPU time
+Thread(id:CREDIT CHANGE: 16 debited from Thread(id:116, group:0) consumed 0 s and 32028 us of CPU time
+CREDIT CHA116, group:0) debited from Thread(id:114, group:0)
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 59 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:122, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:120, group:0) consumed 0 s and 27949 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqThread(id:124, group:0) consumed 0 s and 27940 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:124, group:0)
+Thread(id:124, group:0) inserted into active runqueue, because it's credit 87 >= 0
+Thread(id:76, group:0) is scheduled.
+
+..... uthread_context_func .....
+Thread(id:88, group:0) consumed 0 s and 7993 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:88, group:0)
+Thread(id:88, group:0) inserted into active runqueue, because it's credit 97 >= 0
+Thread(id:96, group:0) is scheduled.
+Thread(id:94, group:0) consumed 0 s and 7747 us of CPU time
+Thread(id:NGE: 3 debited from Thread(id:94, group:0)
+90, group:094, group:0 s and ted into active runqueue, because it's credit 74 >= 0
+ us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:90, group:0)
+Thread(id:102, group:0) is scheduled.
+Thread(id:90, group:0) inserted into active runqueue, because it's credit 97 >= 0
+Thread(id:98, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:92, group:0) consumed 0 s and 9739 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:92, group:0)
+Thread(id:92, group:0) inserted into active runqueue, because it's credit 96 >= 0
+Thread(id:100, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:96, group:0) consumed 0 s and 31995 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 10 >= 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 31986 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+Thread(id:102, group:0Thread(id:100, group:Thread(id:110, group:0) consumed 0 s and 29217 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:100, group:0)
+..... uthr100, group:0) inserted into active runqueue, because it's credit 11 >= 0
+Thread(id:108, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:98, group:0) consumed 0 s and 32034 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:106, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:110, group:0) consumed 0 s and 28004 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:110, group:T)
+Thr, group10Thread(id:) inserte27973 us of CPU time
+e, because it's credit 10 >= 0
+28024Thread(id:CRE, group:0) i14 debited from Thread(id:104, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 37 >= 0
+Thread(id:104, group:0) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:112, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 28015 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:116, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:118, group:, group:)) consumed 0 s and 3202732029 us of CPU time
+CREDIT CHANGE: CREDIT Ced from16 debited from Thread1)
+0)
+Thread(id:118, group:T) inserte112, group:0) inserted into active runqueue, because it's credit 59 >= 0
+Thread(id:120, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 32022 us of CPU time
+Thread(id:CREDIT CHANGE: 16 debited from Thread(id:116, group:0) consumed 0 s and 32028 us of CPU time
+CREDIT CHA116, group:0) debited from Thread(id:114, group:0)
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 59 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:122, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:120, group:0) consumed 0 s and 27949 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqThread(id:122, group:0) consumed 0 s and 27950 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 87 >= 0
+Thread(id:74, group:0) is scheduled.
+
+..... uthread_context_func .....
+Thread(id:88, group:0) consumed 0 s and 7993 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:88, group:0)
+Thread(id:88, group:0) inserted into active runqueue, because it's credit 97 >= 0
+Thread(id:96, group:0) is scheduled.
+Thread(id:94, group:0) consumed 0 s and 7747 us of CPU time
+Thread(id:NGE: 3 debited from Thread(id:94, group:0)
+90, group:094, group:0 s and ted into active runqueue, because it's credit 74 >= 0
+ us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:90, group:0)
+Thread(id:102, group:0) is scheduled.
+Thread(id:90, group:0) inserted into active runqueue, because it's credit 97 >= 0
+Thread(id:98, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:92, group:0) consumed 0 s and 9739 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:92, group:0)
+Thread(id:92, group:0) inserted into active runqueue, because it's credit 96 >= 0
+Thread(id:100, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:96, group:0) consumed 0 s and 31995 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 10 >= 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 31986 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+Thread(id:102, group:0Thread(id:100, group:Thread(id:110, group:0) consumed 0 s and 29217 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:100, group:0)
+..... uthr100, group:0) inserted into active runqueue, because it's credit 11 >= 0
+Thread(id:108, group:0) is scheduled.
+..... uthread_context_func .....
+Thread(id:98, group:0) consumed 0 s and 32034 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:106, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:110, group:0) consumed 0 s and 28004 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:110, group:T)
+Thr, group10Thread(id:) inserte27973 us of CPU time
+e, because it's credit 10 >= 0
+28024Thread(id:CRE, group:0) i14 debited from Thread(id:104, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 37 >= 0
+Thread(id:104, group:0) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:112, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 28015 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:116, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:118, group:, group:)) consumed 0 s and 3202732029 us of CPU time
+CREDIT CHANGE: CREDIT Ced from16 debited from Thread1)
+0)
+Thread(id:118, group:T) inserte112, group:0) inserted into active runqueue, because it's credit 59 >= 0
+Thread(id:120, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 32022 us of CPU time
+Thread(id:CREDIT CHANGE: 16 debited from Thread(id:116, group:0) consumed 0 s and 32028 us of CPU time
+CREDIT CHA116, group:0) debited from Thread(id:114, group:0)
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 59 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:122, group:0) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:120, group:0) consumed 0 s and 27949 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqThread(id:126, group:0) consumed 0 s and 27946 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:126, group:0)
+Thread(id:126, group:0) inserted into active runqueue, because it's credit 87 >= 0
+Thread(id:78, group:0) is scheduled.
+Thread(id:74, group:0) consumed 0 s and 14129 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:74, group:0)
+Thread(id:90, group:0) is scheduled.
+Thread(id:72, group:0) consumed 0 s and 15137 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:72, group:0)
+Thread(id:88, group:0) is scheduled.
+Thread(id:76, group:0) consumed 0 s and 15683 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:76, group:0)
+Thread(id:92, group:0) is scheduled.
+Thread(id:90, group:0) consumed 0 s and 12055 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:90, group:0)
+Thread(id:98, group:0) is scheduled.
+Thread(id:88, group:0) consumed 0 s and 11828 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:88, group:0)
+Thread(id:96, group:0) is scheduled.
+Thread(id:78, group:0) consumed 0 s and 28288 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:78, group:0)
+Thread(id:94, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 4979 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 8 >= 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:94Thread(id:098, group:0) consumed 0 s and 5709 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:98, group:0)
+GE: 1 debited from Thread(id:94, group:0Thread(id:98, group:0Thread(id:Thread(id:94, group:0) inserted 0 s and 96 >= 0
+CREDIT CHANGE: 8 debited from Thread(id:92, group:0)
+Thread(id:Thr, group920) is sch) inserted into active runqueue, because it's credit 88 >= 0
+Thread(id:100, group:0) is scheduled.
+Thread(id:Thread(id:104102Thread(i0 us, group:0CREDIT 31963 us15CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+om Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 22Thread(id:102, group:Thread(id:114, group:0) is scheduled.
+ause it's creditT-5 < 0
+d:100, group:0) consumed 0 s and ThreaThread(id:110, group:0) is scheduled.
+ted 0) is scheduled.
+0, group:0)
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 27974 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:112, group:0)
+Thread(id:112, group:0) inserted into active runqueue, because it's credit 46Thread(id:Thread(id:110, group:0) is schedu0 s and 27977 us of CPU time
+Thread(id:NGE: 13 debited from Thread(id:110, group:0)
+114, group:0) consumed Thread(id:0 s and ) ins us of CPU time
+e runqueue, because it's credit 23CREDIT CHANGE: 13 debited from Thread(id:114, group:0)
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 46 >= 0
+Thread(id:118, group:0) is scheduled.
+Thread(id:122, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 27979 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 23 >= 0
+Thread(id:116, group:0) is scheduled.
+Thread(id:122, group:0) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 72 >= 0
+Thread(id:98, group:0) is scheduled.
+Thread(id:120, group:T) consumed 0 s and 320,  us of0) consumed 0 s and HANGE: 32 de us of CPU time
+CREDIT C, group16)
+ebited from Thread(id:118, group:0)
+Thread(id:118, group:0) inserted into active runqueue, because it's credit 43 >= 0
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 71 >= 0
+Thread(id:126, group:0) is scheduled.
+Thread(id:96, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 32005 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into active runqueue, because it's credit 43 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into expires runqueue, because it's credit -5 < 0
+Thread(id:104, group:0) is scheduled.
+:0) is scheduled.
+Thread(id:74, group:0) consumed 0 s and 14129 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:74, group:0)
+Thread(id:90, group:0) is scheduled.
+Thread(id:72, group:0) consumed 0 s and 15137 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:72, group:0)
+Thread(id:88, group:0) is scheduled.
+Thread(id:76, group:0) consumed 0 s and 15683 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:76, group:0)
+Thread(id:92, group:0) is scheduled.
+Thread(id:90, group:0) consumed 0 s and 12055 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:90, group:0)
+Thread(id:98, group:0) is scheduled.
+Thread(id:88, group:0) consumed 0 s and 11828 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:88, group:0)
+Thread(id:96, group:0) is scheduled.
+Thread(id:78, group:0) consumed 0 s and 28288 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:78, group:0)
+Thread(id:94, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 4979 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 8 >= 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:94Thread(id:098, group:0) consumed 0 s and 5709 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:98, group:0)
+GE: 1 debited from Thread(id:94, group:0Thread(id:98, group:0Thread(id:Thread(id:94, group:0) inserted 0 s and 96 >= 0
+CREDIT CHANGE: 8 debited from Thread(id:92, group:0)
+Thread(id:Thr, group920) is sch) inserted into active runqueue, because it's credit 88 >= 0
+Thread(id:100, group:0) is scheduled.
+Thread(id:Thread(id:104102Thread(i0 us, group:0CREDIT 31963 us15CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+om Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 22Thread(id:102, group:Thread(id:114, group:0) is scheduled.
+ause it's creditT-5 < 0
+d:100, group:0) consumed 0 s and ThreaThread(id:110, group:0) is scheduled.
+ted 0) is scheduled.
+0, group:0)
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 27974 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:112, group:0)
+Thread(id:112, group:0) inserted into active runqueue, because it's credit 46Thread(id:Thread(id:110, group:0) is schedu0 s and 27977 us of CPU time
+Thread(id:NGE: 13 debited from Thread(id:110, group:0)
+114, group:0) consumed Thread(id:0 s and ) ins us of CPU time
+e runqueue, because it's credit 23CREDIT CHANGE: 13 debited from Thread(id:114, group:0)
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 46 >= 0
+Thread(id:118, group:0) is scheduled.
+Thread(id:122, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 27979 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 23 >= 0
+Thread(id:116, group:0) is scheduled.
+Thread(id:122, group:0) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 72 >= 0
+Thread(id:98, group:0) is scheduled.
+Thread(id:120, group:T) consumed 0 s and 320,  us of0) consumed 0 s and HANGE: 32 de us of CPU time
+CREDIT C, group16)
+ebited from Thread(id:118, group:0)
+Thread(id:118, group:0) inserted into active runqueue, because it's credit 43 >= 0
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 71 >= 0
+Thread(id:126, group:0) is scheduled.
+Thread(id:96, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 32005 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into active runqueue, because it's credit 43 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:96, grThread(id:126, group:0) consumed 0 s and 28000 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:126, group:0)
+Thread(id:126, group:0) inserted into active runqueue, because it's credit 73 >= 0
+Thread(id:94, group:0) is scheduled.
+Thread(id:74, group:0) consumed 0 s and 14129 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:74, group:0)
+Thread(id:90, group:0) is scheduled.
+Thread(id:72, group:0) consumed 0 s and 15137 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:72, group:0)
+Thread(id:88, group:0) is scheduled.
+Thread(id:76, group:0) consumed 0 s and 15683 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:76, group:0)
+Thread(id:92, group:0) is scheduled.
+Thread(id:90, group:0) consumed 0 s and 12055 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:90, group:0)
+Thread(id:98, group:0) is scheduled.
+Thread(id:88, group:0) consumed 0 s and 11828 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:88, group:0)
+Thread(id:96, group:0) is scheduled.
+Thread(id:78, group:0) consumed 0 s and 28288 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:78, group:0)
+Thread(id:94, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 4979 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 8 >= 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:94Thread(id:098, group:0) consumed 0 s and 5709 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:98, group:0)
+GE: 1 debited from Thread(id:94, group:0Thread(id:98, group:0Thread(id:Thread(id:94, group:0) inserted 0 s and 96 >= 0
+CREDIT CHANGE: 8 debited from Thread(id:92, group:0)
+Thread(id:Thr, group920) is sch) inserted into active runqueue, because it's credit 88 >= 0
+Thread(id:100, group:0) is scheduled.
+Thread(id:Thread(id:104102Thread(i0 us, group:0CREDIT 31963 us15CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+om Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 22Thread(id:102, group:Thread(id:114, group:0) is scheduled.
+ause it's creditT-5 < 0
+d:100, group:0) consumed 0 s and ThreaThread(id:110, group:0) is scheduled.
+ted 0) is scheduled.
+0, group:0)
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 27974 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:112, group:0)
+Thread(id:112, group:0) inserted into active runqueue, because it's credit 46Thread(id:Thread(id:110, group:0) is schedu0 s and 27977 us of CPU time
+Thread(id:NGE: 13 debited from Thread(id:110, group:0)
+114, group:0) consumed Thread(id:0 s and ) ins us of CPU time
+e runqueue, because it's credit 23CREDIT CHANGE: 13 debited from Thread(id:114, group:0)
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 46 >= 0
+Thread(id:118, group:0) is scheduled.
+Thread(id:122, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 27979 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 23 >= 0
+Thread(id:116, group:0) is scheduled.
+Thread(id:122, group:0) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 72 >= 0
+Thread(id:98, group:0) is scheduled.
+Thread(id:120, group:T) consumed 0 s and 320,  us of0) consumed 0 s and HANGE: 32 de us of CPU time
+CREDIT C, group16)
+ebited from Thread(id:118, group:0)
+Thread(id:118, group:0) inserted into active runqueue, because it's credit 43 >= 0
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 71 >= 0
+Thread(id:126, group:0) is scheduled.
+Thread(id:96, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 32005 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into active runqueue, because it's credit 43 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:96, grThread(id:98, group:0) consumed 0 s and 28011 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into expires runqueue, because it's credit -7 < 0
+Thread(id:106, group:0) is scheduled.
+.
+Thread(id:74, group:0) consumed 0 s and 14129 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:74, group:0)
+Thread(id:90, group:0) is scheduled.
+Thread(id:72, group:0) consumed 0 s and 15137 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:72, group:0)
+Thread(id:88, group:0) is scheduled.
+Thread(id:76, group:0) consumed 0 s and 15683 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:76, group:0)
+Thread(id:92, group:0) is scheduled.
+Thread(id:90, group:0) consumed 0 s and 12055 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:90, group:0)
+Thread(id:98, group:0) is scheduled.
+Thread(id:88, group:0) consumed 0 s and 11828 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:88, group:0)
+Thread(id:96, group:0) is scheduled.
+Thread(id:78, group:0) consumed 0 s and 28288 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:78, group:0)
+Thread(id:94, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 4979 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 8 >= 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:94Thread(id:098, group:0) consumed 0 s and 5709 us of CPU time
+CREDIT CHANGE: 2 debited from Thread(id:98, group:0)
+GE: 1 debited from Thread(id:94, group:0Thread(id:98, group:0Thread(id:Thread(id:94, group:0) inserted 0 s and 96 >= 0
+CREDIT CHANGE: 8 debited from Thread(id:92, group:0)
+Thread(id:Thr, group920) is sch) inserted into active runqueue, because it's credit 88 >= 0
+Thread(id:100, group:0) is scheduled.
+Thread(id:Thread(id:104102Thread(i0 us, group:0CREDIT 31963 us15CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+om Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 22Thread(id:102, group:Thread(id:114, group:0) is scheduled.
+ause it's creditT-5 < 0
+d:100, group:0) consumed 0 s and ThreaThread(id:110, group:0) is scheduled.
+ted 0) is scheduled.
+0, group:0)
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 27974 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:112, group:0)
+Thread(id:112, group:0) inserted into active runqueue, because it's credit 46Thread(id:Thread(id:110, group:0) is schedu0 s and 27977 us of CPU time
+Thread(id:NGE: 13 debited from Thread(id:110, group:0)
+114, group:0) consumed Thread(id:0 s and ) ins us of CPU time
+e runqueue, because it's credit 23CREDIT CHANGE: 13 debited from Thread(id:114, group:0)
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 46 >= 0
+Thread(id:118, group:0) is scheduled.
+Thread(id:122, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 27979 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 23 >= 0
+Thread(id:116, group:0) is scheduled.
+Thread(id:122, group:0) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 72 >= 0
+Thread(id:98, group:0) is scheduled.
+Thread(id:120, group:T) consumed 0 s and 320,  us of0) consumed 0 s and HANGE: 32 de us of CPU time
+CREDIT C, group16)
+ebited from Thread(id:118, group:0)
+Thread(id:118, group:0) inserted into active runqueue, because it's credit 43 >= 0
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 71 >= 0
+Thread(id:126, group:0) is scheduled.
+Thread(id:96, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 32005 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into active runqueue, because it's credit 43 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:96, grThread(id:124, group:0) consumed 0 s and 28000 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:124, group:0)
+Thread(id:124, group:0) inserted into active runqueue, because it's credit 73 >= 0
+Thread(id:92, group:0) is scheduled.
+Thread(id:92, group:0) consumed 0 s and 2999 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:92, group:0)
+Thread(id:108, group:0) is scheduled.
+Thread(id:94, group:0) consumed 0 s and 10071 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:94, group:0)
+Thread(id:110, group:0) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 31925 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:104, group:0)
+Thread(id:104, group:0110, group:0) consumed 0 s and 21828 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:110, group:T)
+ead(id:112Thread(i0) is schedul0) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:118, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 28855 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:116, group:0) is scheduled.
+Thread(id:106, group:0) consumed 0 s and 31954 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 7 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 28020 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:112, group:0)
+Thread(id:112, group:0Thread(id: into active runqueue, because it's credit 32 >= 0
+118, group:0) consumed 0 s and 28021 us of CPU120, group:0) is scheduled.
+ debited from Thread(id:118Thread(id)
+114, group:0Thread(id:118, group:0) inser27946 us of CPU time
+eue, because it's credit 29 >= 0
+CREDIT CHANGE: 13 debited from Thread(id:114, group:0)
+Thread(id:126, group:0) is scheduled.
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 33 >= 0
+Thread(id:122, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 28023 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into active runqueue, because it's credit 29 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:120, group:0) consumed 0 s and 31971 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 56 >= 0
+Thread(id:Thread(id:104, group:0) is scheduled.
+126, group:0) consumed 0 s and 31970 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:126, group:Thread(id:Thread(id:126, group:0122, group:0) consumed runqueue, because it's credit 58 >= 0
+0 s and 31971Thread(id:CRE, group:0) is scheduled.
+om Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 57 >= 0
+Thread(id:106, group:0) is scheduled.
+Thread(id:124, group:0) consumed 0 s and 31971 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:124, group:0)
+Thread(id:124, group:0) inserted into active runqueue, because it's credit 58 >= 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:110, group:0) consumed 0 s and 27984 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:110, group:0)
+Thread(id:110, group:0) inserted into active runqueue, because it's credit 0 >= 0
+Thread(id:118, group:0Thread(id:106, group:0) consumed 0 s and 27985 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into expires runqueue, because it's credit -6 < 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:Thread(id:104, group:0) consumed 1 s and 279940 s and 27984 us of CPU time
+13CREDIT CHANGE: 13 debited from Thre0)
+0)
+Thread(id:104, group:0) inserted into expires runqueue, because it's credit -T < 0
+(id:108, group:0) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:112, group:Thread(id:116, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 31988 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:112, group:0)
+Thread(id:112, group:0) inserted into active runqueue, because it's credit 17 >= 0
+Thread(id:120, group:0) is scheduled.
+debited from Thread(id:124, group:0)
+Thread(id:124, group:0) inserted into active runqueue, because it's credit 73 >= 0
+Thread(id:92, group:0) is scheduled.
+Thread(id:92, group:0) consumed 0 s and 2999 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:92, group:0)
+Thread(id:108, group:0) is scheduled.
+Thread(id:94, group:0) consumed 0 s and 10071 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:94, group:0)
+Thread(id:110, group:0) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 31925 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:104, group:0)
+Thread(id:104, group:0110, group:0) consumed 0 s and 21828 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:110, group:T)
+ead(id:112Thread(i0) is schedul0) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:118, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 28855 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:116, group:0) is scheduled.
+Thread(id:106, group:0) consumed 0 s and 31954 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 7 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 28020 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:112, group:0)
+Thread(id:112, group:0Thread(id: into active runqueue, because it's credit 32 >= 0
+118, group:0) consumed 0 s and 28021 us of CPU120, group:0) is scheduled.
+ debited from Thread(id:118Thread(id)
+114, group:0Thread(id:118, group:0) inser27946 us of CPU time
+eue, because it's credit 29 >= 0
+CREDIT CHANGE: 13 debited from Thread(id:114, group:0)
+Thread(id:126, group:0) is scheduled.
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 33 >= 0
+Thread(id:122, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 28023 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into active runqueue, because it's credit 29 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:120, group:0) consumed 0 s and 31971 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 56 >= 0
+Thread(id:Thread(id:104, group:0) is scheduled.
+126, group:0) consumed 0 s and 31970 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:126, group:Thread(id:Thread(id:126, group:0122, group:0) consumed runqueue, because it's credit 58 >= 0
+0 s and 31971Thread(id:CRE, group:0) is scheduled.
+om Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 57 >= 0
+Thread(id:106, group:0) is scheduled.
+Thread(id:124, group:0) consumed 0 s and 31971 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:124, group:0)
+Thread(id:124, group:0) inserted into active runqueue, because it's credit 58 >= 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:110, group:0) consumed 0 s and 27984 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:110, group:0)
+Thread(id:110, group:0) inserted into active runqueue, because it's credit 0 >= 0
+Thread(id:118, group:0Thread(id:106, group:0) consumed 0 s and 27985 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into expires runqueue, because it's credit -6 < 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:Thread(id:104, group:0) consumed 1 s and 279940 s and 27984 us of CPU time
+13CREDIT CHANGE: 13 debited from Thre0)
+0)
+Thread(id:104, group:0) inserted into expires runqueue, because it's credit -T < 0
+(id:108, group:0) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:112, group:Thread(id:116, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 31988 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:112, group:0)
+Thread(id:112, group:0) inserted into actThread(id:118, group:0) consumed 0 s and 31999 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:118, group:0)
+Thread(id:118, group:0) inserted into active runqueue, because it's credit 14 >= 0
+Thread(id:126, group:0) is scheduled.
+hread(id:92, group:0) consumed 0 s and 2999 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:92, group:0)
+Thread(id:108, group:0) is scheduled.
+Thread(id:94, group:0) consumed 0 s and 10071 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:94, group:0)
+Thread(id:110, group:0) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 31925 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:104, group:0)
+Thread(id:104, group:0110, group:0) consumed 0 s and 21828 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:110, group:T)
+ead(id:112Thread(i0) is schedul0) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:118, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 28855 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:116, group:0) is scheduled.
+Thread(id:106, group:0) consumed 0 s and 31954 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 7 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 28020 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:112, group:0)
+Thread(id:112, group:0Thread(id: into active runqueue, because it's credit 32 >= 0
+118, group:0) consumed 0 s and 28021 us of CPU120, group:0) is scheduled.
+ debited from Thread(id:118Thread(id)
+114, group:0Thread(id:118, group:0) inser27946 us of CPU time
+eue, because it's credit 29 >= 0
+CREDIT CHANGE: 13 debited from Thread(id:114, group:0)
+Thread(id:126, group:0) is scheduled.
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 33 >= 0
+Thread(id:122, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 28023 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into active runqueue, because it's credit 29 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:120, group:0) consumed 0 s and 31971 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 56 >= 0
+Thread(id:Thread(id:104, group:0) is scheduled.
+126, group:0) consumed 0 s and 31970 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:126, group:Thread(id:Thread(id:126, group:0122, group:0) consumed runqueue, because it's credit 58 >= 0
+0 s and 31971Thread(id:CRE, group:0) is scheduled.
+om Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 57 >= 0
+Thread(id:106, group:0) is scheduled.
+Thread(id:124, group:0) consumed 0 s and 31971 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:124, group:0)
+Thread(id:124, group:0) inserted into active runqueue, because it's credit 58 >= 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:110, group:0) consumed 0 s and 27984 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:110, group:0)
+Thread(id:110, group:0) inserted into active runqueue, because it's credit 0 >= 0
+Thread(id:118, group:0Thread(id:106, group:0) consumed 0 s and 27985 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into expires runqueue, because it's credit -6 < 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:Thread(id:104, group:0) consumed 1 s and 279940 s and 27984 us of CPU time
+13CREDIT CHANGE: 13 debited from Thre0)
+0)
+Thread(id:104, group:0) inserted into expires runqueue, because it's credit -T < 0
+(id:108, group:0) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:112, group:Thread(id:116, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 31988 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:112, group:0)
+Thread(id:112, group:0) inserted into actThread(id:114, group:0) consumed 0 s and 31998 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:114, group:0)
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 18 >= 0
+Thread(id:122, group:0) is scheduled.
+hread(id:92, group:0) consumed 0 s and 2999 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:92, group:0)
+Thread(id:108, group:0) is scheduled.
+Thread(id:94, group:0) consumed 0 s and 10071 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:94, group:0)
+Thread(id:110, group:0) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 31925 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:104, group:0)
+Thread(id:104, group:0110, group:0) consumed 0 s and 21828 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:110, group:T)
+ead(id:112Thread(i0) is schedul0) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:118, group:0) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 28855 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:108, group:0)
+Thread(id:108, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:116, group:0) is scheduled.
+Thread(id:106, group:0) consumed 0 s and 31954 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into active runqueue, because it's credit 7 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 28020 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:112, group:0)
+Thread(id:112, group:0Thread(id: into active runqueue, because it's credit 32 >= 0
+118, group:0) consumed 0 s and 28021 us of CPU120, group:0) is scheduled.
+ debited from Thread(id:118Thread(id)
+114, group:0Thread(id:118, group:0) inser27946 us of CPU time
+eue, because it's credit 29 >= 0
+CREDIT CHANGE: 13 debited from Thread(id:114, group:0)
+Thread(id:126, group:0) is scheduled.
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 33 >= 0
+Thread(id:122, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 28023 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into active runqueue, because it's credit 29 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:120, group:0) consumed 0 s and 31971 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 56 >= 0
+Thread(id:Thread(id:104, group:0) is scheduled.
+126, group:0) consumed 0 s and 31970 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:126, group:Thread(id:Thread(id:126, group:0122, group:0) consumed runqueue, because it's credit 58 >= 0
+0 s and 31971Thread(id:CRE, group:0) is scheduled.
+om Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 57 >= 0
+Thread(id:106, group:0) is scheduled.
+Thread(id:124, group:0) consumed 0 s and 31971 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:124, group:0)
+Thread(id:124, group:0) inserted into active runqueue, because it's credit 58 >= 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:110, group:0) consumed 0 s and 27984 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:110, group:0)
+Thread(id:110, group:0) inserted into active runqueue, because it's credit 0 >= 0
+Thread(id:118, group:0Thread(id:106, group:0) consumed 0 s and 27985 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:106, group:0)
+Thread(id:106, group:0) inserted into expires runqueue, because it's credit -6 < 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:Thread(id:104, group:0) consumed 1 s and 279940 s and 27984 us of CPU time
+13CREDIT CHANGE: 13 debited from Thre0)
+0)
+Thread(id:104, group:0) inserted into expires runqueue, because it's credit -T < 0
+(id:108, group:0) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:112, group:Thread(id:116, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 31988 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:112, group:0)
+Thread(id:112, group:0) inserted into actThread(id:116, group:0) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into active runqueue, because it's credit 14 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:120, group:0) consumed 0 s and 27964 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 43 >= 0
+Thread(id:112, group:0) is scheduled.
+Thread(id:126, group:0) consumed 0 s and 27936 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:126, group:0)
+Thread(id:Thread(id:122, group:0) inserted 0 s and ive runqueue, because it's credit 4527896 us of CPU time
+CREDIT CHANGE: 13Thread(id:110, group:0) is schedule0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 44 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:124, group:0) consumed 0 s and 27865 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:124, group:0)
+Thread(id:124, group:0) inserted into active runqueue, because it's credit 45 >= 0
+Thread(id:116, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 31987 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:112, group:0)
+Thread(id:112, group:0) inserted into active runqueue, because it's credit 2 >= 0
+Thread(id:120, group:0) is scheduled.
+Thread(id:110, group:0) consumed 0 s and 31987 us of CPU time
+CREDIT CHANGE: 15Thread(id:Thr, group10), group:00 s and 31987to expires runqueue, because it's credit - u < 0
+CREDIT CHANGE: 15 debited from Thread(id:114, group:0)
+Thread(id:118, group:0) is scheduled.
+Thread(id:114, group:0) inserted into active runqueue, because it's credit 3 >= 0
+Thread(id:122, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 31987 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:116, group:0)
+Thread(id:116, group:0) inserted into expires runqueue, because it's credit -1 < 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:120, group:0) consumed 0 s and 28006 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 29 >= 0
+Thread(id:112, group:0) is scheduled.
+Thread(id:118, group:0) consumed 0 s and 28005 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:118, group:0)
+Thread(id:118, group:0) inserted into active runqueue, because it's credit 0 >= 0
+Thread(id:122, group:0) is scheduled.
+0) consumed 0 s and 28006 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:122, group:0)
+Thread(id:122, group:0) inserted into active runqueue, because it's credit 30 >= 0
+Thread(id:114, group:0) is scheduled.
+Thread(id:124, group:0) consumed 0 s and 28006 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:124, group:0)
+Thread(id:124, group:0) inserted into active runqueue, because it's credit 31 >= 0
+Thread(id:124, group:0) is scheduled.
+Thread(id:114, group:0) consumed 0 s and 12975 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:114, group:0)
+Thread(id:122, group:0) is scheduled.
+Thread(id:112, group:0) consumed 0 s and 20184 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:112, group:0)
+Thread(id:120, group:0) is scheduled.
+Thread(id:124, group:0) consumed 0 s and 22465 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:124, group:0)
+Thread(id:5, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:5, group:1) consumed 0 s and 378 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:5, group:1)
+Thread(id:13, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:13, group:1) consumed 0 s and 349 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:13, group:1)
+Thread(id:21, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:21, group:1) consumed 0 s and 335 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:21, group:1)
+Thread(id:29, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:29, group:1) consumed 0 s and 358 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:29, group:1)
+Thread(id:37, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:37, group:1) consumed 0 s and 2545 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:37, group:1)
+Thread(id:45, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:122, group:0) consumed 0 s and 14814 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:122, group:0)
+Thread(id:3, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:3, group:1) consumed 0 s and 358 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:3, group:1)
+Thread(id:11, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:11, group:1) consumed 0 s and 359 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:11, group:1)
+Thread(id:19, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:19, group:1) consumed 0 s and 328 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:19, group:1)
+Thread(id:27, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:45, group:1) consumed 0 s and 2498 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:45, group:1)
+Thread(id:53, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:27, group:1) consumed 0 s and 317 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:27, group:1)
+Thread(id:35, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:53, group:1) consumed 0 s and 2508 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:53, group:1)
+Thread(id:61, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:35, group:1) consumed 0 s and 2489 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:35, group:1)
+Thread(id:43, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:120, group:0) consumed 0 s and 11794 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:120, group:0)
+Thread(id:120, group:0) inserted into active runqueue, because it's credit 24 >= 0
+Thread(id:120126, grou) 0) consumed 0 s and 31981 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:126, group:0)
+Thread(id:126, group:0) inserted into active runqueue, because it's credit 30 >= 0
+Thread(id:118, group:0) is scheduled.
+Thread(id:43, group:1) consumed 0 s and 289 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:43, group:1)
+Thread(id:43, group:1) inserted into active runqueue, because it's credit 50 >= 0
+Thread(id:61, group:1) consumed50 s and 497 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:61, group:1)
+Thread(id:61, group:1) inserted into active runqueue, because it's credit 100 >= 0
+Thread(id:69, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:51, group:1) consumed 0 s and 2475 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:51, group:1)
+Thread(id:59, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:59, group:1) consumed 0 s and 2486 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:59, group:1)
+Thread(id:67, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:120, group:0) consumed 0 s and 6522 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:120, group:0)
+Thread(id:1, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:1, group:1) consumed 0 s and 350 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:1, group:1)
+Thread(id:9, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:9, group:1) consumed 0 s and 333 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:9, group:1)
+Thread(id:17, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:17, group:1) consumed 0 s and 340 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:17, group:1)
+Thread(id:25, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:25, group:1) consumed 0 s and 347 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:25, group:1)
+Thread(id:33, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:33, group:1) consumed 0 s and 2562 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:33, group:1)
+Thread(id:41, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:41, group:1) consumed 0 s and 2554 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:41, group:1)
+Thread(id:49, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:118, group:0) consumed 0 s and 14499 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:118, group:0)
+Thread(id:126, group:0) is scheduled.
+Thread(id:49, group:1) consumed 0 s and 2492 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:49, group:1)
+Thread(id:57, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:57, group:1) consumed 0 s and 2584 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:57, group:1)
+Thread(id:65, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:69, group:1) consumed 0 s and 19827 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:69, group:1)
+Thread(id:77, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:67, group:1) consumed 0 s and 19586 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:67, group:1)
+Thread(id:75, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:65, group:1) consumed 0 s and 9841 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:65, group:1)
+Thread(id:65, group:1) inserted into active runqueue, because it's credit 21 >= 0
+Thread(id:73, group:1) is scheduled.
+Thread(id:126, group:0) consumed 0 s and 13494 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:126, group:0)
+Thread(id:126, group:0) inserted into active runqueue, because it's credit 24 >= 0
+Thread(id:126, group:0) is scheduled.
+Thread(id:77, group:1) consumed 0 s and 8151 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:77, group:1)
+Thread(id:77, group:1) inserted into active runqueue, because it's credit 46 >= 0
+Thread(id:85, group:1) is scheduled.
+Thread(id:..... uthread_context_func .....
+75, group:1) consumed 0 s and 3419 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:75, group:1)
+Thread(id:75, group:1) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:83, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:126, group:0) consumed 0 s and 3136 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:126, group:0)
+Thread(id:7, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:7, group:1) consumed 0 s and 349 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:7, group:1)
+Thread(id:15, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:15, group:1) consumed 0 s and 331 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:15, group:1)
+Thread(id:23, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:23, group:1) consumed 0 s and 358 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:23, group:1)
+Thread(id:31, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:31, group:1) consumed 0 s and 345 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:31, group:1)
+Thread(id:39, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:39, group:1) consumed 0 s and 2509 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:39, group:1)
+Thread(id:47, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:47, group:1) consumed 0 s and 2510 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:47, group:1)
+Thread(id:55, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:55, group:1) consumed 0 s and 2477 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:55, group:1)
+Thread(id:63, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:63, group:1) consumed 0 s and 2479 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:63, group:1)
+Thread(id:71, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:85, group:1) consumed 0 s and 19781 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:85, group:1)
+Thread(id:93, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:83, group:1) consumed 0 s and 19807 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:83, group:1)
+Thread(id:91, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:73, group:1) consumed 0 s and 20095 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:73, group:1)
+Thread(id:81, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:81, group:1) consumed 0 s and 11892 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:81, group:1)
+Thread(id:81, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:89, group:1) is scheduled.
+Thread(id:71, group:1) consumed 0 s and 17454 us of CPU time
+CREDIT CHANGE: 8 debited from Thread(id:71, group:1)
+Thread(id:71, group:1) inserted into active runqueue, because it's credit 17 >= 0
+Thread(id:79, group:1) is scheduled.
+Thread(id:93, group:1) consumed 0 s and 12225 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:93, group:1)
+Thread(id:93, group:1) inserted into active runqueue, because it's credit 94 >= 0
+Thread(id:101, group:1) is scheduled.
+91, group:1) consumed 0 s and 12198 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:91, group:1)
+Thread(id:91, group:1) inserted into active runqueue, because it's credit 94 >= 0
+Thread(id:99, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:79, group:1) consumed 0 s and 19756 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:79, group:1)
+Thread(id:87, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:89, group:1) consumed 0 s and 20261 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:89, group:1)
+Thread(id:97, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:97, group:1) consumed 0 s and 7714 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 22 >= 0
+Thread(id:105, group:1) , group:1) consumed 0 s and 8219 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:87, group:1)
+Thread(id:87, group:1) inserted into active runqueue, because it's credit 71 >= 0
+Thread(id:95, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 27990 us of CPU time
+Thread(id:NGE: 13 debited from Thread(id:99, group:1)
+101, group:1) consumed 0 s and 27994 us of , group:1) inserted into active runqueue, because 101, group:1)
+Thread(id:101Thread(i1) , group:1) is scheduled.
+ueue, because it's credit 12 >= 0
+Thread(id:109, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:95, group:1) consumed 0 s and 20006 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:95, group:1)
+Thread(id:103, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:107, group:1Thread(id: 0 s and 31989 us of CPU time
+CREDIT CHANGE: 15105, group:1) consumed 0 s and 32000 us of CPU time
+1) inserted into active runqueue, because it's credit 35 >= 0
+CREDIT CHANGE: 16Thread(id:115, group:1) , group:1) consumed 0 s and 11990 us of C1) inserted into active runqueue, because it's credit CR >= 0
+HANGE: 5 debited from Thread(id:103, group:1)
+Thread(id:103, group:1) inserted into active runqueue, because it's credit 20 >= 0
+Thread(id:Thread(id:111, group:1) is scheduled.
+109, group:1) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 35 >= 0
+Thread(id:117, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:111, group:1) consumed 0 s and 27980 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into active runqueue, because it's credit 37 >= 0
+Thread(id:119, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27979 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:Thread(id:113, group:1117, group:1) consumee 0 s and 27983ause it's credit 62 >= 0
+ us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:117, group:1)
+Thread(id:T115, group:1) consumed 0 s and 27988 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:115, group:1)
+Thread(id:115, group:1) inserted into active runqueue, because it's credit 62 >= 0
+Thread(id:123, group:1) is scheduled.
+
+CREDIT CHANGE: 5 debited from Thread(id:81, group:1)
+Thread(id:81, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:89, group:1) is scheduled.
+Thread(id:71, group:1) consumed 0 s and 17454 us of CPU time
+CREDIT CHANGE: 8 debited from Thread(id:71, group:1)
+Thread(id:71, group:1) inserted into active runqueue, because it's credit 17 >= 0
+Thread(id:79, group:1) is scheduled.
+Thread(id:93, group:1) consumed 0 s and 12225 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:93, group:1)
+Thread(id:93, group:1) inserted into active runqueue, because it's credit 94 >= 0
+Thread(id:101, group:1) is scheduled.
+91, group:1) consumed 0 s and 12198 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:91, group:1)
+Thread(id:91, group:1) inserted into active runqueue, because it's credit 94 >= 0
+Thread(id:99, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:79, group:1) consumed 0 s and 19756 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:79, group:1)
+Thread(id:87, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:89, group:1) consumed 0 s and 20261 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:89, group:1)
+Thread(id:97, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:97, group:1) consumed 0 s and 7714 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 22 >= 0
+Thread(id:105, group:1) , group:1) consumed 0 s and 8219 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:87, group:1)
+Thread(id:87, group:1) inserted into active runqueue, because it's credit 71 >= 0
+Thread(id:95, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 27990 us of CPU time
+Thread(id:NGE: 13 debited from Thread(id:99, group:1)
+101, group:1) consumed 0 s and 27994 us of , group:1) inserted into active runqueue, because 101, group:1)
+Thread(id:101Thread(i1) , group:1) is scheduled.
+ueue, because it's credit 12 >= 0
+Thread(id:109, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:95, group:1) consumed 0 s and 20006 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:95, group:1)
+Thread(id:103, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:107, group:1Thread(id: 0 s and 31989 us of CPU time
+CREDIT CHANGE: 15105, group:1) consumed 0 s and 32000 us of CPU time
+1) inserted into active runqueue, because it's credit 35 >= 0
+CREDIT CHANGE: 16Thread(id:115, group:1) , group:1) consumed 0 s and 11990 us of C1) inserted into active runqueue, because it's credit CR >= 0
+HANGE: 5 debited from Thread(id:103, group:1)
+Thread(id:103, group:1) inserted into active runqueue, because it's credit 20 >= 0
+Thread(id:Thread(id:111, group:1) is scheduled.
+109, group:1) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 35 >= 0
+Thread(id:117, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:111, group:1) consumed 0 s and 27980 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into active runqueue, because it's credit 37 >= 0
+Thread(id:119, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27979 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:Thread(id:113, group:1117, group:1) consumee 0 s and 27983ause it's credit 62 >= 0
+ us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:117, group:1)
+Thread(id:21, group:1) is scheduled.
+and 27988 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:115, group:1)
+Thread(id:115, group:1) inserted into active runqueue, because it's credit 62 >= 0
+Thread(id:123, group:1) is scheduled.
+
+CREDIT CHANGE: 5 debited from Thread(id:81, group:1)
+Thread(id:81, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:89, group:1) is scheduled.
+Thread(id:71, group:1) consumed 0 s and 17454 us of CPU time
+CREDIT CHANGE: 8 debited from Thread(id:71, group:1)
+Thread(id:71, group:1) inserted into active runqueue, because it's credit 17 >= 0
+Thread(id:79, group:1) is scheduled.
+Thread(id:93, group:1) consumed 0 s and 12225 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:93, group:1)
+Thread(id:93, group:1) inserted into active runqueue, because it's credit 94 >= 0
+Thread(id:101, group:1) is scheduled.
+91, group:1) consumed 0 s and 12198 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:91, group:1)
+Thread(id:91, group:1) inserted into active runqueue, because it's credit 94 >= 0
+Thread(id:99, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:79, group:1) consumed 0 s and 19756 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:79, group:1)
+Thread(id:87, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:89, group:1) consumed 0 s and 20261 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:89, group:1)
+Thread(id:97, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:97, group:1) consumed 0 s and 7714 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 22 >= 0
+Thread(id:105, group:1) , group:1) consumed 0 s and 8219 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:87, group:1)
+Thread(id:87, group:1) inserted into active runqueue, because it's credit 71 >= 0
+Thread(id:95, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 27990 us of CPU time
+Thread(id:NGE: 13 debited from Thread(id:99, group:1)
+101, group:1) consumed 0 s and 27994 us of , group:1) inserted into active runqueue, because 101, group:1)
+Thread(id:101Thread(i1) , group:1) is scheduled.
+ueue, because it's credit 12 >= 0
+Thread(id:109, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:95, group:1) consumed 0 s and 20006 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:95, group:1)
+Thread(id:103, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:107, group:1Thread(id: 0 s and 31989 us of CPU time
+CREDIT CHANGE: 15105, group:1) consumed 0 s and 32000 us of CPU time
+1) inserted into active runqueue, because it's credit 35 >= 0
+CREDIT CHANGE: 16Thread(id:115, group:1) , group:1) consumed 0 s and 11990 us of C1) inserted into active runqueue, because it's credit CR >= 0
+HANGE: 5 debited from Thread(id:103, group:1)
+Thread(id:103, group:1) inserted into active runqueue, because it's credit 20 >= 0
+Thread(id:Thread(id:111, group:1) is scheduled.
+109, group:1) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 35 >= 0
+Thread(id:117, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:111, group:1) consumed 0 s and 27980 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into active runqueue, because it's credit 37 >= 0
+Thread(id:119, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27979 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:Thread(id:113, group:1117, group:1) consumee 0 s and 27983ause it's credit 62 >= 0
+ us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:117, group:1)
+Thread(id:Thread(id:117, group:1) inserted into active runqueue, because it's credit 62 >= 0
+Thread(id:125, group:1) is scheduled.
+, group:1) inserted into active runqueue, because it's credit 62 >= 0
+Thread(id:123, group:1) is scheduled.
+
+CREDIT CHANGE: 5 debited from Thread(id:81, group:1)
+Thread(id:81, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:89, group:1) is scheduled.
+Thread(id:71, group:1) consumed 0 s and 17454 us of CPU time
+CREDIT CHANGE: 8 debited from Thread(id:71, group:1)
+Thread(id:71, group:1) inserted into active runqueue, because it's credit 17 >= 0
+Thread(id:79, group:1) is scheduled.
+Thread(id:93, group:1) consumed 0 s and 12225 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:93, group:1)
+Thread(id:93, group:1) inserted into active runqueue, because it's credit 94 >= 0
+Thread(id:101, group:1) is scheduled.
+91, group:1) consumed 0 s and 12198 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:91, group:1)
+Thread(id:91, group:1) inserted into active runqueue, because it's credit 94 >= 0
+Thread(id:99, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:79, group:1) consumed 0 s and 19756 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:79, group:1)
+Thread(id:87, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:89, group:1) consumed 0 s and 20261 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:89, group:1)
+Thread(id:97, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:97, group:1) consumed 0 s and 7714 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 22 >= 0
+Thread(id:105, group:1) , group:1) consumed 0 s and 8219 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:87, group:1)
+Thread(id:87, group:1) inserted into active runqueue, because it's credit 71 >= 0
+Thread(id:95, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 27990 us of CPU time
+Thread(id:NGE: 13 debited from Thread(id:99, group:1)
+101, group:1) consumed 0 s and 27994 us of , group:1) inserted into active runqueue, because 101, group:1)
+Thread(id:101Thread(i1) , group:1) is scheduled.
+ueue, because it's credit 12 >= 0
+Thread(id:109, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:95, group:1) consumed 0 s and 20006 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:95, group:1)
+Thread(id:103, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:107, group:1Thread(id: 0 s and 31989 us of CPU time
+CREDIT CHANGE: 15105, group:1) consumed 0 s and 32000 us of CPU time
+1) inserted into active runqueue, because it's credit 35 >= 0
+CREDIT CHANGE: 16Thread(id:115, group:1) , group:1) consumed 0 s and 11990 us of C1) inserted into active runqueue, because it's credit CR >= 0
+HANGE: 5 debited from Thread(id:103, group:1)
+Thread(id:103, group:1) inserted into active runqueue, because it's credit 20 >= 0
+Thread(id:Thread(id:111, group:1) is scheduled.
+109, group:1) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 35 >= 0
+Thread(id:117, group:1) is scheduled.
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:111, group:1) consumed 0 s and 27980 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into active runqueue, because it's credit 37 >= 0
+Thread(id:119, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27979 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:Thread(id:113, group:1117, group:1) consumee 0 s and 27983ause it's credit 62 >= 0
+ us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:117, group:1)
+Thread(id:T..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+..... uthread_context_func .....
+Thread(id:119, group:1) consumed 0 s and 32004 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:119, group:1)
+Thread(id:119, group:1) inserted into active runqueue, because it's credit 59 >= 0
+Thread(id:127Thread(id:121, group:1) consumed 0 s and 32003 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:121, group:1)
+Thread(id:121, group:1) inserted into active runqueue, because it's credit 84 >= 0
+Thread(id:65, group:1) is scheduled.
+Thread(id:Thread(id:, group:1) consumed 0 s  us of C1) consumed 0 s and 31916 us of CPU time
+m Thread(id:123, group:1)
+CREDIT CHANGE: 15 debited from Thread(id:125, group:T)
+ead(id:123, group:1) inserted into active runqueue, because it's credit 85 >= 0
+Thread(id:125, group:1Thread(id:43, group:1) is scheduled.
+use it's credit 85 >= 0
+Thread(id:61, group:1) is scheduled.
+..... uthread_context_func .....
+Thread(id:61, group:1) consumed 0 s and 2063 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:61, group:1)
+Thread(id:77, group:1) is scheduled.
+Thread(id:43, group:1) consumed 0 s and 2213 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:43, group:1)
+Thread(id:75, group:1) is scheduled.
+Thread(id:65, group:1) consumed 0 s and 10555 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:65, group:1)
+Thread(id:81, group:1) is scheduled.
+Thread(id:77, group:1) consumed 0 s and 11968 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:77, group:1)
+Thread(id:93, group:1) is scheduled.
+Thread(id:75, group:1) consumed 0 s and 16599 us of CPU time
+CREDIT CHANGE: 8 debited from Thread(id:75, group:1)
+Thread(id:91, group:1) is scheduled.
+Thread(id:81, group:1) consumed 0 s and 8305 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:81, group:1)
+Thread(id:97, group:1) is scheduled.
+Thread(id:93, group:1) consumed 0 s and 7696 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:93, group:1)
+Thread(id:101, group:1) is scheduled.
+Thread(id:91, group:1) consumed 0 s and 7442 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:91, group:1)
+Thread(id:99, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 9111 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 18 >= 0
+Thread(id:105, group:1Thread(id:127, group:1) consumed 0 s and 27986 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 87 >= 0
+99, group:1) consumed T s and 1697 us of C1CREDIT CHANGE: 0 debited from Thread(id:99, group:1)
+Thread(id:99, group:1) inserted into active runqueue, because it's credit 12 >= 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:101, group:1) consumed 0 s and 6226 us of CPU time
+CREDIT CHANGE: 3 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:71, group:1) consumed 0 s and 2338 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:71, group:1)
+Thread(id:87, group:1) is scheduled.
+Thread(id:87, group:1) consumed 0 s and 11567 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:87, group:1)
+Thread(id:103, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 32007 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:105, group:1)
+Thread(id:105, group:1103, group:1) consumed 0 s and 18095 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:Thread(id:107, group:1) consumed 0 s and 32006Thread(id:103, group:C) inserted into active runqueue, because it's credit 16 debited from Thread(id:107, group:1)
+Thread(id:111, group:1) is scheduled.
+Thread(id:107, group:1) inserted into active runqueue, because it's credit 19 >= 0
+Thread(id:115, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 32008 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 19 >= 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27985 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:121, group:1) is scheduled.
+111, group:1) consumed 0 s and 27985 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:Thr, group11) consumed)0 s and 27986o active runqueue, because it's credit 24 >= 0
+ us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:115, group:1)
+Thread(id:119, group:1) is scheduled.
+Thread(id:115, group:1) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:123, group:1) is scheduled.
+Thread(id:117, group:1) consumed 0 s and 27948 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:117, group:1)
+Thread(id:117, group:1) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 31993 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:121, group:1)
+Thread(id:121, group:1) inserted into active runqueue, because it's credit 69 >= 0
+Thread(id:97, group:1) is scheduled.
+Thread(id:119, group:1) consumed 0 s and 31992 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:119, group:1)
+Thread(id:119, group:1) inserted into active runqueue, because it's credit 44 >= 0
+123, group:1) consumed Thread(id:127, s aup:1 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:123, group:1)
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:99, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 28010 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 28010 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 73 >= 0
+99, group:1) consumed T s ad( 28010 us of C1CREDIT CHANGE: 14 debited from Thread(id:99, group:1)
+Thread(id:99, group:1) inserted into expires runqueue, because it's credit -2 < 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:101, group:1) consumed 0 s and 28008 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into expires runqueue, because it's credit -5 < 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 31984 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:105, group:1)
+Thread(id:105, group:1) inserted into active runqueue, because it's credit 3 >= 0
+Thread(id:113, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 31984 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:103, group:1)
+Thread(id:Thread(id:103, group:1107, group:14 < 0
+0 s and 31983 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:107Thread(i1)
+11, group:1) is scheduled.
+Thread(id:107, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:115, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 31983 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27998 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:121, group:1) is scheduled.
+111, group:1) consumed 0 s and 27997 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into active runqueue, because it's credit 11 >= 0
+115, group:1Thread(id:119, group:1) is scheduled.
+
+Thread(id:117, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27985 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:121, group:1) is scheduled.
+111, group:1) consumed 0 s and 27985 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:Thr, group11) consumed)0 s and 27986o active runqueue, because it's credit 24 >= 0
+ us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:115, group:1)
+Thread(id:119, group:1) is scheduled.
+Thread(id:115, group:1) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:123, group:1) is scheduled.
+Thread(id:117, group:1) consumed 0 s and 27948 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:117, group:1)
+Thread(id:117, group:1) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 31993 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:121, group:1)
+Thread(id:121, group:1) inserted into active runqueue, because it's credit 69 >= 0
+Thread(id:97, group:1) is scheduled.
+Thread(id:119, group:1) consumed 0 s and 31992 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:119, group:1)
+Thread(id:119, group:1) inserted into active runqueue, because it's credit 44 >= 0
+123, group:1) consumed Thread(id:127, s aup:1 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:123, group:1)
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:99, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 28010 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 28010 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 73 >= 0
+99, group:1) consumed T s ad( 28010 us of C1CREDIT CHANGE: 14 debited from Thread(id:99, group:1)
+Thread(id:99, group:1) inserted into expires runqueue, because it's credit -2 < 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:101, group:1) consumed 0 s and 28008 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into expires runqueue, because it's credit -5 < 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 31984 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:105, group:1)
+Thread(id:105, group:1) inserted into active runqueue, because it's credit 3 >= 0
+Thread(id:113, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 31984 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:103, group:1)
+Thread(id:Thread(id:103, group:1107, group:14 < 0
+0 s and 31983 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:107Thread(i1)
+11, group:1) is scheduled.
+Thread(id:107, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:115, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 31983 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27998 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:121, group:1) is scheduled.
+111, group:1) consumed 0 s and 27997 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into active runqueue, because it's credit 11 >= 0
+115, group:1Thread(id:119, group:0 s and 27998 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:115, group:1)
+Thread(id:115, group:1) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:123, group:1) is scheduled.
+ into active runqueue, because it's credit 49 >= 0
+Thread(id:121, group:1) is scheduled.
+111, group:1) consumed 0 s and 27985 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:Thr, group11) consumed)0 s and 27986o active runqueue, because it's credit 24 >= 0
+ us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:115, group:1)
+Thread(id:119, group:1) is scheduled.
+Thread(id:115, group:1) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:123, group:1) is scheduled.
+Thread(id:117, group:1) consumed 0 s and 27948 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:117, group:1)
+Thread(id:117, group:1) inserted into active runqueue, because it's credit 49 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 31993 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:121, group:1)
+Thread(id:121, group:1) inserted into active runqueue, because it's credit 69 >= 0
+Thread(id:97, group:1) is scheduled.
+Thread(id:119, group:1) consumed 0 s and 31992 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:119, group:1)
+Thread(id:119, group:1) inserted into active runqueue, because it's credit 44 >= 0
+123, group:1) consumed Thread(id:127, s aup:1 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:123, group:1)
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:99, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 70 >= 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 28010 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 28010 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 73 >= 0
+99, group:1) consumed T s ad( 28010 us of C1CREDIT CHANGE: 14 debited from Thread(id:99, group:1)
+Thread(id:99, group:1) inserted into expires runqueue, because it's credit -2 < 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:101, group:1) consumed 0 s and 28008 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into expires runqueue, because it's credit -5 < 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 31984 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:105, group:1)
+Thread(id:105, group:1) inserted into active runqueue, because it's credit 3 >= 0
+Thread(id:113, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 31984 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:103, group:1)
+Thread(id:Thread(id:103, group:1107, group:14 < 0
+0 s and 31983 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:107Thread(i1)
+11, group:1) is scheduled.
+Thread(id:107, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:115, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 31983 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27998 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:121, group:1) is scheduled.
+111, group:1) consumed 0 s and 27997 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into active runqueue, because it's credit 11 >= 0
+115, group:1Thread(id:119, group:Thread(id:117, group:1) consumed 0 s and 27998 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:117, group:1)
+Thread(id:117, group:1) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 31995 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:121, group:1)
+Thread(id:121, group:1) inserted into active runqueue, because it's credit 54 >= 0
+Thread(id:97, group:1) is scheduled.
+119, group:1) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15Thread(id:123, group:1Thread(id:119, group:0 s and 31934nto active runqueue, because it's credit  u >= 0
+CREDIT CHANGE: 15 debited from Thread(id:123, group:1)
+Thread(id:127, group:1) is scheduled.
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 55 >= 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 31909 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 55 >= 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into expires runqueue, because it's credit -9 < 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 28008 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 59 >= 0
+107, group:1) consumed Thread(i28111Thread(id14 debited from Thread(id:107, group:1)
+consumed 0 s and 28006 us of CPU time
+Thread(id:CRE, group:1) inserted into expires runqu109, group:1)
+Thread(id:115, group:1) is scheduled.
+Thread(id:109, group:1) inserted into expires runqueue, because it's credit -10 < 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 32001 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:105, group:1)
+Thread(id:105, group:1) inserted into expires runqueue, because it's credit -13 < 0
+Thread(id:113, group:1) is scheduled.
+Thread(id:111, group:1) consumed 0 s and 31996 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into expires runqueue, because it's credit -4 < 0
+115, group:1Thread(id: 0 s and 119 us of C1) is scheduled.
+CREDIT CHANGE: 15 debited from Thread(id:115, group:1)
+Thread(id:115, group:1) inserted into active runqueue, because it's credit 21 >= 0
+Thread(id:123, group:1) is scheduled.
+Thread(id:117, group:1) consumed 0 s and 31996 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:117, group:1)
+Thread(id:117, group:1) inserted into active runqueue, because it's credit 21 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27995 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into active runqueue, because it's credit 23 >= 0
+Thread(id:121, group:1) is scheduled.
+Thread(id:119, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:119, group:1)
+Thread(id:) inserted into active runqueue, because it's credit 16 >= 0
+Thr, group111) is scheduled.
+0 s and 27995 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:123, group:1)
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 42 >= 0
+Thread(id:115, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 42 >= 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 31985 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 44 >= 0
+Thread(id:119, group:1) is scheduled.
+Thread(id:115, group:1) consumed 0  s and33199  us of CPU timeCREDIT CHANGE: 15 debited from Thread(id:115, group:112Thread(id:Thread(id:115, group:1) inserted into active runqueue, because it's credit 6 >= 0
+Thread(id:123, group:1) is scheduled.
+ited from Thread(id:117, group:1)
+Thread(id:117, group:1) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 31995 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:121, group:1)
+Thread(id:121, group:1) inserted into active runqueue, because it's credit 54 >= 0
+Thread(id:97, group:1) is scheduled.
+119, group:1) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15Thread(id:123, group:1Thread(id:119, group:0 s and 31934nto active runqueue, because it's credit  u >= 0
+CREDIT CHANGE: 15 debited from Thread(id:123, group:1)
+Thread(id:127, group:1) is scheduled.
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 55 >= 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 31909 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 55 >= 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into expires runqueue, because it's credit -9 < 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 28008 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 59 >= 0
+107, group:1) consumed Thread(i28111Thread(id14 debited from Thread(id:107, group:1)
+consumed 0 s and 28006 us of CPU time
+Thread(id:CRE, group:1) inserted into expires runqu109, group:1)
+Thread(id:115, group:1) is scheduled.
+Thread(id:109, group:1) inserted into expires runqueue, because it's credit -10 < 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 32001 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:105, group:1)
+Thread(id:105, group:1) inserted into expires runqueue, because it's credit -13 < 0
+Thread(id:113, group:1) is scheduled.
+Thread(id:111, group:1) consumed 0 s and 31996 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into expires runqueue, because it's credit -4 < 0
+115, group:1Thread(id: 0 s and 119 us of C1) is scheduled.
+CREDIT CHANGE: 15 debited from Thread(id:115, group:1)
+Thread(id:115, group:1) inserted into active runqueue, because it's credit 21 >= 0
+Thread(id:123, group:1) is scheduled.
+Thread(id:117, group:1) consumed 0 s and 31996 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:117, group:1)
+Thread(id:117, group:1) inserted into active runqueue, because it's credit 21 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27995 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into active runqueue, because it's credit 23 >= 0
+Thread(id:121, group:1) is scheduled.
+Thread(id:119, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:119, group:1)
+Thread(id:) inserted into active runqueue, because it's credit 16 >= 0
+Thr, group111) is scheduled.
+0 s and 27995 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:123, group:1)
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 42 >= 0
+Thread(id:115, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 42 >= 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 31985 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 44 >= 0
+Thread(id:119, group:1) is scheduled.
+Thread(id:115, group:1) consumed 0  s and33199  us of CPU timeCREDIT CHANGE: 15 debited from Thread(id:115, group:112Thread(id:Thread(id:115, group:1) inserted intoThread(id:121, group:1) inserted into active runqueue, because it's credit 39 >= 0
+Thread(id:113, group:1) is scheduled.
+ad(id:117, group:1) inserted into active runqueue, because it's credit 36 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 31995 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:121, group:1)
+Thread(id:121, group:1) inserted into active runqueue, because it's credit 54 >= 0
+Thread(id:97, group:1) is scheduled.
+119, group:1) consumed 0 s and 31994 us of CPU time
+CREDIT CHANGE: 15Thread(id:123, group:1Thread(id:119, group:0 s and 31934nto active runqueue, because it's credit  u >= 0
+CREDIT CHANGE: 15 debited from Thread(id:123, group:1)
+Thread(id:127, group:1) is scheduled.
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 55 >= 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 31909 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 55 >= 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into expires runqueue, because it's credit -9 < 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 28008 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 59 >= 0
+107, group:1) consumed Thread(i28111Thread(id14 debited from Thread(id:107, group:1)
+consumed 0 s and 28006 us of CPU time
+Thread(id:CRE, group:1) inserted into expires runqu109, group:1)
+Thread(id:115, group:1) is scheduled.
+Thread(id:109, group:1) inserted into expires runqueue, because it's credit -10 < 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 32001 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:105, group:1)
+Thread(id:105, group:1) inserted into expires runqueue, because it's credit -13 < 0
+Thread(id:113, group:1) is scheduled.
+Thread(id:111, group:1) consumed 0 s and 31996 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:111, group:1)
+Thread(id:111, group:1) inserted into expires runqueue, because it's credit -4 < 0
+115, group:1Thread(id: 0 s and 119 us of C1) is scheduled.
+CREDIT CHANGE: 15 debited from Thread(id:115, group:1)
+Thread(id:115, group:1) inserted into active runqueue, because it's credit 21 >= 0
+Thread(id:123, group:1) is scheduled.
+Thread(id:117, group:1) consumed 0 s and 31996 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:117, group:1)
+Thread(id:117, group:1) inserted into active runqueue, because it's credit 21 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27995 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into active runqueue, because it's credit 23 >= 0
+Thread(id:121, group:1) is scheduled.
+Thread(id:119, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:119, group:1)
+Thread(id:) inserted into active runqueue, because it's credit 16 >= 0
+Thr, group111) is scheduled.
+0 s and 27995 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:123, group:1)
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 42 >= 0
+Thread(id:115, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 42 >= 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 31985 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 44 >= 0
+Thread(id:119, group:1) is scheduled.
+Thread(id:115, group:1) consumed 0  s and33199  us of CPU timeCREDIT CHANGE: 15 debited from Thread(id:115, group:112Thread(id:Thread(id:115, group:1) inserted into117, group:1) consumed 0 s and 31985 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:117, group:1)
+Thread(id:117, group:1) inserted into active runqueue, because it's credit 6 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 27939 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into active runqueue, because it's credit 10 >= 0
+Thread(id:121, group:1) is scheduled.
+119, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:119Thread(id:123, group:Thread(id:) c, group:10 s and 27969to active runqueue, because it's credit 3 >= 0
+ us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:123, group:1Thread(id:127, group:1) is scheduled.
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 29 >= 0
+Thread(id:115, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 27928 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 29 >= 0
+Thread(id:117, group:1) is scheduled.
+Thread(id:117, group:1) consumed 0 s and 18872 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:117, group:1)
+Thread(id:125, group:1) is scheduled.
+Thread(id:115, group:1) consumed 0 s and 22788 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:115, group:1)
+Thread(id:123, group:1) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 32000 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:121, group:1)
+Thread(id:121, group:1) inserted into active runqueue, because it's credit 23 >= 0
+Thread(id:113, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 32000 us of CPU time
+CREDIT CHANGE: 16 debited from Thread(id:127, group:1)
+Thread(id:127, group:1) inserted into active runqueue, because it's credit 28 >= 0
+123, group:1) consumed T1199209 us o) is scheduled.
+CREDIT CHANGE: 4 debited from Thread(id:123, group:1)
+Thread(id:123, group:1) inserted into active runqueue, because it's credit 25 >= 0
+Thread(id:123, group:1) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 13125 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:125, group:1)
+Thread(id:125, group:1) inserted into active runqueue, because it's credit 23 >= 0
+Thread(id:125, group:1) is scheduled.
+Thread(id:123, group:1) consumed 0 s and 2087 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:123, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s previous credit:-7
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s current credit:18
+CREDIT CHANGE: Thread(id:106, group:0, weight:50)'s previous credit:-6
+CREDIT CHANGE: Thread(id:106, group:0, weight:50)'s current credit:44
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s previous credit:-2
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s current credit:23
+CREDIT CHANGE: Thread(id:107, group:1, weight:50)'s previous credit:-10
+CREDIT CHANGE: Thread(id:107, group:1, weight:50)'s current credit:40
+Thread(id:98, group:0) is scheduled.
+Thread(id:125, group:1) consumed 0 s and 2641 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:125, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:100, group:0, weight:25)'s previous credit:-4
+CREDIT CHANGE: Thread(id:100, group:0, weight:25)'s current credit:21
+CREDIT CHANGE: Thread(id:108, group:0, weight:50)'s previous credit:-4
+CREDIT CHANGE: Thread(id:108, group:0, weight:50)'s current credit:46
+CREDIT CHANGE: Thread(id:116, group:0, weight:75)'s previous credit:-1
+CREDIT CHANGE: Thread(id:116, group:0, weight:75)'s current credit:74
+CREDIT CHANGE: Thread(id:101, group:1, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:101, group:1, weight:25)'s current credit:20
+CREDIT CHANGE: Thread(id:109, group:1, weight:50)'s previous credit:-10
+CREDIT CHANGE: Thread(id:109, group:1, weight:50)'s current credit:40
+Thread(id:100, group:0) is scheduled.
+Thread(id:119, group:1) consumed 0 s and 12394 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:119, group:1)
+Thread(id:127, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 14704 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:127, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s current credit:20
+CREDIT CHANGE: Thread(id:110, group:0, weight:50)'s previous credit:-15
+CREDIT CHANGE: Thread(id:110, group:0, weight:50)'s current credit:35
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s previous credit:-4
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s current credit:21
+CREDIT CHANGE: Thread(id:111, group:1, weight:50)'s previous credit:-4
+CREDIT CHANGE: Thread(id:111, group:1, weight:50)'s current credit:46
+Thread(id:102, group:0) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 28005 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:121, group:1) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 852 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:102, group:0)
+Thread(id:102, group:0) inserted into active runqueue, because it's credit 20 >= 0
+98110, gro00) is scheduled.
+0 s and 25905 us of CPU time
+CREDIT CHANGE: 12 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into active runqueue, because it's credit 6 >= 0
+Thread(id:106, group:0) is scheduled.
+Thread(id:100, group:0) consumed 0 s and 25351 us of CPU time
+CREDIT CHANGE: 12 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 8841 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:121, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:96, group:0, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:96, group:0, weight:25)'s current credit:20
+CREDIT CHANGE: Thread(id:104, group:0, weight:50)'s previous credit:-7
+CREDIT CHANGE: Thread(id:104, group:0, weight:50)'s current credit:43
+CREDIT CHANGE: Thread(id:97, group:1, weight:25)'s previous credit:-9
+CREDIT CHANGE: Thread(id:97, group:1, weight:25)'s current credit:16
+CREDIT CHANGE: Thread(id:105, group:1, weight:50)'s previous credit:-13
+CREDIT CHANGE: Thread(id:105, group:1, weight:50)'s current credit:37
+CREDIT CHANGE: Thread(id:113, group:1, weight:75)'s previous credit:-4
+CREDIT CHANGE: Thread(id:113, group:1, weight:75)'s current credit:71
+Thread(id:96, group:0) is scheduled.
+Thread(id:110, group:0) consumed 0 s and 27429 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:110, group:0)
+Thread(id:102, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 23129 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:104, group:0) is scheduled.
+102, group:0) consumed 0 s and 4552 us of CPU time
+Thread(id:108, group:0) consumed 0 s and 31983 us of CPU time2 debited from Thread(id:102, group10)
+ gr deb0)
+consumed 0) inserted into active runqueue, because it's credit  u >= 0
+PU108, group:0) inserted into active runqueue, be106, group:0)
+Thread(id:0) is sched0) in, group:0) is scheduled.
+Thread(id:98, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 12028 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:116, group:0)
+Thread(id:100, group:0) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 27994 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:104, group:0)
+Thread(id:104, group:0) inserted into active runqueue, because it's credit 30 >= 0
+Thread(id:96, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 27980 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:102, group:0)
+Thread(id:, group:0) inserted into active runqueue, because it's credit 5 >= 0
+Thread(id:102, group:0) is scheduled.
+ed from Thread(id:119, group:1)
+Thread(id:127, group:1) is scheduled.
+Thread(id:127, group:1) consumed 0 s and 14704 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:127, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s current credit:20
+CREDIT CHANGE: Thread(id:110, group:0, weight:50)'s previous credit:-15
+CREDIT CHANGE: Thread(id:110, group:0, weight:50)'s current credit:35
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s previous credit:-4
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s current credit:21
+CREDIT CHANGE: Thread(id:111, group:1, weight:50)'s previous credit:-4
+CREDIT CHANGE: Thread(id:111, group:1, weight:50)'s current credit:46
+Thread(id:102, group:0) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 28005 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:121, group:1) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 852 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:102, group:0)
+Thread(id:102, group:0) inserted into active runqueue, because it's credit 20 >= 0
+98110, gro00) is scheduled.
+0 s and 25905 us of CPU time
+CREDIT CHANGE: 12 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into active runqueue, because it's credit 6 >= 0
+Thread(id:106, group:0) is scheduled.
+Thread(id:100, group:0) consumed 0 s and 25351 us of CPU time
+CREDIT CHANGE: 12 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 8841 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:121, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:96, group:0, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:96, group:0, weight:25)'s current credit:20
+CREDIT CHANGE: Thread(id:104, group:0, weight:50)'s previous credit:-7
+CREDIT CHANGE: Thread(id:104, group:0, weight:50)'s current credit:43
+CREDIT CHANGE: Thread(id:97, group:1, weight:25)'s previous credit:-9
+CREDIT CHANGE: Thread(id:97, group:1, weight:25)'s current credit:16
+CREDIT CHANGE: Thread(id:105, group:1, weight:50)'s previous credit:-13
+CREDIT CHANGE: Thread(id:105, group:1, weight:50)'s current credit:37
+CREDIT CHANGE: Thread(id:113, group:1, weight:75)'s previous credit:-4
+CREDIT CHANGE: Thread(id:113, group:1, weight:75)'s current credit:71
+Thread(id:96, group:0) is scheduled.
+Thread(id:110, group:0) consumed 0 s and 27429 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:110, group:0)
+Thread(id:102, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 23129 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:104, group:0) is scheduled.
+102, group:0) consumed 0 s and 4552 us of CPU time
+Thread(id:108, group:0) consumed 0 s and 31983 us of CPU time2 debited from Thread(id:102, group10)
+ gr deb0)
+consumed 0) inserted into active runqueue, because it's credit  u >= 0
+PU108, group:0) inserted into active runqueue, be106, group:0)
+Thread(id:0) is sched0) in, group:0) is scheduled.
+Thread(id:98, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 12028 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:116, group:0)
+Thread(id:100, group:0) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 27994 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:104, group:0)
+Thread(id:104, group:0) inserted into active runqueue, because it's credit 30 >= 0
+Thread(id:96, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 27980 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:102, group:0)
+Thread(id:, group:0) inserted into active runqueue, because it98, group:0) consumed 0 s and 27979 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into expires runqueue, because it's credit -7 < 0
+Thread(id:106, group:0) is scheduled.
+d:127, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s current credit:20
+CREDIT CHANGE: Thread(id:110, group:0, weight:50)'s previous credit:-15
+CREDIT CHANGE: Thread(id:110, group:0, weight:50)'s current credit:35
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s previous credit:-4
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s current credit:21
+CREDIT CHANGE: Thread(id:111, group:1, weight:50)'s previous credit:-4
+CREDIT CHANGE: Thread(id:111, group:1, weight:50)'s current credit:46
+Thread(id:102, group:0) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 28005 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:113, group:1)
+Thread(id:113, group:1) inserted into expires runqueue, because it's credit -4 < 0
+Thread(id:121, group:1) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 852 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:102, group:0)
+Thread(id:102, group:0) inserted into active runqueue, because it's credit 20 >= 0
+98110, gro00) is scheduled.
+0 s and 25905 us of CPU time
+CREDIT CHANGE: 12 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into active runqueue, because it's credit 6 >= 0
+Thread(id:106, group:0) is scheduled.
+Thread(id:100, group:0) consumed 0 s and 25351 us of CPU time
+CREDIT CHANGE: 12 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:121, group:1) consumed 0 s and 8841 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:121, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:96, group:0, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:96, group:0, weight:25)'s current credit:20
+CREDIT CHANGE: Thread(id:104, group:0, weight:50)'s previous credit:-7
+CREDIT CHANGE: Thread(id:104, group:0, weight:50)'s current credit:43
+CREDIT CHANGE: Thread(id:97, group:1, weight:25)'s previous credit:-9
+CREDIT CHANGE: Thread(id:97, group:1, weight:25)'s current credit:16
+CREDIT CHANGE: Thread(id:105, group:1, weight:50)'s previous credit:-13
+CREDIT CHANGE: Thread(id:105, group:1, weight:50)'s current credit:37
+CREDIT CHANGE: Thread(id:113, group:1, weight:75)'s previous credit:-4
+CREDIT CHANGE: Thread(id:113, group:1, weight:75)'s current credit:71
+Thread(id:96, group:0) is scheduled.
+Thread(id:110, group:0) consumed 0 s and 27429 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:110, group:0)
+Thread(id:102, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 23129 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into active runqueue, because it's credit 9 >= 0
+Thread(id:104, group:0) is scheduled.
+102, group:0) consumed 0 s and 4552 us of CPU time
+Thread(id:108, group:0) consumed 0 s and 31983 us of CPU time2 debited from Thread(id:102, group10)
+ gr deb0)
+consumed 0) inserted into active runqueue, because it's credit  u >= 0
+PU108, group:0) inserted into active runqueue, be106, group:0)
+Thread(id:0) is sched0) in, group:0) is scheduled.
+Thread(id:98, group:0) is scheduled.
+Thread(id:116, group:0) consumed 0 s and 12028 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:116, group:0)
+Thread(id:100, group:0) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 27994 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:104, group:0)
+Thread(id:104, group:0) inserted into active runqueue, because it's credit 30 >= 0
+Thread(id:96, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 27980 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:102, group:0)
+Thread(id:, group:0) inserted into active runqueue, because itThread(id:100, group:0) consumed 0 s and 15954 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into active runqueue, because it's credit 2 >= 0
+Thread(id:108, group:0) is scheduled.
+Thread(id:106, group:0) consumed 0 s and 11485 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:106, group:0)
+Thread(id:99, group:1) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 21162 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:108, group:0)
+Thread(id:100, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into expires runqueue, because it's credit -6 < 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 31976 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+Thread(id:Thread(id:, g, gro1) c) insert0 s and 20469 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:99Thread(id:1)
+1) is scheduled.
+Thread(id:99, group:1) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:100, group:0) consumed 0 s and 10769 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -3 < 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 27703 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:104, group:0)
+Thread(id:97, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 291 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 16 >= 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:103, group:1)
+Thread(id:Thread(id:103, group:1) inserted into active runqueue, because it's credit 8 >= 0
+107, group:1) consumed 0Thread(27997111, group:1) is scheduled.
+CREDIT CHANGE: 13 debited from Thread(id:107, group:1)
+Thread(id:107, group:1) inserted into active runqueue, because it's credit 27 >= 0
+Thread(id:99, group:1) is scheduled.
+Thread(id:101, group:1) consumed 0 s and 27997 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into active runqueue, because it's credit 7 >= 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 31999 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:105, group:1)
+Thread(id:Thread(id:105, group:1) inserted ) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:111, group:1Thread(id:113, group:1) is schedule, group:1) inserted into active runqueue, because it's credit 31 >= 0
+Thread(id:103, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 25 >= 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 213 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:113, group:1)
+Thread(id:97, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 36630 us of CPU time
+CREDIT CHANGE: 18 debited from Thread(id:99, group:1)
+Thread(id:99, group:1) inserted into expires runqueue, because it's credit -5 < 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:107, group:1) consumed 0 s and 11726 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:107, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s previous credit:-7
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s current credit:18
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s current credit:20
+Thread(id:98, group:0) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 23742 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:Thread(id:103, group:1) consumed 0 s and 28038 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:103, group:1)
+Thread(id:103, group:1) inserted into expires runqueue, because it's credit -6 < 0
+Thread(id:111, group:1) is scheduled.
+read(id:106, group:0) consumed 0 s and 11485 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:106, group:0)
+Thread(id:99, group:1) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 21162 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:108, group:0)
+Thread(id:100, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into expires runqueue, because it's credit -6 < 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 31976 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+Thread(id:Thread(id:, g, gro1) c) insert0 s and 20469 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:99Thread(id:1)
+1) is scheduled.
+Thread(id:99, group:1) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:100, group:0) consumed 0 s and 10769 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -3 < 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 27703 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:104, group:0)
+Thread(id:97, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 291 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 16 >= 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:103, group:1)
+Thread(id:Thread(id:103, group:1) inserted into active runqueue, because it's credit 8 >= 0
+107, group:1) consumed 0Thread(27997111, group:1) is scheduled.
+CREDIT CHANGE: 13 debited from Thread(id:107, group:1)
+Thread(id:107, group:1) inserted into active runqueue, because it's credit 27 >= 0
+Thread(id:99, group:1) is scheduled.
+Thread(id:101, group:1) consumed 0 s and 27997 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into active runqueue, because it's credit 7 >= 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 31999 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:105, group:1)
+Thread(id:Thread(id:105, group:1) inserted ) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:111, group:1Thread(id:113, group:1) is schedule, group:1) inserted into active runqueue, because it's credit 31 >= 0
+Thread(id:103, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 25 >= 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 213 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:113, group:1)
+Thread(id:97, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 36630 us of CPU time
+CREDIT CHANGE: 18 debited from Thread(id:99, group:1)
+Thread(id:99, group:1) inserted into expires runqueue, because it's credit -5 < 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:107, group:1) consumed 0 s and 11726 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:107, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s previous credit:-7
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s current credit:18
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s current credit:20
+Thread(id:98, group:0) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 23742 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:Thread(id:101, group:1) consumed 0 s and 28048 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into expires runqueue, because it's credit -7 < 0
+Thread(id:109, group:1) is scheduled.
+read(id:106, group:0) consumed 0 s and 11485 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:106, group:0)
+Thread(id:99, group:1) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 21162 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:108, group:0)
+Thread(id:100, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into expires runqueue, because it's credit -6 < 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 31976 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+Thread(id:Thread(id:, g, gro1) c) insert0 s and 20469 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:99Thread(id:1)
+1) is scheduled.
+Thread(id:99, group:1) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:100, group:0) consumed 0 s and 10769 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -3 < 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 27703 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:104, group:0)
+Thread(id:97, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 291 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 16 >= 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:103, group:1)
+Thread(id:Thread(id:103, group:1) inserted into active runqueue, because it's credit 8 >= 0
+107, group:1) consumed 0Thread(27997111, group:1) is scheduled.
+CREDIT CHANGE: 13 debited from Thread(id:107, group:1)
+Thread(id:107, group:1) inserted into active runqueue, because it's credit 27 >= 0
+Thread(id:99, group:1) is scheduled.
+Thread(id:101, group:1) consumed 0 s and 27997 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into active runqueue, because it's credit 7 >= 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 31999 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:105, group:1)
+Thread(id:Thread(id:105, group:1) inserted ) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:111, group:1Thread(id:113, group:1) is schedule, group:1) inserted into active runqueue, because it's credit 31 >= 0
+Thread(id:103, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 25 >= 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 213 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:113, group:1)
+Thread(id:97, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 36630 us of CPU time
+CREDIT CHANGE: 18 debited from Thread(id:99, group:1)
+Thread(id:99, group:1) inserted into expires runqueue, because it's credit -5 < 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:107, group:1) consumed 0 s and 11726 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:107, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s previous credit:-7
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s current credit:18
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s current credit:20
+Thread(id:98, group:0) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 23742 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 5 >= 0
+Thread(id:105, group:1) is scheduled.
+group:1) inserted into expires runqueue, because it's credit -7 < 0
+Thread(id:109, group:1) is scheduled.
+read(id:106, group:0) consumed 0 s and 11485 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:106, group:0)
+Thread(id:99, group:1) is scheduled.
+Thread(id:108, group:0) consumed 0 s and 21162 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:108, group:0)
+Thread(id:100, group:0) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:96, group:0)
+Thread(id:96, group:0) inserted into expires runqueue, because it's credit -6 < 0
+Thread(id:104, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 31976 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:102, group:0)
+Thread(id:Thread(id:, g, gro1) c) insert0 s and 20469 us of CPU time
+CREDIT CHANGE: 10 debited from Thread(id:99Thread(id:1)
+1) is scheduled.
+Thread(id:99, group:1) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:100, group:0) consumed 0 s and 10769 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -3 < 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:104, group:0) consumed 0 s and 27703 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:104, group:0)
+Thread(id:97, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 291 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 16 >= 0
+Thread(id:105, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 27996 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:103, group:1)
+Thread(id:Thread(id:103, group:1) inserted into active runqueue, because it's credit 8 >= 0
+107, group:1) consumed 0Thread(27997111, group:1) is scheduled.
+CREDIT CHANGE: 13 debited from Thread(id:107, group:1)
+Thread(id:107, group:1) inserted into active runqueue, because it's credit 27 >= 0
+Thread(id:99, group:1) is scheduled.
+Thread(id:101, group:1) consumed 0 s and 27997 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into active runqueue, because it's credit 7 >= 0
+Thread(id:109, group:1) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 31999 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:105, group:1)
+Thread(id:Thread(id:105, group:1) inserted ) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:111, group:1Thread(id:113, group:1) is schedule, group:1) inserted into active runqueue, because it's credit 31 >= 0
+Thread(id:103, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 31997 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:109, group:1)
+Thread(id:109, group:1) inserted into active runqueue, because it's credit 25 >= 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:113, group:1) consumed 0 s and 213 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:113, group:1)
+Thread(id:97, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 36630 us of CPU time
+CREDIT CHANGE: 18 debited from Thread(id:99, group:1)
+Thread(id:99, group:1) inserted into expires runqueue, because it's credit -5 < 0
+Thread(id:107, group:1) is scheduled.
+Thread(id:107, group:1) consumed 0 s and 11726 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:107, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s previous credit:-7
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s current credit:18
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s previous credit:-5
+CREDIT CHANGE: Thread(id:99, group:1, weight:25)'s current credit:20
+Thread(id:98, group:0) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 23742 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:Thread(id:98, group:0) consumed 0 s and 11663 us of CPU time
+CREDIT CHANGE: 5 debited from Thread(id:98, group:0)
+Thread(id:98, group:0) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:98, group:0) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 9709 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:105, group:1)
+Thread(id:97, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 9795 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:109, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:100, group:0, weight:25)'s previous credit:-3
+CREDIT CHANGE: Thread(id:100, group:0, weight:25)'s current credit:22
+CREDIT CHANGE: Thread(id:101, group:1, weight:25)'s previous credit:-7
+CREDIT CHANGE: Thread(id:101, group:1, weight:25)'s current credit:18
+Thread(id:100, group:0) is scheduled.
+Thread(id:111, group:1) consumed 0 s and 16288 us of CPU time
+CREDIT CHANGE: 8 debited from Thread(id:111, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s previous credit:-10
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s current credit:15
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s previous credit:-6
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s current credit:19
+Thread(id:102, group:0) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 22019 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into expires runqueue, because it's credit -6 < 0
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+Thread(id:102, group:0) consumed 0 s and 15534 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:102, group:0)
+CREDIT CHANGE: Thread(id:96, group:0, weight:) )'s prev0) consumed 0 s and T CHANGE: Thread(id:96, group:0, weight:25Thread(id:102, group:C) is scheduled.
+hread(id97Thread(i1, weight:25)'s previous credit:-6
+100, group:0) consumed 0 s and Threa us of , group:1) is scheduled.
+
+CREDIT CHANGE: 10 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into active runqueue, because it's credit 12 >= 0
+Thread(id:100, group:0) is scheduled.
+Thread(id:96, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 26650 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:102, group:0)
+Thread(id:103, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 1338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:103, group:1)
+Thread(id:103, group:1) inserted into active runqueue, because it's credit 19 >= 0
+Thread(id:103, group:1) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 27986 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:96, group:C)
+DIT CHANGE: 13 debited from Thread(id:Th, group:96, group:0) inserted into active runqueue, because it's credit 6 >= 0
+100, group:0) consumed 09), gro2790 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:100, group:0)
+ead(id:99, group:1) is scheduled.
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -1 < 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 18930 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:96, group:0)
+Thread(id:97, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 25141 us of CPU time
+CREDIT CHANGE: 12 debited from Thread(id:99, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s previous credit:-2
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s current credit:23
+Thread(id:98, group:0) is scheduled.
+Thread(id:98, group:0) consumed 0 s and 2453 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:98, group:0)
+Thread(id:97, group:1) consumed 0 s and 13054 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:97, group:1) is scheduled.
+103, group:1) consumed 0 s and 31996 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:103, group:1)
+Thread(id:103, group:1) inserted into active runqueue, because it's credit 4 >= 0
+Thread(id:103, group:1) is scheduled.
+se it's credit 13 >= 0
+Thread(id:98, group:0) is scheduled.
+Thread(id:105, group:1) consumed 0 s and 9709 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:105, group:1)
+Thread(id:97, group:1) is scheduled.
+Thread(id:109, group:1) consumed 0 s and 9795 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:109, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:100, group:0, weight:25)'s previous credit:-3
+CREDIT CHANGE: Thread(id:100, group:0, weight:25)'s current credit:22
+CREDIT CHANGE: Thread(id:101, group:1, weight:25)'s previous credit:-7
+CREDIT CHANGE: Thread(id:101, group:1, weight:25)'s current credit:18
+Thread(id:100, group:0) is scheduled.
+Thread(id:111, group:1) consumed 0 s and 16288 us of CPU time
+CREDIT CHANGE: 8 debited from Thread(id:111, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s previous credit:-10
+CREDIT CHANGE: Thread(id:102, group:0, weight:25)'s current credit:15
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s previous credit:-6
+CREDIT CHANGE: Thread(id:103, group:1, weight:25)'s current credit:19
+Thread(id:102, group:0) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 22019 us of CPU time
+CREDIT CHANGE: 11 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into expires runqueue, because it's credit -6 < 0
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+Thread(id:102, group:0) consumed 0 s and 15534 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:102, group:0)
+CREDIT CHANGE: Thread(id:96, group:0, weight:) )'s prev0) consumed 0 s and T CHANGE: Thread(id:96, group:0, weight:25Thread(id:102, group:C) is scheduled.
+hread(id97Thread(i1, weight:25)'s previous credit:-6
+100, group:0) consumed 0 s and Threa us of , group:1) is scheduled.
+
+CREDIT CHANGE: 10 debited from Thread(id:100, group:0)
+Thread(id:100, group:0) inserted into active runqueue, because it's credit 12 >= 0
+Thread(id:100, group:0) is scheduled.
+Thread(id:96, group:0) is scheduled.
+Thread(id:102, group:0) consumed 0 s and 26650 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:102, group:0)
+Thread(id:103, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 1338 us of CPU time
+CREDIT CHANGE: 0 debited from Thread(id:103, group:1)
+Thread(id:103, group:1) inserted into active runqueue, because it's credit 19 >= 0
+Thread(id:103, group:1) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 27986 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:96, group:C)
+DIT CHANGE: 13 debited from Thread(id:Th, group:96, group:0) inserted into active runqueue, because it's credit 6 >= 0
+100, group:0) consumed 09), gro2790 us of CPU time
+CREDIT CHANGE: 13 debited from Thread(id:100, group:0)
+ead(id:99, group:1) is scheduled.
+Thread(id:100, group:0) inserted into expires runqueue, because it's credit -1 < 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:96, group:0) consumed 0 s and 18930 us of CPU time
+CREDIT CHANGE: 9 debited from Thread(id:96, group:0)
+Thread(id:97, group:1) is scheduled.
+Thread(id:99, group:1) consumed 0 s and 25141 us of CPU time
+CREDIT CHANGE: 12 debited from Thread(id:99, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s previous credit:-2
+CREDIT CHANGE: Thread(id:98, group:0, weight:25)'s current credit:23
+Thread(id:98, group:0) is scheduled.
+Thread(id:98, group:0) consumed 0 s and 2453 us of CPU time
+CREDIT CHANGE: 1 debited from Thread(id:98, group:0)
+Thread(id:97, group:1) consumed 0 s and 13054 us of CPU time
+CREDIT CHANGE: 6 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into active runqueue, because it's credit 13 >= 0
+Thread(id:97, group:1) is scheduled.
+103, group:1) consumed 0 s and 31996 us of CPU time
+CRThread(id:101, group:1) consumed 0 s and 31993 us of CPU time
+CREDIT CHANGE: 15 debited from Thread(id:101, group:1)
+Thread(id:101, group:1) inserted into active runqueue, because it's credit 3 >= 0
+Thread(id:101, group:1) is scheduled.
+Thread(id:103, group:1) consumed 0 s and 14817 us of CPU time
+CREDIT CHANGE: 7 debited from Thread(id:103, group:1)
+Thread(id:101, group:1) consumed 0 s and 16924 us of CPU time
+CREDIT CHANGE: 8 debited from Thread(id:101, group:1)
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:100, group:0, weight:25)'s previous credit:-1
+CREDIT CHANGE: Thread(id:100, group:0, weight:25)'s current credit:24
+Thread(id:100, group:0) is scheduled.
+Thread(id:100, group:0) consumed 0 s and 8460 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:100, group:0)
+Thread(id:97, group:1) consumed 0 s and 28004 us of CPU time
+CREDIT CHANGE: 14 debited from Thread(id:97, group:1)
+Thread(id:97, group:1) inserted into expires runqueue, because it's credit -1 < 0
+No threads in ACTIVE kernel runq. Bumping credits of threads in EXPIRES runq
+CREDIT CHANGE: Thread(id:97, group:1, weight:25)'s previous credit:-1
+CREDIT CHANGE: Thread(id:97, group:1, weight:25)'s current credit:24
+Thread(id:97, group:1) is scheduled.
+Thread(id:97, group:1) consumed 0 s and 8393 us of CPU time
+CREDIT CHANGE: 4 debited from Thread(id:97, group:1)
+***************************** Thread Combination: [0]
+Mean of threads' CPU times is: 375 us
+Standard Deviation of threads' CPU times is: 27.73 us
+Mean of threads' creation to completion times is: 307624 us
+Standard deviation of threads' creation to completion times is: 307200.02 us
+Mean of threads' wait times is: 307249 us
+*******************************************************
+
+***************************** Thread Combination: [1]
+Mean of threads' CPU times is: 338 us
+Standard Deviation of threads' CPU times is: 9.55 us
+Mean of threads' creation to completion times is: 307875 us
+Standard deviation of threads' creation to completion times is: 307203.00 us
+Mean of threads' wait times is: 307537 us
+*******************************************************
+
+***************************** Thread Combination: [2]
+Mean of threads' CPU times is: 337 us
+Standard Deviation of threads' CPU times is: 8.50 us
+Mean of threads' creation to completion times is: 308163 us
+Standard deviation of threads' creation to completion times is: 307208.13 us
+Mean of threads' wait times is: 307826 us
+*******************************************************
+
+***************************** Thread Combination: [3]
+Mean of threads' CPU times is: 342 us
+Standard Deviation of threads' CPU times is: 11.18 us
+Mean of threads' creation to completion times is: 308478 us
+Standard deviation of threads' creation to completion times is: 307209.00 us
+Mean of threads' wait times is: 308136 us
+*******************************************************
+
+***************************** Thread Combination: [4]
+Mean of threads' CPU times is: 2503 us
+Standard Deviation of threads' CPU times is: 32.39 us
+Mean of threads' creation to completion times is: 310950 us
+Standard deviation of threads' creation to completion times is: 307228.99 us
+Mean of threads' wait times is: 308447 us
+*******************************************************
+
+***************************** Thread Combination: [5]
+Mean of threads' CPU times is: 2501 us
+Standard Deviation of threads' CPU times is: 22.20 us
+Mean of threads' creation to completion times is: 335906 us
+Standard deviation of threads' creation to completion times is: 333624.92 us
+Mean of threads' wait times is: 333405 us
+*******************************************************
+
+***************************** Thread Combination: [6]
+Mean of threads' CPU times is: 2504 us
+Standard Deviation of threads' CPU times is: 44.60 us
+Mean of threads' creation to completion times is: 315630 us
+Standard deviation of threads' creation to completion times is: 306942.15 us
+Mean of threads' wait times is: 313126 us
+*******************************************************
+
+***************************** Thread Combination: [7]
+Mean of threads' CPU times is: 2508 us
+Standard Deviation of threads' CPU times is: 48.90 us
+Mean of threads' creation to completion times is: 340612 us
+Standard deviation of threads' creation to completion times is: 333027.04 us
+Mean of threads' wait times is: 338104 us
+*******************************************************
+
+***************************** Thread Combination: [8]
+Mean of threads' CPU times is: 19977 us
+Standard Deviation of threads' CPU times is: 263.44 us
+Mean of threads' creation to completion times is: 375301 us
+Standard deviation of threads' creation to completion times is: 349683.21 us
+Mean of threads' wait times is: 355324 us
+*******************************************************
+
+***************************** Thread Combination: [9]
+Mean of threads' CPU times is: 21409 us
+Standard Deviation of threads' CPU times is: 4120.67 us
+Mean of threads' creation to completion times is: 470170 us
+Standard deviation of threads' creation to completion times is: 272097.34 us
+Mean of threads' wait times is: 448761 us
+*******************************************************
+
+***************************** Thread Combination: [10]
+Mean of threads' CPU times is: 20163 us
+Standard Deviation of threads' CPU times is: 405.78 us
+Mean of threads' creation to completion times is: 396594 us
+Standard deviation of threads' creation to completion times is: 345189.13 us
+Mean of threads' wait times is: 376431 us
+*******************************************************
+
+***************************** Thread Combination: [11]
+Mean of threads' CPU times is: 21188 us
+Standard Deviation of threads' CPU times is: 3001.77 us
+Mean of threads' creation to completion times is: 516633 us
+Standard deviation of threads' creation to completion times is: 247861.76 us
+Mean of threads' wait times is: 495445 us
+*******************************************************
+
+***************************** Thread Combination: [12]
+Mean of threads' CPU times is: 168169 us
+Standard Deviation of threads' CPU times is: 2144.26 us
+Mean of threads' creation to completion times is: 1512171 us
+Standard deviation of threads' creation to completion times is: 21415.60 us
+Mean of threads' wait times is: 1344002 us
+*******************************************************
+
+***************************** Thread Combination: [13]
+Mean of threads' CPU times is: 166699 us
+Standard Deviation of threads' CPU times is: 3846.12 us
+Mean of threads' creation to completion times is: 1366170 us
+Standard deviation of threads' creation to completion times is: 60729.91 us
+Mean of threads' wait times is: 1199471 us
+*******************************************************
+
+***************************** Thread Combination: [14]
+Mean of threads' CPU times is: 167715 us
+Standard Deviation of threads' CPU times is: 2514.25 us
+Mean of threads' creation to completion times is: 1010740 us
+Standard deviation of threads' creation to completion times is: 321841.08 us
+Mean of threads' wait times is: 843025 us
+*******************************************************
+
+***************************** Thread Combination: [15]
+Mean of threads' CPU times is: 165216 us
+Standard Deviation of threads' CPU times is: 2184.31 us
+Mean of threads' creation to completion times is: 918992 us
+Standard deviation of threads' creation to completion times is: 305981.18 us
+Mean of threads' wait times is: 753776 us
+*******************************************************
+

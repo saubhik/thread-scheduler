@@ -27,6 +27,15 @@ typedef struct uthread_struct
 	int (*uthread_func)(void*);
 	void *uthread_arg;
 
+	/* For credit scheduler */
+	int uthread_weight;
+	int uthread_credit;
+	int uthread_cap;
+
+	struct timeval last_scheduled_at; /* Last scheduled time */
+	struct timeval agg_cpu_time; /* Aggregated sum of CPU time */
+	struct timeval created_at; /* Thread creation time */
+
 	void *exit_status; /* exit status */
 	int reserved1;
 	int reserved2;
@@ -39,4 +48,6 @@ typedef struct uthread_struct
 
 struct __kthread_runqueue;
 extern void uthread_schedule(uthread_struct_t * (*kthread_best_sched_uthread)(struct __kthread_runqueue *));
+extern int uthread_create(uthread_t *u_tid, int (*u_func)(void *), void *u_arg, uthread_group_t u_gid, int u_weight, int u_cap);
+extern void gt_yield();
 #endif
